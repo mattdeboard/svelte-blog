@@ -22,19 +22,6 @@
 	<p class="date">written on {date}</p>
 	<div class="content">
 		<!-- svelte-ignore missing-declaration -->
-		<SvelteMarkdown
-			source={articleBody}
-			options={{
-				highlight: function (code, lang, callback) {
-					require('pygmentize-bundled-cached')(
-						{ lang: lang, format: 'html' },
-						code,
-						function (err, result) {
-							callback(err, result.toString());
-						}
-					);
-				}
-			}}
-		/>
+		<SvelteMarkdown source={articleBody} />
 	</div>
 </div>
