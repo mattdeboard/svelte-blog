@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "svelte.enable-ts-plugin": true,
+    "[svelte]": {
+      "editor.defaultFormatter": "svelte.svelte-vscode"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "svelte.svelte-vscode",
+      "ardenivanov.svelte-intellisense",
+      "fivethree.vscode-svelte-snippets"
+    ]
+  },
+}
