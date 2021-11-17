@@ -1,5 +1,5 @@
 public: yes
-tags: \[git,python\]
+tags: [git,python]
 summary: Use git & Python to auto-generate changelogs.
 
 Using git & Python to autogen changelogs
@@ -31,7 +31,7 @@ When I am automating a repetitive task like this, my goal is to write as little 
     git log --merges
 ```
 
-This is good, but it shows a lot of extra information I'd have to parse out. If you'll notice in my example above, the lines in `RELEASE NOTES.md` are formatted like `[#<pull request number>](https://github.com/courseload/project/pull/<pull request number>) - <pull request description>`. So we notice right away we need two things from \`git log\`:
+This is good, but it shows a lot of extra information I'd have to parse out. If you'll notice in my example above, the lines in `RELEASE NOTES.md` are formatted like `[#<pull request number>](https://github.com/courseload/project/pull/<pull request number>) - <pull request description>`. So we notice right away we need two things from `git log`:
 
 1.  The commit message of the merge. Think of this as the subject line of an email. We want this because this has the number of the pull request.
 2.  The pull request description, which works out to be, for the sake of this blog post, the equivalent of the first line of the body of the aforementioned email.
@@ -58,7 +58,7 @@ It's great that we have just the info we want, but I know we're also going to ne
 1.  Parse out the pull request number from the [git log output, and
 2.  Use the PR number to create the changelog entry
 
-By running the above [git log command via [subprocess.check\_output I can automate all this with [this script](https://gist.github.com/mattdeboard/68f7009e847e36e6c107):
+By running the above [git log command via [subprocess.check_output I can automate all this with [this script](https://gist.github.com/mattdeboard/68f7009e847e36e6c107):
 
 ```python
 #!/usr/bin/env python
@@ -162,13 +162,13 @@ $ ./release.py 1.7 HEAD
 Or, specify an output file:
 
 ```
-$ ./release 1.7 HEAD ./RELEASE\ NOTES.md
+$ ./release 1.7 HEAD ./RELEASE NOTES.md
 ```
 
 Conclusion
 ----------
 
-One additional step I took is to create a git alias for the git log command, but prettied up a bit, for when I want to just scan through the differences from one version to the next. If you'd like to do the same, add the following to the [\[alias\] section of \`\~/.gitconfig\`:
+One additional step I took is to create a git alias for the git log command, but prettied up a bit, for when I want to just scan through the differences from one version to the next. If you'd like to do the same, add the following to the \[alias\] section of `~/.gitconfig`:
 
 ```shell
     lm = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset \
