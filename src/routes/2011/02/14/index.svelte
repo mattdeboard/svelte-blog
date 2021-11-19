@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
+  let date = "2011/02/14";
+  let source = `
 
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
-	let date = '2011/02/14';
-	let source = `
 # Latest work
 
 I have put my latest project live. I started [Yuk](http://yuk.mattdeboard.net) ([source](https://github.com/mattdeboard/Yuk)) a couple of weeks ago as an exercise in developing an understanding of an MVC web framework, instead of using [flask](http://flask.pocoo.org) for everything. flask is great, but not knowing Django (and more importantly, Django's underlying principles) is a huge knowledge gap I wanted to address.

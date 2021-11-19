@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
-
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2011/05/08";
   let source = `
+
 # Haystack index update script + cronjob
 
 [Yukmarks](http://yukmarks.com) doesn't really have any users except for me and my girlfriend, so updating the search index manually has never been very difficult. Just punch up my [fabfile](http://mattdeboard.net/2011/05/06/if-you-dont-use-fabric-do/) and run update_search(). Trivial.

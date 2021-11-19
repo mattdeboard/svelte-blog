@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
-
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2012/10/19";
   let source = `
+
 # How to Run a Windows Service As A Linux Daemon
 
 **Premise:** You've got a Windows service that you want to run on a Linux server

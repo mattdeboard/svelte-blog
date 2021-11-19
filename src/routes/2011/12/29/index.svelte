@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
-
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2011/12/29";
   let source = `
+# Displacing MySQL with...Solr?
 
 We recently completed a big refactor at [work](http://directemployers.org), the intent for which was implementing search for one of our products, a Django-based web CMS called DirectSEO. It did not take long, however, to realize that by choosing Solr as our search backend, we had the opportunity to make some much-needed optimizations. Now, after analyzing three weeks' worth of data related to the refactor, I can say the time investment has yielded real, measurable gains. They came mainly from removing some very expensive database calls from our views, then fetching the same data via calls to the [Solr](http://lucene.apache.org/solr/) index. This resulted in a simplified code base and decreased page-load times. This post is intended to explain a bit about our approach to leveraging Solr's feature set.
 

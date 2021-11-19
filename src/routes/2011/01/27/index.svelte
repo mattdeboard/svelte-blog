@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
+  let date = "2011/01/27";
+  let source = `
 
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
-	let date = '2011/01/27';
-	let source = `
 # No More Tumblr
 
 A week or two ago I decided to stop using Tumblr and "roll my own" blog. Since I've been using [flask](http://flask.pocoo.org) to put [some projects](http://mattdeboard.net/projects) on the web, I decided to give [rstblog](https://github.com/mitsuhiko/rstblog) a go. (Both written by the [same guy](http://lucumr.pocoo.org).)

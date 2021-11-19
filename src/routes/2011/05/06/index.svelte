@@ -1,9 +1,5 @@
 <script lang="ts">
-	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
-
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
+  import SvelteMarkdown from 'svelte-markdown';
   let date = "2011/05/06";
   let source = `
 # Python code deployment with Fabric

@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
-
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2011/05/09";
   let source = `
+
 # My guide to rstblog
 
 For about six months now I've been using [Armin Ronacher's](http://lucumr.pocoo.org/) minimalist blog "platform", [rstblog](https://github.com/mitsuhiko/rstblog). For static blogs like this one, it's great. However, it is definitely not a plug-and-play blog solution. It has definitely had a learning curve, but nothing too intimidating. This post will describe some of my experiences with rstblog over the past six months, and some of the optimizations I've made to the publishing process.

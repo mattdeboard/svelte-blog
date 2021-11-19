@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
-
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2011/05/12";
   let source = `
+
 # Python-Powered Smash'n'Grab
 
 After watching and listening my girlfriend wrestling with her course schedule for the fall semester, I got a "big idea" for another project. It's not ready to see the light of day, but suffice it to say it involves a better way of scheduling classes.

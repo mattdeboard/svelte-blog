@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
+  let date = "2011/06/17";
+  let source = `
 
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
-	let date = '2011/06/17';
-	let source = `
 # Changing Careers at 31
 
 I won't bury the lead: About a month ago, I got my first job as a programmer after years of working in PR and marketing.

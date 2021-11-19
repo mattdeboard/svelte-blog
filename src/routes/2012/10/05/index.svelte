@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
+  let date = "2012/10/05";
+  let source = `
 
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
-	let date = '2012/10/05';
-	let source = `
 # Larry the Software Guy
 
 Anil Dash published [a blog post](http://dashes.com/anil/2012/10/the-blue-collar-coder.html) today I think is a victim of a bad title: "The Blue Collar Coder." I normally skim over the "Is programming an art, craft or science?" discussions but there were a couple of very smart programmers discussing it on Twitter, and I joined in. During the conversation, I vacillated between agreeing with Anil's proposition and agreeing with [Alex Feinberg](https://twitter.com/strlen/status/254369312884805632).

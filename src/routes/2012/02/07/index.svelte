@@ -1,11 +1,8 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-	// export let title: string;
-	// export let articleBody: string;
-
-	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2012/02/07";
   let source = `
+
 # REST API for search results
 
 **Updated:** _So after talking with the author of Tastypie I added the_ `SearchDeclarativeMetaclass` _and_ `SearchOptions` _to handle inheritance of the metaclass attributes on_ `SearchResource`. _I almost entirely copied his_ `ModelDeclarativeMetaclass` _and it works well. In-house, we further subclass_ `SearchResource` _to model our job postings data in our search index, and it works great._
