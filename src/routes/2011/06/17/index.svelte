@@ -4,8 +4,8 @@
 	// export let articleBody: string;
 
 	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
-  let date = "2011/06/17";
-  let source = `
+	let date = '2011/06/17';
+	let source = `
 Changing Careers at 31
 ======================
 
