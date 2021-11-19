@@ -1,0 +1,13 @@
+name = "svelte-blog"
+type = "javascript"
+
+account_id = "ff404933c2aa00ddef4fe1e588481df5"
+workers_dev = true
+route = "svelte-blog.mattdeboard.workers.dev/*"
+zone_id = ""
+compatibility_date = "2021-11-18"
+
+[[kv_namespaces]]
+binding = "BLOG_POSTS"
+id = "519bb70095e14269a7b974235758e987"
+preview_id = "96f38ee473f24a1285ce439113db3163"
