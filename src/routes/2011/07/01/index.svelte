@@ -6,8 +6,7 @@
 	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2011/07/01";
   let source = `
-Export ALL Your Facebook Photos Easily
-======================================
+# Export ALL Your Facebook Photos Easily
 
 It's no secret that [Google+](http://plus.google.com) is gaining new users as fast as the acceptance pipeline will let invitees click "Make me an account."
 

@@ -6,10 +6,9 @@
 	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2012/02/07";
   let source = `
-REST API for search results
-===========================
+# REST API for search results
 
-**Updated:** *So after talking with the author of Tastypie I added the* `SearchDeclarativeMetaclass` *and* `SearchOptions` *to handle inheritance of the metaclass attributes on* `SearchResource`. *I almost entirely copied his* `ModelDeclarativeMetaclass` *and it works well. In-house, we further subclass* `SearchResource` *to model our job postings data in our search index, and it works great.*
+**Updated:** _So after talking with the author of Tastypie I added the_ `SearchDeclarativeMetaclass` _and_ `SearchOptions` _to handle inheritance of the metaclass attributes on_ `SearchResource`. _I almost entirely copied his_ `ModelDeclarativeMetaclass` _and it works well. In-house, we further subclass_ `SearchResource` _to model our job postings data in our search index, and it works great._
 
 So, first things first: [django-tastypie](https://github.com/toastdriven/django-tastypie) is pretty great. If you're running a Django web application and want to expose your data via a REST API, tastypie will do it. I got everything up-and-running in just a few hours (95% reading, 5% writing).
 

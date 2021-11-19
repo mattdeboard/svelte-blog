@@ -2,8 +2,7 @@ public: yes
 tags: [supervisor,mono,mono-service,clr,dotnet]
 summary: mono-service + supervisor
 
-How to Run a Windows Service As A Linux Daemon
-==============================================
+# How to Run a Windows Service As A Linux Daemon
 
 **Premise:** You've got a Windows service that you want to run on a Linux server
 
@@ -17,8 +16,7 @@ Once installed, you can run your compiled code like so:
 
 By default, this creates a lockfile in `/tmp`. You can change this by using the `-l:\<lockfile\>` option. This is great, because now your service is running in the background! However, this is really flimsy; what if the process dies? What if the server needs rebooted? To solve this I'm using [supervisor](http://supervisord.org/).
 
-Get It Running In 4 Steps
--------------------------
+## Get It Running In 4 Steps
 
 Once you've got supervisor and mono installed, follow these steps:
 
@@ -35,8 +33,7 @@ Once you've got supervisor and mono installed, follow these steps:
 3.  `sudo service supervisor update`. This will reload the config file you edited above.
 4.  To confirm that your process started, run `ps aux\|grep mono`. You should see it in the process list.
 
-Conclusion
-----------
+## Conclusion
 
 Hope this helps. Supervisor has a ton of different options for configuring how a process runs, it's worth it to RTFM.
 

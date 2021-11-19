@@ -2,27 +2,21 @@ tags: [rstblog, mitsuhiko, python, blog]
 public: yes
 summary: Config & maintenance of Armin Ronacher's rstblog
 
-My guide to rstblog
-===================
+# My guide to rstblog
 
 For about six months now I've been using [Armin Ronacher's](http://lucumr.pocoo.org/) minimalist blog "platform", [rstblog](https://github.com/mitsuhiko/rstblog). For static blogs like this one, it's great. However, it is definitely not a plug-and-play blog solution. It has definitely had a learning curve, but nothing too intimidating. This post will describe some of my experiences with rstblog over the past six months, and some of the optimizations I've made to the publishing process.
 
 Before I go any further, I want to thank [Morten Siebuhr](http://sbhr.dk), whose excellent [blog post on rstblog](http://sbhr.dk/2010/11/30/using_rstblog/) helped me both configure and maintain my blog. He illuminated some of the general points of rstblog, and before you go any further, please read it.
 
-Some background
----------------
+## Some background
 
 First, rstblog is so called because it is powered by [reStructuredText](http://docutils.sourceforge.net/rst.html), a very powerful, easy-to-grok markup syntax. (It's right up there with [Fabric](http://fabfile.org/) on my ["Idiot-Proof/Time-Saving" graph](http://mattdeboard.net/static/GRAPH.png).) I never realized how pervasive rst is, until I decided to move to rstblog from [Tumblr](http://tumblr.com). Using Armin's blog platform (which he calls a ["Not-invented-here](http://en.wikipedia.org/wiki/Not_Invented_Here) site generator") has paid dividends just in terms of the knowledge of rst I've been forced to acquire.
 
 Some other concepts & tech with which I've had to get familiar in support of rstblog:
 
-:   1.  [YAML](http://www.yaml.org/spec/1.2/spec.html) - Specifically, getting a grip on how finicky it can be about whitespace.
-    2.  [Makefiles](http://linuxdevcenter.com/pub/a/linux/2002/01/31/make_intro.html) - I knew `make` is how Linux compiles or otherwise builds software. But I was not aware of how to put Makefiles into play to control this behavior. (I'm really getting sick of mentioning this guy here, but Brett Hoerner has a simple Makefile [here](https://github.com/bretthoerner/bretthoerner.com/blob/master/Makefile) that I incorporated into my own workflow.)
-    3.  [virtualenv](http://pypi.python.org/pypi/virtualenv) - Though virtualenv is now so pervasive in my dev work that I don't really remember a time when I *wasn't* using it, I know I first used it for my blog. I consider [this](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip) to be a canonical explanation of why virtualenv is great. (Not that I'm a keeper of canon or anything.)
-    4.  [RVM](https://rvm.beginrescueend.com/) - I use [Blueprint](http://blueprintcss.org) to manage CSS files for each of my websites. Blueprint requires Ruby. I'm an idiot, so I need Ruby Version Manager to help me be not stupid.
+: 1. [YAML](http://www.yaml.org/spec/1.2/spec.html) - Specifically, getting a grip on how finicky it can be about whitespace. 2. [Makefiles](http://linuxdevcenter.com/pub/a/linux/2002/01/31/make_intro.html) - I knew `make` is how Linux compiles or otherwise builds software. But I was not aware of how to put Makefiles into play to control this behavior. (I'm really getting sick of mentioning this guy here, but Brett Hoerner has a simple Makefile [here](https://github.com/bretthoerner/bretthoerner.com/blob/master/Makefile) that I incorporated into my own workflow.) 3. [virtualenv](http://pypi.python.org/pypi/virtualenv) - Though virtualenv is now so pervasive in my dev work that I don't really remember a time when I _wasn't_ using it, I know I first used it for my blog. I consider [this](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip) to be a canonical explanation of why virtualenv is great. (Not that I'm a keeper of canon or anything.) 4. [RVM](https://rvm.beginrescueend.com/) - I use [Blueprint](http://blueprintcss.org) to manage CSS files for each of my websites. Blueprint requires Ruby. I'm an idiot, so I need Ruby Version Manager to help me be not stupid.
 
-Workflow
---------
+## Workflow
 
 The big, tough nut to crack for rstblog, from my perspective, has been workflow. Nowadays, mine looks like this:
 
@@ -76,7 +70,6 @@ alias er="cd /a/mattdeboard.net; . bin/activate; cd /home/matt/blueprint/lib/; r
 
 I am 100% sure I'm doing it wrong with Pygments. I have the styles hard-coded in my stylesheet, which I don't think I need to do. rstblog has support for Pygments, so it doesn't make sense that I'd need to put them in my stylesheet. However, it's done, it works, it looks how I want, so fixing it is an extremely low priority. If you've got insight on how this actually works, I'm all ears!
 
-Conclusion
-----------
+## Conclusion
 
 I like having this much control over the under-the-hood components of my blog. If you don't see the need, it's probably not worth the time investment. However, if you're a relative newcomer to Linux and/or Python, and you have the desire to learn more about both while simultaneously wanting to stab yourself in the face occasionally, I strongly recommend checking out rstblog. It is a great vehicle for self-education.

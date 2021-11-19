@@ -2,8 +2,7 @@ public: yes
 tags: [lxml, python, parsing]
 summary: A setback is just a setup for a-- oh dear I frew up.
 
-Python-Powered Smash'n'Grab
-===========================
+# Python-Powered Smash'n'Grab
 
 After watching and listening my girlfriend wrestling with her course schedule for the fall semester, I got a "big idea" for another project. It's not ready to see the light of day, but suffice it to say it involves a better way of scheduling classes.
 
@@ -22,7 +21,7 @@ The response I got was indecisive and confusing:
 >
 > SIS Help Desk"
 
-*(Emphasis added)*
+_(Emphasis added)_
 
 I sent a follow-up email asking what the bolded text actually means, but got nothing back. So instead of waiting, I decided to just make my own.
 
@@ -198,4 +197,4 @@ if __name__ == "__main__":
     print(ic)
 ```
 
-Turned out I was scraping about 2,850 individual pages to compile the data. Running this script took about an hour each time I ran it. At least now I'm past that and can move on with the rest of the project, which I *hope* to start this weekend.
+Turned out I was scraping about 2,850 individual pages to compile the data. Running this script took about an hour each time I ran it. At least now I'm past that and can move on with the rest of the project, which I _hope_ to start this weekend.

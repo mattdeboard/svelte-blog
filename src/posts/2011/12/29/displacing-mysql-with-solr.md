@@ -1,15 +1,13 @@
 public: yes
 tags: [solr, nosql, django, python, haystack]
 
-Displacing MySQL with...Solr?
-=============================
+# Displacing MySQL with...Solr?
 
 We recently completed a big refactor at [work](http://directemployers.org), the intent for which was implementing search for one of our products, a Django-based web CMS called DirectSEO. It did not take long, however, to realize that by choosing Solr as our search backend, we had the opportunity to make some much-needed optimizations. Now, after analyzing three weeks' worth of data related to the refactor, I can say the time investment has yielded real, measurable gains. They came mainly from removing some very expensive database calls from our views, then fetching the same data via calls to the [Solr](http://lucene.apache.org/solr/) index. This resulted in a simplified code base and decreased page-load times. This post is intended to explain a bit about our approach to leveraging Solr's feature set.
 
 (This is my first truly technical post so I'm sure I'm leaving things out, or explaining poorly. Please contact me or leave comments if I didn't cover something in enough detail or if you've got any questions.)
 
-Some Background
----------------
+## Some Background
 
 As part of their membership in DirectEmployers, member organizations are provided with a job board on a domain of their choosing to present their job listings in an SEO-friendly way. These sites often live on the [.jobs TLD](http://en.wikipedia.org/wiki/.jobs); however, members can -- and often do -- use subdomains of their own site for their job board. An example of each: [Lockheed-Martin](http://lockheedmartin.jobs) (.jobs); [Arrow Electronics](http://jobsearch.arrow.com) (other).
 
@@ -19,8 +17,7 @@ The job boards are generated dynamically. Members give us some basic information
 
 From here, users can drill down into the jobs using standard navigation links which we generated based on facets for title, location and custom facets we call [Saved Search](https://github.com/DirectEmployers/saved-search) (not to be confused with [saved-searches](https://github.com/toastdriven/saved_searches)).
 
-Implementation Details
-----------------------
+## Implementation Details
 
 Simply put, we use Django to deal with MySQL, and we use [Django-Haystack](http://haystacksearch.org) to deal with Solr. We run our [own fork](https://github.com/DirectEmployers/django-haystack) of Haystack, which capitalizes on some hacks in my own [fork of pysolr](https://github.com/mattdeboard/pysolr).
 
@@ -56,16 +53,14 @@ For Solr, we run two servers in a master-slave configuration. The master handles
 
 The one caveat for using Solr in this way is that unlike some other document databases, there is absolutely no notion of relations whatsoever. Plus, obviously, it wouldn't be responsible to use Solr as a primary datastore (A good read on why can be found in [this](http://stackoverflow.com/questions/4960952/when-to-consider-solr/4961973#4961973) response on SO).
 
-Performance & Reliability
--------------------------
+## Performance & Reliability
 
 Performance has improved measurably, especially on [pages with a lot of jobs, a lot of facets and a lot of saved searches](http://lockheedmartin.jobs). Some very costly SQL queries have been eliminated. By utilizing Solr's query-tuning tools like `facet.mincount`, `start` and `offset`, we've kept the amount of data transfered per request is low. Using Solr to power saved searches eliminates a lot of complexity from our code base.
 
-Getting data reliability right has taken longer, involving some diligent bug-hunting. I've spent the past four months learning about how Solr works, how to intelligently leverage Haystack's API, and implementing some features of Solr in Haystack that aren't included out-of-the-box. It is important to keep in mind that a Solr match is not necessarily binary. A thing might match, it might not, but more likely it will "kinda" match. Tightening up queries as needed is vital if you want exact results *only*. One of my big hurdles in getting this working right was making sure matches were fuzzy where they should be fuzzy, and exact where they should be exact.
+Getting data reliability right has taken longer, involving some diligent bug-hunting. I've spent the past four months learning about how Solr works, how to intelligently leverage Haystack's API, and implementing some features of Solr in Haystack that aren't included out-of-the-box. It is important to keep in mind that a Solr match is not necessarily binary. A thing might match, it might not, but more likely it will "kinda" match. Tightening up queries as needed is vital if you want exact results _only_. One of my big hurdles in getting this working right was making sure matches were fuzzy where they should be fuzzy, and exact where they should be exact.
 
 Finally, I think that as we add more features to our application, we'll have to start putting standard RDBMS queries back into play in some areas. For the past 3 months I've been rewiring a Django application, cutting out the old relational stuff and replacing it with simpler, faster methods. It is a dramatic shift. As time goes on we'll be building out more features that will require relational information.
 
-Conclusion
-----------
+## Conclusion
 
 Utilizing Solr in this way is both ordinary and novel. It's novel because when people think of Solr, they think a search box with a button that says "Search". You click on the button and get results. It's ordinary because Solr is, after all, a document database. It stores documents in a flat structure, and you compose queries to retrieve them. Not exotic, unusual or special in any way. In a use case such as ours, however, where the need for relations is minimal and practically all of our content is generated based on text searching, Solr is great.

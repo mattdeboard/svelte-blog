@@ -2,8 +2,7 @@ public: yes
 tags: [rstblog]
 summary: New blog, some new projects.
 
-No More Tumblr
-==============
+# No More Tumblr
 
 A week or two ago I decided to stop using Tumblr and "roll my own" blog. Since I've been using [flask](http://flask.pocoo.org) to put [some projects](http://mattdeboard.net/projects) on the web, I decided to give [rstblog](https://github.com/mitsuhiko/rstblog) a go. (Both written by the [same guy](http://lucumr.pocoo.org).)
 
@@ -11,4 +10,4 @@ rstblog is very much a very "small" blog app, with only very minimal documentati
 
 I have also added a link to select projects in the header and generally cleaned and centralized everything.
 
-Getting my blog in a somewhat finalized form also marks the end of the beginning of my movement toward setting up my own web server to function as a place to host my own projects, including the blog. I realize for most people who will read this running a webserver isn't that big a deal, and maybe even something you were doing in high school or before. But for me, this has been a new thing and a tremendous learning experience. Much thanks to Brett Hoerner for his [post on configuring Apache2 and nginx](http://bretthoerner.com/2008/10/9/configs-for-nginx-and-apache-mod-wsgi) for mod\_wsgi. They've been a great reference source as I fumble with those two services.
+Getting my blog in a somewhat finalized form also marks the end of the beginning of my movement toward setting up my own web server to function as a place to host my own projects, including the blog. I realize for most people who will read this running a webserver isn't that big a deal, and maybe even something you were doing in high school or before. But for me, this has been a new thing and a tremendous learning experience. Much thanks to Brett Hoerner for his [post on configuring Apache2 and nginx](http://bretthoerner.com/2008/10/9/configs-for-nginx-and-apache-mod-wsgi) for mod_wsgi. They've been a great reference source as I fumble with those two services.

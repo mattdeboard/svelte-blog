@@ -2,8 +2,7 @@ public: yes
 tags: [trunkly]
 summary: A recap of my work with Trunk.ly.
 
-Initiative and Assistance
-=========================
+# Initiative and Assistance
 
 I have kept a bookmark to Joel Spolsky's [article](http://www.joelonsoftware.com/articles/Unicode.html) on Unicode and character sets on my work computer for ages. So last week, with all the buzz about the demise of del.icio.us, I finally decided it was a good time to find a link manager service to have a persistent place for such things. That brought me to Trunk.ly, a link aggregation service that pulls in links from Twitter, Facebook, etc., and started using it immediately.
 

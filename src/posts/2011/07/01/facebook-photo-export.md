@@ -2,8 +2,7 @@ public: yes
 tags: [facebook, googleplus]
 summary: Help with hitting eject from Facebook
 
-Export ALL Your Facebook Photos Easily
-======================================
+# Export ALL Your Facebook Photos Easily
 
 It's no secret that [Google+](http://plus.google.com) is gaining new users as fast as the acceptance pipeline will let invitees click "Make me an account."
 

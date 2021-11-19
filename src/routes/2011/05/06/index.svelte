@@ -6,13 +6,11 @@
 	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2011/05/06";
   let source = `
-Python code deployment with Fabric
-==================================
+# Python code deployment with Fabric
 
 So last night at the [IndyPy](http://www.meetup.com/python-182/) meetup I gave a very impromptu talk on [Fabric](http://www.meetup.com/python-182/). It lasted maybe five minutes and afterward I really felt like I just did not do this great tool justice. In order to make up for that, I thought I'd dive in a little deeper to Fabric.
 
-Why I am an idiot
------------------
+## Why I am an idiot
 
 First and foremost, I love Fabric because **it lets me be lazy**. For far too long while I was developing [Yukmarks](http://yukmarks.com), I was manually typing things like:
 
@@ -29,17 +27,16 @@ That's right:
 > 1.  ssh to my "production" server
 > 2.  pull the latest revisions
 > 3.  use django's built-in data dump to back up my database
-> 4.  *also* use the postgres dump
+> 4.  _also_ use the postgres dump
 > 5.  not pictured: updating the [Haystack](http://haystacksearch.org/) search index for [Whoosh](https://bitbucket.org/mchaput/whoosh/wiki/Home)
 
 You get the picture. It was ugly, and stupid, and time consuming, and I literally cannot believe that I spent all those calories typing those commands in over... and over... and over again.
 
-Why I love Fabric
------------------
+## Why I love Fabric
 
 So then [someone](http://bretthoerner.com) introduced me to Fabric. I now use Fabric to automate code deployment. (See my full fabfile [here](https://github.com/mattdeboard/Yuk/blob/master/fabfile.py).)
 
-(In no way do I claim to use Fabric to its full potential, nor do I claim to be an expert, nor do I claim that my fabfile is *fabulous*. If you've got tips or corrections, please leave them in the comments.)
+(In no way do I claim to use Fabric to its full potential, nor do I claim to be an expert, nor do I claim that my fabfile is _fabulous_. If you've got tips or corrections, please leave them in the comments.)
 
 To make Fabric work, you just import the API and you're off:
 

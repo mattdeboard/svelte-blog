@@ -4,21 +4,18 @@
 	// export let articleBody: string;
 
 	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
-  let date = "2011/11/23";
-  let source = `
-=========================
+	let date = '2011/11/23';
+	let source = `
 
 I posted a [very brief response](http://news.ycombinator.com/item?id=3268469) to a post on HackerNews yesterday challenging the notion that 8 weeks of guided tutelage on [Ruby on Rails](http://rubyonrails.org/) is not going to produce someone who you might consider a "junior RoR developer." It did not garner many upvotes so I figured that like most conversation on the Internet it faded into the general ambient chatter. Imagine my surprise when I woke up to couple handfuls' worth of emails from around the world asking me what I did, how I did it, and how I got a job. I'm assuming, judging by the relatively small amount of mail I got from a random aside on HN\*, that there must be a lot of people who are trying to figure out how to pursue a career in programming.
 
-First, A Disclaimer or Two
---------------------------
+## First, A Disclaimer or Two
 
 Please note that this blog post is entitled, "How **I** Became a Programmer", not, "How **You** Can Become a Programmer." I'm not a self-help guru or wise or even a particularly good programmer. I did, however, decide at an inflection point in my life to pursue something vigorously and it paid off. Any insights gleaned from my experience are yours to make on your own; I doubt I'll have much insight for your personal situation.
 
 Also, after consulting with my girlfriend, my total time of dedicated effort to becoming a paid programmer was actually about 12 weeks, not \~10 as I stated in the post I linked to above. So, there you go.
 
-My Story: tl;dr
----------------
+## My Story: tl;dr
 
 In brief: I left the Marine Corps after more than a decade in July 2010. I got a job at the state lottery as a PR flak in August of that year, and lost it in mid-February. In mid-May I got hired as a part-time "junior User Experience engineer" at [DirectEmployers Association](http://directemployers.org). By late August I was a full-time, regular old "User Experience engineer."
 
@@ -26,8 +23,7 @@ When I lost my job I decided that I was done doing PR; I wanted to be a programm
 
 Voila. Without further ado, I'm going to write about what I didn't do, then dive into the questions I got via email.
 
-What I Didn't Do
-----------------
+## What I Didn't Do
 
 One of the things that was asked in almost every email was, "How did you learn Django in 11 weeks?"
 
@@ -35,8 +31,7 @@ I want to make it clear that I didn't set out to learn Django per se. Django is 
 
 In other words, I do not feel that I would be as modestly competent as I am today if I had spent an inordinate time becoming an expert at the abstraction layer of Django, instead of learning the concepts that make Django work.
 
-Questions From Email
---------------------
+## Questions From Email
 
 **Did you begin with web or book resources?**
 
@@ -78,8 +73,7 @@ As far as HTML & CSS there is just so much information out there, and they're su
 
 Also, network. Attend meetups. Meet people. Tweet. Blog. Interact with the community around your language(s). Get to know people. Demonstrate to the world that you really love programming. The week before I saw the job posting for my first programming job I delivered a lightning talk on [Fabric](http://fabfile.org), Python's Capistrano analog. That got me on a few people's radar.
 
-Conclusion
-----------
+## Conclusion
 
 If I had to summarize the big overview of how I did what I did, I'd say:
 
@@ -91,7 +85,7 @@ If I had to summarize the big overview of how I did what I did, I'd say:
 
 My final point really is that I got lucky. I'm not an amazing developer. At the end of the day I'm a newb and I still have a lot to learn. My career is just beginning but I am proud of the effort I put into changing my life. I hope my experiences can help some other folks.
 
-\* *I should note that I was already of a mind to blog about this since my cousin Jeff has also taken up programming after leaving the environmental consultancy business.*
+\* _I should note that I was already of a mind to blog about this since my cousin Jeff has also taken up programming after leaving the environmental consultancy business._
 `;
 </script>
 

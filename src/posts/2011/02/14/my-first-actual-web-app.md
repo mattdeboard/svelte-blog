@@ -2,8 +2,7 @@ public: yes
 tags: [flask, web, python]
 summary: My latest projects
 
-Latest work
-===========
+# Latest work
 
 I have put my latest project live. I started [Yuk](http://yuk.mattdeboard.net) ([source](https://github.com/mattdeboard/Yuk)) a couple of weeks ago as an exercise in developing an understanding of an MVC web framework, instead of using [flask](http://flask.pocoo.org) for everything. flask is great, but not knowing Django (and more importantly, Django's underlying principles) is a huge knowledge gap I wanted to address.
 

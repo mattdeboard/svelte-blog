@@ -2,12 +2,11 @@ public: yes
 tags: [programming]
 summary: Is programming an 'elite' career?
 
-Larry the Software Guy
-======================
+# Larry the Software Guy
 
 Anil Dash published [a blog post](http://dashes.com/anil/2012/10/the-blue-collar-coder.html) today I think is a victim of a bad title: "The Blue Collar Coder." I normally skim over the "Is programming an art, craft or science?" discussions but there were a couple of very smart programmers discussing it on Twitter, and I joined in. During the conversation, I vacillated between agreeing with Anil's proposition and agreeing with [Alex Feinberg](https://twitter.com/strlen/status/254369312884805632).
 
-I think the title is poor because programming will never be "blue collar." Anil knows that; he more or less admits it was basically caste-baiting in the first sentence of the final paragraph. Unfortunately, I think people reacted to the notion of a programmer being considered "blue collar" more than the *real* points I think he was trying to make. The tl;dr of Anil's blog post seems to be:
+I think the title is poor because programming will never be "blue collar." Anil knows that; he more or less admits it was basically caste-baiting in the first sentence of the final paragraph. Unfortunately, I think people reacted to the notion of a programmer being considered "blue collar" more than the _real_ points I think he was trying to make. The tl;dr of Anil's blog post seems to be:
 
 1.  A CS degree is overkill for most job openings
 2.  The "tech community" (??) should be focused on creating lots of jobs, not entrepreneurship

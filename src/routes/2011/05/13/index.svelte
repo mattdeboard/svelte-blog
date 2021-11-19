@@ -6,8 +6,7 @@
 	// export let date: `20${number}${number}/${number}${number}/${number}${number}`;
   let date = "2011/05/13";
   let source = `
-Chebyshev polynomials in LaTeX
-==============================
+# Chebyshev polynomials in LaTeX
 
 I'm recovering from an obsession with [Chebyshev polynomials](http://mathworld.wolfram.com/ChebyshevPolynomialoftheFirstKind.html). Despite the fancy title and somewhat-intimidating definition, Chebyshev polynomials are actually a fantastic shortcut -- relative to what we're taught from the book -- to factoring out trigonometric double-angle problems like `cos(6x)`.
 

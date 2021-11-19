@@ -2,15 +2,13 @@ tags: [django, python, haystack, whoosh]
 public: yes
 summary: Haystack/Whoosh auto-update script for Django
 
-Haystack index update script + cronjob
-======================================
+# Haystack index update script + cronjob
 
 [Yukmarks](http://yukmarks.com) doesn't really have any users except for me and my girlfriend, so updating the search index manually has never been very difficult. Just punch up my [fabfile](http://mattdeboard.net/2011/05/06/if-you-dont-use-fabric-do/) and run update_search(). Trivial.
 
 However, I am seriously, profoundly lazy, so all those keystrokes were getting annoying. Plus, manually updating search is just stupid & inefficient. I could use the same amount -- or less -- of keystrokes to just Ctrl-F on my Yukmarks [profile page](http://yukmarks.com/u:matt). So I wrote a script to automatically update my [Haystack](http://haystacksearch.org/) search. A cron job runs it every 15 minutes.
 
-The code
---------
+## The code
 
 ```python
 
@@ -73,13 +71,12 @@ srchupdate.py -c|mail -s "Search Update Complete" matt
 
 (I have it all on one line in crontab, but broken up into two here for ease of reading.)
 
-What do
--------
+## What do
 
 So basically every 15 minutes, the server runs [srchupdate.py](https://github.com/mattdeboard/Yuk/srchupdate.py), and logs the results to a log file outside the project directory. If the update fails, it logs the exit status values, stderr and stdout data (using the communicate() method and returnvalue attribute of Python's excellent `subprocess.Popen`). This captures traceback info and has made debugging much easier.
 
-The biggest source of friction is [Whoosh](https://bitbucket.org/mchaput/whoosh/wiki/Home), which powers my Haystack install. Whoosh is pure Python, and very easy to install. However, it is *extremely* slow. I'd probably even say ponderous. For ~350 bookmark entries on Yuk, it takes about 10 seconds to update. From what I understand, Solr is much faster, but has a much steeper learning curve. For Yukmarks, I think Whoosh is fine, but I doubt going forward I'd use it for any serious projects where speed is important.
+The biggest source of friction is [Whoosh](https://bitbucket.org/mchaput/whoosh/wiki/Home), which powers my Haystack install. Whoosh is pure Python, and very easy to install. However, it is _extremely_ slow. I'd probably even say ponderous. For ~350 bookmark entries on Yuk, it takes about 10 seconds to update. From what I understand, Solr is much faster, but has a much steeper learning curve. For Yukmarks, I think Whoosh is fine, but I doubt going forward I'd use it for any serious projects where speed is important.
 
 If you got here after Googling for a Haystack auto-update solution, I hope this helps.
 
-*Edit: Removed a paragraph about incremental indexing. Haystack does this by default.*
+_Edit: Removed a paragraph about incremental indexing. Haystack does this by default._

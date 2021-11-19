@@ -2,11 +2,9 @@ public: yes
 tags: [git,python]
 summary: Use git & Python to auto-generate changelogs.
 
-Using git & Python to autogen changelogs
-========================================
+# Using git & Python to autogen changelogs
 
-Background
-----------
+## Background
 
 As part of the communication process at work, devs maintain changelogs for some of our projects. What these consist of is a single `RELEASE NOTES.md` file in the project root, where each each line is a Markdown hyperlink to the pull request that introduced the change. These pull request links are then grouped together by date of release. The changelog looks like:
 
@@ -22,8 +20,7 @@ As part of the communication process at work, devs maintain changelogs for some 
 
 At first, these were created by having devs also update `RELEASE NOTES.md` with each pull request. This distributed the workload, but it also made having multiple pull requests a big pain in the ass since the same file, usually the same line in the same file, was being modified by multiple pull requests. So we stopped that practice and instead moved to a hand-made `RELEASE NOTES.md` file, maintained by these de facto primaries. Obviously this kind of work is sub-optimal and ripe for automation. For months though, streamlining the process fell far down on the priority list until I just couldn't take it anymore.
 
-git log
--------
+## git log
 
 When I am automating a repetitive task like this, my goal is to write as little code as possible. In thise case, that means massaging the output of [git log to get me as close to the desired final format of the changelog lines as possible. In other words, I only want to output merge commits. We can do that with:
 
@@ -50,8 +47,7 @@ But let's get really close now to the desired final output:
 
 Now, every merge commit appears as a two-line entry. The first is the merge commit message. The second is the pull request description. For bonus points ,the second line looks almost exactly like the changelog lines, except using Python string interpolation variables embedded in place of the PR number.
 
-Python
-------
+## Python
 
 It's great that we have just the info we want, but I know we're also going to need to do two things:
 
@@ -165,8 +161,7 @@ Or, specify an output file:
 $ ./release 1.7 HEAD ./RELEASE NOTES.md
 ```
 
-Conclusion
-----------
+## Conclusion
 
 One additional step I took is to create a git alias for the git log command, but prettied up a bit, for when I want to just scan through the differences from one version to the next. If you'd like to do the same, add the following to the \[alias\] section of `~/.gitconfig`:
 
@@ -175,6 +170,7 @@ One additional step I took is to create a git alias for the git log command, but
       -%C(yellow)%d%Creset %C(bold cyan)%s %Cgreen(%cr)%n%Creset%n - %b%n' \
       --abbrev-commit --date=relative --merges
 ```
+
 You can also achieve the same effect by entering the following at the CLI:
 
 ```shell
@@ -182,6 +178,7 @@ You can also achieve the same effect by entering the following at the CLI:
       %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %C(bold cyan)%s \
       %Cgreen(%cr)%n%Creset%n - %b%n' --abbrev-commit --date=relative --merges"
 ```
+
 (The escaped newlines aren't necessary, only including them to keep the line length down on the page.)
 
 Please leave a comment if you have questions or spot an error. Thanks.
