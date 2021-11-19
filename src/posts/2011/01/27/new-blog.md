@@ -1,5 +1,5 @@
 public: yes
-tags: \[rstblog\]
+tags: [rstblog]
 summary: New blog, some new projects.
 
 No More Tumblr

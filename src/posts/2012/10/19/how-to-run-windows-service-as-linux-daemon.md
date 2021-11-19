@@ -1,5 +1,5 @@
 public: yes
-tags: \[supervisor,mono,mono-service,clr,dotnet\]
+tags: [supervisor,mono,mono-service,clr,dotnet]
 summary: mono-service + supervisor
 
 How to Run a Windows Service As A Linux Daemon

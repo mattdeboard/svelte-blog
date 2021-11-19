@@ -1,5 +1,5 @@
 public: yes
-tags: \[trunkly\]
+tags: [trunkly]
 summary: A recap of my work with Trunk.ly.
 
 Initiative and Assistance

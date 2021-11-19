@@ -1,5 +1,5 @@
 public: yes
-tags: \[intern, career\]
+tags: [intern, career]
 summary: In which hard work pays off.
 
 Changing Careers at 31

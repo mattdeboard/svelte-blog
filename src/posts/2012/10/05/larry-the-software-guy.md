@@ -1,5 +1,5 @@
 public: yes
-tags: \[programming\]
+tags: [programming]
 summary: Is programming an 'elite' career?
 
 Larry the Software Guy

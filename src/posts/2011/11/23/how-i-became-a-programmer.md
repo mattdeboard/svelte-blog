@@ -1,5 +1,5 @@
 public: yes
-tags: \[programming, career\]
+tags: [programming, career]
 
 How I Became a Programmer
 =========================
