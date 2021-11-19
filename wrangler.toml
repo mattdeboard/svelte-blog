@@ -7,7 +7,12 @@ route = "svelte-blog.mattdeboard.workers.dev/*"
 zone_id = ""
 compatibility_date = "2021-11-18"
 
-[[kv_namespaces]]
-binding = "BLOG_POSTS"
-id = "519bb70095e14269a7b974235758e987"
-preview_id = "96f38ee473f24a1285ce439113db3163"
+[site]
+bucket = "./static"
+
+kv_namespaces = [
+  { binding = "BLOG_POSTS", bucket = "./static", id = "519bb70095e14269a7b974235758e987", preview_id = "96f38ee473f24a1285ce439113db3163" },
+  { binding = "ARTICLE_TAGS", bucket = "./static", id = "fe6cd392ea034f39bf62c5c9ea18d34d", preview_id = "1597f533d4994369953dd0b63724395b" },
+  { binding = "ARTICLE_SUMMARIES", bucket = "./static", id = "30fd667d4b0b45b093aad6f1924ff437", preview_id = "163415bf44a34764888dd0d5d814f380" },
+  { binding = "ARTICLE_PUBLIC_STATUS", bucket = "./static", id = "04f5f3b4b415442e9613af05e0c7a843", preview_id = "5db0d2db97d74aef90de75112a17e615" },
+]
