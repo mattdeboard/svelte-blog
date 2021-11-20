@@ -1,23 +1,23 @@
 <script lang="ts">
-	import Article from '../components/Article.svelte';
-	let promise = Promise.resolve('');
+  import Article from '../components/Article.svelte';
+  let promise = Promise.resolve('');
 
-	// import ArticleList from '../components/ArticleList/ArticleList.svelte';
-	// import SvelteMarkdown from 'svelte-markdown';
+  // import ArticleList from '../components/ArticleList/ArticleList.svelte';
+  // import SvelteMarkdown from 'svelte-markdown';
 
-	// async function fetchPost() {
-	// 	const data = await fetch(
-	// 		'/src/posts/2014/01/14/automatic-changelog-generation-with-git.md'
-	// 	).then((response) => response.text());
-	// 	console.log('Data:', data);
-	// 	return data;
-	// }
-	// let promise = fetchPost();
+  // async function fetchPost() {
+  // 	const data = await fetch(
+  // 		'/src/posts/2014/01/14/automatic-changelog-generation-with-git.md'
+  // 	).then((response) => response.text());
+  // 	console.log('Data:', data);
+  // 	return data;
+  // }
+  // let promise = fetchPost();
 </script>
 
 {#await promise}
-	<p>...waiting</p>
+  <p>...waiting</p>
 {:then markdown}
-	<!-- <SvelteMarkdown source={markdown} /> -->
-	<Article />
+  <!-- <SvelteMarkdown source={markdown} /> -->
+  <Article />
 {/await}
