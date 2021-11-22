@@ -15,4 +15,5 @@ kv_namespaces = [
   { binding = "ARTICLE_TAGS", bucket = "./static", id = "fe6cd392ea034f39bf62c5c9ea18d34d", preview_id = "1597f533d4994369953dd0b63724395b" },
   { binding = "ARTICLE_SUMMARIES", bucket = "./static", id = "30fd667d4b0b45b093aad6f1924ff437", preview_id = "163415bf44a34764888dd0d5d814f380" },
   { binding = "ARTICLE_PUBLIC_STATUS", bucket = "./static", id = "04f5f3b4b415442e9613af05e0c7a843", preview_id = "5db0d2db97d74aef90de75112a17e615" },
+  { binding = "PARSED_ARTICLES", bucket = "./static", id = "fed04a36ac7545b8a6c0fcfb31842baa", preview_id = "d173b36e58254bc48a2f06cb11935511" },
 ]
