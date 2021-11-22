@@ -17,9 +17,12 @@
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
+    "cloudflare-workers-kv": "^1.0.0",
+    "dotenv": "^10.0.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
+    "node-fetch": "^3.1.0",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
     "pygmentize-bundled-cached": "^1.1.0",
@@ -32,7 +35,7 @@
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "wrangler": "^0.0.0-fsw-beta.5"
   }
