@@ -1,6 +1,6 @@
 {
   "name": "svelte-blog",
-  "main": ".svelte-kit/output/server/app.js",
+  "main": "workers-site/index.js",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
@@ -18,7 +18,6 @@
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "cloudflare-workers-kv": "^1.0.0",
-    "dotenv": "^10.0.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
@@ -35,8 +34,5 @@
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
-  "type": "commonjs",
-  "dependencies": {
-    "wrangler": "^0.0.0-fsw-beta.5"
-  }
+  "type": "module"
 }

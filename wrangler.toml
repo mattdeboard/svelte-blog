@@ -3,13 +3,9 @@ type = "javascript"
 
 account_id = "ff404933c2aa00ddef4fe1e588481df5"
 workers_dev = true
-route = "svelte-blog.mattdeboard.workers.dev/*"
+# route = "svelte-blog.mattdeboard.workers.dev/*"
 zone_id = ""
 compatibility_date = "2021-11-18"
-
-[site]
-bucket = "./static"
-
 kv_namespaces = [
   { binding = "BLOG_POSTS", bucket = "./static", id = "519bb70095e14269a7b974235758e987", preview_id = "96f38ee473f24a1285ce439113db3163" },
   { binding = "ARTICLE_TAGS", bucket = "./static", id = "fe6cd392ea034f39bf62c5c9ea18d34d", preview_id = "1597f533d4994369953dd0b63724395b" },
@@ -17,3 +13,15 @@ kv_namespaces = [
   { binding = "ARTICLE_PUBLIC_STATUS", bucket = "./static", id = "04f5f3b4b415442e9613af05e0c7a843", preview_id = "5db0d2db97d74aef90de75112a17e615" },
   { binding = "PARSED_ARTICLES", bucket = "./static", id = "fed04a36ac7545b8a6c0fcfb31842baa", preview_id = "d173b36e58254bc48a2f06cb11935511" },
 ]
+
+[site]
+bucket = "./static"
+entry-point = "./workers-site"
+
+[build]
+command = "npm run build && wrangler publish"
+name = "svelte-blog"
+
+[build.upload]
+format = "service-worker"
+main = "workers-site/index.js"

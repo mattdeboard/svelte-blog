@@ -1,7 +1,7 @@
 <script lang="ts">
-  let link = '::link::';
-  let summary = '::summary::';
-  let date = '::date::';
+  export let link;
+  export let summary;
+  export let date;
 </script>
 
 <div class="entry-overview">

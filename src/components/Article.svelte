@@ -1,7 +1,6 @@
 <script lang="ts">
-  import SvelteMarkdown from 'svelte-markdown';
-  let date = '::date::';
-  let source = '::source::';
+  import SvelteMarkdown from "svelte-markdown";
+  export let date: string, source: string, tags: string | undefined;
 </script>
 
 <div>
@@ -10,5 +9,8 @@
   <div class="content">
     <!-- svelte-ignore missing-declaration -->
     <SvelteMarkdown {source} />
+    {#if tags?.length}
+      <div>Tagged with: {tags}</div>
+    {/if}
   </div>
 </div>
