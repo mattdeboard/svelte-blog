@@ -11,7 +11,7 @@
   });
   onDestroy(unsubscribe);
   export let appState;
-  console.log(appState);
+  // console.log(appState);
 </script>
 
 <!-- svelte-ignore -->

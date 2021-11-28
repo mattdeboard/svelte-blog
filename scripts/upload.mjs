@@ -74,7 +74,7 @@ async function parseAndPutPayload(chunk, key) {
     ...groups,
     body: body.trim(),
   };
-  console.log(JSON.stringify(payload));
+  // console.log(JSON.stringify(payload));
   return kv.put(key, JSON.stringify(payload));
 }
 

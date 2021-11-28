@@ -19,9 +19,9 @@ bucket = "./static"
 entry-point = "./workers-site"
 
 [build]
-command = "npm run build && wrangler publish"
-name = "svelte-blog"
+command = "npm run build"
+# name = "svelte-blog"
 
 [build.upload]
 format = "service-worker"
-main = "workers-site/index.js"
+# main = "workers-site/index.js"

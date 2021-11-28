@@ -1,10 +1,3 @@
-<script context="module">
-  /** @type {import('@sveltejs/kit').Load} */
-  export function load({ fetch }) {
-    return true;
-  }
-</script>
-
 <script lang="ts">
   import Article from "../components/Article.svelte";
   import { indexStore } from "../stores";

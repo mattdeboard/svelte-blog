@@ -12,9 +12,8 @@
   indexStore.subscribe(state => {
     hasFetched = state.hasFetched;
   });
-  console.log(hasFetched);
+  // console.log(hasFetched);
 
-  var BASE_PATH = "https://api.cloudflare.com/client/v4/accounts";
   kv.init({
     variableBinding: import.meta.env.VITE_KV_BINDING,
     namespaceId: import.meta.env.VITE_PARSED_ARTICLES_NAMESPACE_ID,
@@ -23,7 +22,7 @@
     apiKey: import.meta.env.VITE_WORKERS_KV_API_KEY,
   });
 
-  export async function load({ fetch: skFetch, page }) {
+  export async function load({ page }) {
     const response = await kv.get(
       `${page.params.pubYear}/${page.params.pubMonth}/${page.params.pubDay}`
     );
