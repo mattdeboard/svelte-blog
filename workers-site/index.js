@@ -54,24 +54,37 @@
     );
   };
 
-  // .svelte-kit/output/server/chunks/layout-84a7d8b4.js
-  var layout_84a7d8b4_exports = {};
-  __export(layout_84a7d8b4_exports, {
-    default: () => Layout,
+  // .svelte-kit/output/server/chunks/__layout-5c9bf14a.js
+  var layout_5c9bf14a_exports = {};
+  __export(layout_5c9bf14a_exports, {
+    default: () => _layout,
   });
-  var Layout;
-  var init_layout_84a7d8b4 = __esm({
-    ".svelte-kit/output/server/chunks/layout-84a7d8b4.js"() {
-      init_app_f96727fd();
-      Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-        return `${slots.default ? slots.default({}) : ``}`;
+  var _layout;
+  var init_layout_5c9bf14a = __esm({
+    ".svelte-kit/output/server/chunks/__layout-5c9bf14a.js"() {
+      init_app_bb99931b();
+      _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        return `<div class="${"container"}"><div class="${"span-24 last"}" id="${"header"}"><a href="${"http://mattdeboard.net"}">Matt DeBoard</a></div>
+
+  <div class="${"span-24"}" id="${"menu"}"><a href="${"http://mattdeboard.net/projects/"}">projects</a>
+    <a href="${"http://twitter.com/#%21/matt_deboard"}" target="${"_blank"}">twitter</a>
+    <a href="${"https://github.com/mattdeboard"}" target="${"_blank"}">github</a>
+    <a href="${"http://mattdeboard.tumblr.com"}" target="${"_blank"}">tumblr archives</a>
+    <a href="${"http://mattdeboard.net/feed.atom"}" target="${"_blank"}">rss feed</a></div>
+
+  <div class="${"span-14"}" id="${"content"}">${
+          slots.default ? slots.default({}) : ``
+        }</div>
+
+  <div class="${"span-24 last"}" id="${"footer"}"></div>
+  <div class="${"span-24 last"}" id="${"disqus_thread"}"></div></div>`;
       });
     },
   });
 
-  // .svelte-kit/output/server/chunks/error-85466862.js
-  var error_85466862_exports = {};
-  __export(error_85466862_exports, {
+  // .svelte-kit/output/server/chunks/error-b49918bc.js
+  var error_b49918bc_exports = {};
+  __export(error_b49918bc_exports, {
     default: () => Error2,
     load: () => load,
   });
@@ -79,9 +92,9 @@
     return { props: { error: error2, status } };
   }
   var Error2;
-  var init_error_85466862 = __esm({
-    ".svelte-kit/output/server/chunks/error-85466862.js"() {
-      init_app_f96727fd();
+  var init_error_b49918bc = __esm({
+    ".svelte-kit/output/server/chunks/error-b49918bc.js"() {
+      init_app_bb99931b();
       Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         let { status } = $$props;
         let { error: error2 } = $$props;
@@ -101,11 +114,144 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
     },
   });
 
-  // .svelte-kit/output/server/chunks/index-c0b20ccf.js
-  var index_c0b20ccf_exports = {};
-  __export(index_c0b20ccf_exports, {
+  // .svelte-kit/output/server/chunks/index-c092dd3d.js
+  var index_c092dd3d_exports = {};
+  __export(index_c092dd3d_exports, {
     default: () => Routes,
   });
+  var ArticleSummary, Routes;
+  var init_index_c092dd3d = __esm({
+    ".svelte-kit/output/server/chunks/index-c092dd3d.js"() {
+      init_app_bb99931b();
+      ArticleSummary = create_ssr_component(
+        ($$result, $$props, $$bindings, slots) => {
+          let { date: date18, summary, title } = $$props;
+          if ($$props.date === void 0 && $$bindings.date && date18 !== void 0)
+            $$bindings.date(date18);
+          if (
+            $$props.summary === void 0 &&
+            $$bindings.summary &&
+            summary !== void 0
+          )
+            $$bindings.summary(summary);
+          if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+            $$bindings.title(title);
+          return `<div class="${"entry-overview"}"><div class="${"date"}">${escape(
+            date18,
+          )}</div>
+  <div class="${"detail"}"><a${add_attribute("href", `/${date18}`, 0)}>${escape(
+            title,
+          )}</a>
+
+    <div class="${"summary"}"><p>${escape(summary)}</p></div></div></div>
+<hr>`;
+        },
+      );
+      Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let articles = [
+          {
+            summary: "A recap of my work with Trunk.ly.",
+            title: "Initiative and Assistance",
+            date: "2010/12/27",
+          },
+          {
+            summary: "Use git & Python to auto-generate changelogs.",
+            title: "Using git & Python to autogen changelogs",
+            date: "2014/01/14",
+          },
+          {
+            summary:
+              "A drop-in Haystack resource class for django-tastypie APIs.",
+            title: "REST API for search results",
+            date: "2012/02/07",
+          },
+          {
+            summary: "mono-service + supervisor",
+            title: "How to Run a Windows Service As A Linux Daemon",
+            date: "2012/10/19",
+          },
+          {
+            summary: "Is programming an 'elite' career?",
+            title: "Larry the Software Guy",
+            date: "2012/10/05",
+          },
+          {
+            summary: "",
+            title: "How I Became a Programmer,",
+            date: "2011/11/23",
+          },
+          {
+            summary: "My latest projects",
+            title: "Latest work",
+            date: "2011/02/14",
+          },
+          {
+            summary: "In which hard work pays off.",
+            title: "Changing Careers at 31",
+            date: "2011/06/17",
+          },
+          {
+            summary: "Help with hitting eject from Facebook",
+            title: "Export ALL Your Facebook Photos Easily",
+            date: "2011/07/01",
+          },
+          {
+            summary:
+              "Generate LaTeX-formatted string representation of a Chebyshev polynomial of nth degree.",
+            title: "Chebyshev polynomials in LaTeX",
+            date: "2011/05/13",
+          },
+          {
+            summary: "Haystack/Whoosh auto-update script for Django",
+            title: "Haystack index update script + cronjob",
+            date: "2011/05/08",
+          },
+          {
+            summary: "Derek died.",
+            title: "No Regrets,",
+            date: "2011/05/04",
+          },
+          {
+            summary: "Be lazy.",
+            title: "Python code deployment with Fabric",
+            date: "2011/05/06",
+          },
+          {
+            summary: "Config & maintenance of Armin Ronacher's rstblog",
+            title: "My guide to rstblog",
+            date: "2011/05/09",
+          },
+          {
+            summary: "A setback is just a setup for a-- oh dear I frew up.",
+            title: "Python-Powered Smash'n'Grab",
+            date: "2011/05/12",
+          },
+          {
+            summary: "New blog",
+            title: "No More Tumblr",
+            date: "2011/01/27",
+          },
+          {
+            summary: "",
+            title: "Displacing MySQL with...Solr?,",
+            date: "2011/12/29",
+          },
+        ];
+        return `${each(
+          articles,
+          article =>
+            `${validate_component(ArticleSummary, "ArticleSummary").$$render(
+              $$result,
+              Object.assign(article),
+              {},
+              {},
+            )}`,
+        )}`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/SvelteMarkdown-b91e19e3.js
   function getDefaults$1() {
     return {
       baseUrl: null,
@@ -478,13 +624,6 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
       throw e;
     }
   }
-  async function fetchPost() {
-    const data = await fetch(
-      "/src/posts/2014/01/14/automatic-changelog-generation-with-git.md",
-    ).then(response => response.text());
-    console.log("Data:", data);
-    return data;
-  }
   var Parser$1,
     defaults$5,
     escapeTest,
@@ -572,12 +711,10 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
     defaultOptions,
     Lexer2,
     Slugger2,
-    SvelteMarkdown,
-    Article,
-    Routes;
-  var init_index_c0b20ccf = __esm({
-    ".svelte-kit/output/server/chunks/index-c0b20ccf.js"() {
-      init_app_f96727fd();
+    SvelteMarkdown;
+  var init_SvelteMarkdown_b91e19e3 = __esm({
+    ".svelte-kit/output/server/chunks/SvelteMarkdown-b91e19e3.js"() {
+      init_app_bb99931b();
       Parser$1 = create_ssr_component(
         ($$result, $$props, $$bindings, slots) => {
           let $$restProps = compute_rest_props($$props, [
@@ -2559,10 +2696,7 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
                 for (j = 0; j < l2; j++) {
                   cell += this.renderer.tablecell(
                     this.parseInline(token.tokens.header[j]),
-                    {
-                      header: true,
-                      align: token.align[j],
-                    },
+                    { header: true, align: token.align[j] },
                   );
                 }
                 header += this.renderer.tablerow(cell);
@@ -3288,63 +3422,1607 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
           )}`;
         },
       );
-      Article = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-        let { title } = $$props;
-        let { articleBody } = $$props;
-        let { date } = $$props;
-        if ($$props.title === void 0 && $$bindings.title && title !== void 0)
-          $$bindings.title(title);
-        if (
-          $$props.articleBody === void 0 &&
-          $$bindings.articleBody &&
-          articleBody !== void 0
-        )
-          $$bindings.articleBody(articleBody);
-        if ($$props.date === void 0 && $$bindings.date && date !== void 0)
-          $$bindings.date(date);
-        return `
-
-
-<div><h1 class="${"title"}">${escape(title)}</h1>
-	<p class="${"date"}">written on ${escape(date)}</p>
-	<div class="${"content"}">
-		${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
-      $$result,
-      { source: articleBody },
-      {},
-      {},
-    )}</div></div>`;
-      });
-      Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-        let promise = fetchPost();
-        return `${(function (__value) {
-          if (is_promise(__value)) {
-            __value.then(null, noop);
-            return `
-	<p>...waiting</p>
-`;
-          }
-          return (function (markdown) {
-            return `
-	
-	${validate_component(Article, "Article").$$render(
-    $$result,
-    {
-      title: "Neato",
-      articleBody: markdown,
-      date: "Today!",
     },
-    {},
-    {},
-  )}
+  });
+
+  // .svelte-kit/output/server/chunks/index-4a3e7509.js
+  var index_4a3e7509_exports = {};
+  __export(index_4a3e7509_exports, {
+    default: () => _27,
+  });
+  var date, _27;
+  var init_index_4a3e7509 = __esm({
+    ".svelte-kit/output/server/chunks/index-4a3e7509.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date = "2010/12/27";
+      _27 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Initiative and Assistance
+
+I have kept a bookmark to Joel Spolsky's [article](http://www.joelonsoftware.com/articles/Unicode.html) on Unicode and character sets on my work computer for ages. So last week, with all the buzz about the demise of del.icio.us, I finally decided it was a good time to find a link manager service to have a persistent place for such things. That brought me to Trunk.ly, a link aggregation service that pulls in links from Twitter, Facebook, etc., and started using it immediately.
+
+After reading their first blog post (discussing their not-quite-when-we-planned-to-launch launch), I could kind of tell they were feeling the heat to ramp up development to handle their influx of traffic. Not only that but with their growing userbase they were also dealing with requests for new features and bugfixes.
+
+Just on a lark, looking for a new project to work on, I sent them a message using their "Contact Us" form that simply asked, "Is there any way to contribute help to Trunk.ly?"
+
+I was surprised when they wrote back, and even more surprised when they gave me a small and straightforward feature (RSS feed importing) to implement. It has been fulfilling, educational and entertaining writing code for something that a lot of people use, not to mention actually helping a couple of real developers out by giving them my time. I am sure they will have to revise it, given that I'm not exactly the world's most experienced developer of production-quality code. That being said, I'm pretty proud of the little bit I've done. Added bonus: I'm not embarrassed about my github repos anymore, since I've got something actually useful in there now.
+
+I guess the lesson here is that to find a project to work on in order to hone your skills, ask the people who make the things you have a use for if you can help. I'm much more optimistic the answer will be "yes" in the future (and infinitely more confident that I'll actually be able to pull off executing the task I've been given!).
 `;
-          })(__value);
-        })(promise)}`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
       });
     },
   });
 
-  // .svelte-kit/output/server/chunks/app-f96727fd.js
+  // .svelte-kit/output/server/chunks/index-915fe2f8.js
+  var index_915fe2f8_exports = {};
+  __export(index_915fe2f8_exports, {
+    default: () => _272,
+  });
+  var date2, _272;
+  var init_index_915fe2f8 = __esm({
+    ".svelte-kit/output/server/chunks/index-915fe2f8.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date2 = "2011/01/27";
+      _272 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# No More Tumblr
+
+A week or two ago I decided to stop using Tumblr and "roll my own" blog. Since I've been using [flask](http://flask.pocoo.org) to put [some projects](http://mattdeboard.net/projects) on the web, I decided to give [rstblog](https://github.com/mitsuhiko/rstblog) a go. (Both written by the [same guy](http://lucumr.pocoo.org).)
+
+rstblog is very much a very "small" blog app, with only very minimal documentation. Thankfully [Morten Siebuhr](http://sbhr.dk/2010/11/30/using_rstblog/) put together a nice beginner's course on how to implement it. I referenced it heavily, though there were still some bumps on the road. Mostly, it took me awhile to realize you have to rm -r _build/ everytime you run-rstblog build. I was wondering why all of my links weren't updating; it was because when you do "run-rstblog build", it only seems to create templates that already exist. I don't have a great explanation. But if you're looking for rstblog tips, here's mine: rm -r _build/ every time you run-rstblog build.
+
+I have also added a link to select projects in the header and generally cleaned and centralized everything.
+
+Getting my blog in a somewhat finalized form also marks the end of the beginning of my movement toward setting up my own web server to function as a place to host my own projects, including the blog. I realize for most people who will read this running a webserver isn't that big a deal, and maybe even something you were doing in high school or before. But for me, this has been a new thing and a tremendous learning experience. Much thanks to Brett Hoerner for his [post on configuring Apache2 and nginx](http://bretthoerner.com/2008/10/9/configs-for-nginx-and-apache-mod-wsgi) for mod_wsgi. They've been a great reference source as I fumble with those two services.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date2)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-6d9e28b3.js
+  var index_6d9e28b3_exports = {};
+  __export(index_6d9e28b3_exports, {
+    default: () => _14,
+  });
+  var date3, _14;
+  var init_index_6d9e28b3 = __esm({
+    ".svelte-kit/output/server/chunks/index-6d9e28b3.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date3 = "2011/02/14";
+      _14 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Latest work
+
+I have put my latest project live. I started [Yuk](http://yuk.mattdeboard.net) ([source](https://github.com/mattdeboard/Yuk)) a couple of weeks ago as an exercise in developing an understanding of an MVC web framework, instead of using [flask](http://flask.pocoo.org) for everything. flask is great, but not knowing Django (and more importantly, Django's underlying principles) is a huge knowledge gap I wanted to address.
+
+So, Yuk. The least important point first: The name is stupid. Since Yuk is a bookmarking service, I thought it would be cute to play off "delicious" with ... well, you get it. Dumb idea. "Rebranding" isn't really a priority though.
+
+Though the name was a play off "del.icio.us", I have actually written the site using [pinboard.in](http://pinboard.in) as a model, at least in terms of features and design. Pinboard is a really fast, dead simple bookmark service with a lot of great features that don't overshadow/obscure the site's core functionality. Having a model to base my work on has been very helpful.
+
+My first task was to set about getting Yuk's own core functionality -- saving user-defined URLs to a database -- working. For the framework I chose Django, and for the database I chose sqlite3, for simplicity. An additional point to this project was to gain familiarity with databases, especially how to design them so that model relations not only work, but make sense. I've still got a long, long way to go on this point. Be that as it may, as I said I chose sqlite3 for simplicity (simplicity being a codeword for what the Django docs recommended for a small project). It is fine for my uses and has been a great hands-on exercise.
+
+One side effect of this project was finally getting a handle on Python classes. Since I'd never undertaken a project that called for them, I'd never really understood what they were for/why they would be used. That is, I could implement a class by regurgitating I'd read -- the 'self' concept, the __init__ function, and so forth -- but I wouldn't actually understand. However, because of some of the details of implementing a bookmarking service, I have had the opportunity to define classes, subclasses, overwrite functions, and so forth within Django's MVC structure. If I learned absolutely nothing else, the time I've spent on this project would have been worth it simply for having a reason to implement classes.
+
+After nailing down storing bookmarks to the database, then came user registration/accounts. I don't have much to say about this since Django core and the [django-registration](http://code.google.com/p/django-registration/) app make it ridiculously simple. I still need to customize the URL config for the registration/login/logout views, but since it works so well right out of the box, it has been a low priority.
+
+Since then, I've put in a few additional features, such as timestamps, tagging, RSS importing (a chance to reuse [some code](https://github.com/mattdeboard/trunkly-rss) I'd written for another self-learning [project](http://mattdeboard.net/2010/12/27/Taking-initiative-and-offering-assistance)), editing and deleting. Thanks to that last item, I finally wrote some JavaScript, thanks to the JQuery library. It's not impressive code but it works, and enhances the UI (though in kind of a hacky fashion).
+
+Yuk isn't done. It's really ugly, and there are some features on my back-of-a-napkin roadmap I'll be implementing this week. That being said I think I can start tightening my code up without it being "premature optimization."
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date3)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-99dbca5b.js
+  var index_99dbca5b_exports = {};
+  __export(index_99dbca5b_exports, {
+    default: () => _04,
+  });
+  var date4, _04;
+  var init_index_99dbca5b = __esm({
+    ".svelte-kit/output/server/chunks/index-99dbca5b.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date4 = "2011/05/04";
+      _04 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+# No Regrets
+
+I was inspired by the farewell post of a man I've never heard of, published the day of his death. Well, maybe less "inspired" and more "filled with relief and gratitude." You can read his letter [here](http://www.penmachine.com/2011/05/the-last-post). At the time of this writing, however, that link is being hammered by, I'm sure, an overwhelming surge of traffic as word of this post makes its way around the web. Here is Google's [cache](http://webcache.googleusercontent.com/search?q=cache:http://www.penmachine.com/2011/05/the-last-post), and here is a [pastebin](http://pastebin.ca/2053916) copy. It's worth a read, but be forewarned: It is pretty wrenching.
+
+Derek's post-mortem post made me glad I'm living the life I'm living now. I'm 31 years old -- 32 in a month -- and while my daughter Emma is at school, I spend the day programming, running errands, reading, and otherwise pursuing my own personal interests. When she gets home, I make sure she does her homework, I make dinner, I sleep.
+
+Every morning I get to wake up next to a beautiful, brilliant, driven woman who's several years my junior but has a firmer grasp of what matters in life than I think I could have ever hoped to in my 20s. I have never felt better about another person in my life.
+
+I have no bills and I maintain a modest lifestyle. I am attending university for a degree in a subject about which I'm passionate, and which will make me some extra money down the road when I need it.
+
+I set my own schedule every day, fitted around picking up & dropping off my daughter at school. Beyond the normal stresses of being a single parent, my life is astoundingly, remarkably, wonderfully, joyously stress-free. For the first time in my life, I think, I don't have anything to complain about.
+
+Reading Derek's post has affirmed the decisions I've made to put me in this position. I regret nothing, and just about every day is awesome. If you've read this far, please don't take this as shameless bragging. It is a sincere expression of gratitude to Derek, and a grinning shout of relief at the sky that I have let so many unnecessary, trivial things fall away from my life over the past few years.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date4)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-afd76937.js
+  var index_afd76937_exports = {};
+  __export(index_afd76937_exports, {
+    default: () => _06,
+  });
+  var date5, _06;
+  var init_index_afd76937 = __esm({
+    ".svelte-kit/output/server/chunks/index-afd76937.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date5 = "2011/05/06";
+      _06 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Python code deployment with Fabric
+
+So last night at the [IndyPy](http://www.meetup.com/python-182/) meetup I gave a very impromptu talk on [Fabric](http://www.meetup.com/python-182/). It lasted maybe five minutes and afterward I really felt like I just did not do this great tool justice. In order to make up for that, I thought I'd dive in a little deeper to Fabric.
+
+## Why I am an idiot
+
+First and foremost, I love Fabric because **it lets me be lazy**. For far too long while I was developing [Yukmarks](http://yukmarks.com), I was manually typing things like:
+
+\`\`\`bash
+# On local:
+ssh my-ip-address.com
+
+# On remote:
+git pull && sudo /etc/init.d/apache2 restart && ./manage.py dump_data && pg_dump >> foo.txt
+\`\`\`
+
+That's right:
+
+> 1.  ssh to my "production" server
+> 2.  pull the latest revisions
+> 3.  use django's built-in data dump to back up my database
+> 4.  _also_ use the postgres dump
+> 5.  not pictured: updating the [Haystack](http://haystacksearch.org/) search index for [Whoosh](https://bitbucket.org/mchaput/whoosh/wiki/Home)
+
+You get the picture. It was ugly, and stupid, and time consuming, and I literally cannot believe that I spent all those calories typing those commands in over... and over... and over again.
+
+## Why I love Fabric
+
+So then [someone](http://bretthoerner.com) introduced me to Fabric. I now use Fabric to automate code deployment. (See my full fabfile [here](https://github.com/mattdeboard/Yuk/blob/master/fabfile.py).)
+
+(In no way do I claim to use Fabric to its full potential, nor do I claim to be an expert, nor do I claim that my fabfile is _fabulous_. If you've got tips or corrections, please leave them in the comments.)
+
+To make Fabric work, you just import the API and you're off:
+
+\`\`\`python
+
+from fabric.api import *
+from hosts import hosts, secret
+
+# I keep my hosts and auth data in a local file called hosts.py
+env.password = secret
+env.hosts = hosts
+
+def git_pull():
+
+    run("cd %s; . bin/activate; cd %s; git pull; ./manage.py schemamigration"
+
+    :   " --auto yuk; ./manage.py migrate yuk;cp %s* %s;sudo /etc/init.d/apache2"
+        " force-reload" % (domain_dir, appdir, css_dir, static_file_dir))
+\`\`\`
+
+The above code is exactly what it looks like: a number of semicolon-separated shell commands. It's probably the most idiot-proof, time-saving thing I've ever used. Please see the below:
+
+![Curiously, coding in Java while flying an airplane moves both dots toward the center.](/static/GRAPH.png)
+
+Stop typing so much. Fabric makes things ridiculously easy.
+
+**Edit 5/8/11**: I actually reduced the complexity of my update_index() fabfile function quite a bit. I was doing a lot of really stupid chowning back and forth, which I've now fixed. Old:
+
+\`\`\`python
+
+def update_search():
+
+:   run("cd %s; . bin/activate; cd %s; sudo chown matt:matt %s; sudo chown matt"
+    ":matt %s*; ./manage.py update_index; sudo chown www-<data:www-data> %s; "
+    "sudo chown www-<data:www-data> %s*; sudo /etc/init.d/apache2 force-reloa"
+    "d" % (domain_dir, appdir, whoosh_dir,
+    whoosh_dir, whoosh_dir, whoosh_dir))
+\`\`\`
+
+New:
+
+\`\`\`python
+
+def update_search():
+
+:
+
+    run("sudo -u www-data /a/mattdeboard.net/bin/python %smanage.py update_inde"
+
+    :   "x; sudo /etc/init.d/apache2 force-reload" % appdir)
+\`\`\`
+
+**p.s.** In addition to Fabric, you'll definitely want to incorporate cron & creative use of your Makefile to make your life easier. Consult [the github repo](https://github.com/mattdeboard/Yuk) for Yukmarks.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date5)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-ee0262a0.js
+  var index_ee0262a0_exports = {};
+  __export(index_ee0262a0_exports, {
+    default: () => _08,
+  });
+  var date6, _08;
+  var init_index_ee0262a0 = __esm({
+    ".svelte-kit/output/server/chunks/index-ee0262a0.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date6 = "2011/05/08";
+      _08 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Haystack index update script + cronjob
+
+[Yukmarks](http://yukmarks.com) doesn't really have any users except for me and my girlfriend, so updating the search index manually has never been very difficult. Just punch up my [fabfile](http://mattdeboard.net/2011/05/06/if-you-dont-use-fabric-do/) and run update_search(). Trivial.
+
+However, I am seriously, profoundly lazy, so all those keystrokes were getting annoying. Plus, manually updating search is just stupid & inefficient. I could use the same amount -- or less -- of keystrokes to just Ctrl-F on my Yukmarks [profile page](http://yukmarks.com/u:matt). So I wrote a script to automatically update my [Haystack](http://haystacksearch.org/) search. A cron job runs it every 15 minutes.
+
+## The code
+
+\`\`\`python
+
+import subprocess
+import sys
+import logging
+
+domain_dir = "/a/mattdeboard.net/"
+appdir = domain_dir + "src/yukproj/"
+whoosh_dir = appdir + "yuk/whoosh/"
+
+def update():
+    logging.basicConfig(
+      filename='/a/mattdeboard.net/src/index.log',
+      level=logging.INFO,
+      format='%(asctime)s %(levelname)s:%(message)s',
+      datefmt='%m/%d/%Y %H:%M:%S'
+    )
+
+    logging.info('Starting index update.')
+    update_index = subprocess.Popen(['sudo', '-u', 'www-data',
+      domain_dir+'bin/python',
+      appdir+'manage.py', 'update_index'],
+      stdout=subprocess.PIPE,
+      stderr=subprocess.STDOUT)
+    update_index.wait()
+    apachereload = subprocess.Popen(['sudo',
+      '/etc/init.d/apache2',
+      'force-reload'],
+      stdout=subprocess.PIPE,
+      stderr=subprocess.STDOUT)
+    apachereload.wait()
+
+    if not any((update_index.returncode, apachereload.returncode)):
+      logging.info('Index successfully updated.')
+    else:
+      subs = [update_index, apachereload]
+      logging.error('**INDEX UPDATE FAILED**')
+      logging.error('The following exit codes were returned:')
+      logging.error('- update_index: %s' % update_index.returncode)
+      logging.error('- apachereload: %s' % apachereload.returncode)
+
+    for sub in subs:
+      if sub.returncode:
+        logging.error('Error information:')
+        logging.error('stdout: %s' % sub.communicate()[0])
+        logging.error('stderr: %s' % sub.communicate()[1])
+
+if __name__ == '__main__':
+  update()
+\`\`\`
+
+The (root) cron job:
+
+\`\`\`bash
+
+0,15,30,45 * * * * /a/mattdeboard.net/bin/python /a/mattdeboard.net/src/yukproj/
+srchupdate.py -c|mail -s "Search Update Complete" matt
+\`\`\`
+
+(I have it all on one line in crontab, but broken up into two here for ease of reading.)
+
+## What do
+
+So basically every 15 minutes, the server runs [srchupdate.py](https://github.com/mattdeboard/Yuk/srchupdate.py), and logs the results to a log file outside the project directory. If the update fails, it logs the exit status values, stderr and stdout data (using the communicate() method and returnvalue attribute of Python's excellent \`subprocess.Popen\`). This captures traceback info and has made debugging much easier.
+
+The biggest source of friction is [Whoosh](https://bitbucket.org/mchaput/whoosh/wiki/Home), which powers my Haystack install. Whoosh is pure Python, and very easy to install. However, it is _extremely_ slow. I'd probably even say ponderous. For ~350 bookmark entries on Yuk, it takes about 10 seconds to update. From what I understand, Solr is much faster, but has a much steeper learning curve. For Yukmarks, I think Whoosh is fine, but I doubt going forward I'd use it for any serious projects where speed is important.
+
+If you got here after Googling for a Haystack auto-update solution, I hope this helps.
+
+_Edit: Removed a paragraph about incremental indexing. Haystack does this by default._
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date6)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-01a7a94d.js
+  var index_01a7a94d_exports = {};
+  __export(index_01a7a94d_exports, {
+    default: () => _09,
+  });
+  var date7, _09;
+  var init_index_01a7a94d = __esm({
+    ".svelte-kit/output/server/chunks/index-01a7a94d.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date7 = "2011/05/09";
+      _09 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# My guide to rstblog
+
+For about six months now I've been using [Armin Ronacher's](http://lucumr.pocoo.org/) minimalist blog "platform", [rstblog](https://github.com/mitsuhiko/rstblog). For static blogs like this one, it's great. However, it is definitely not a plug-and-play blog solution. It has definitely had a learning curve, but nothing too intimidating. This post will describe some of my experiences with rstblog over the past six months, and some of the optimizations I've made to the publishing process.
+
+Before I go any further, I want to thank [Morten Siebuhr](http://sbhr.dk), whose excellent [blog post on rstblog](http://sbhr.dk/2010/11/30/using_rstblog/) helped me both configure and maintain my blog. He illuminated some of the general points of rstblog, and before you go any further, please read it.
+
+## Some background
+
+First, rstblog is so called because it is powered by [reStructuredText](http://docutils.sourceforge.net/rst.html), a very powerful, easy-to-grok markup syntax. (It's right up there with [Fabric](http://fabfile.org/) on my ["Idiot-Proof/Time-Saving" graph](http://mattdeboard.net/static/GRAPH.png).) I never realized how pervasive rst is, until I decided to move to rstblog from [Tumblr](http://tumblr.com). Using Armin's blog platform (which he calls a ["Not-invented-here](http://en.wikipedia.org/wiki/Not_Invented_Here) site generator") has paid dividends just in terms of the knowledge of rst I've been forced to acquire.
+
+Some other concepts & tech with which I've had to get familiar in support of rstblog:
+
+: 1. [YAML](http://www.yaml.org/spec/1.2/spec.html) - Specifically, getting a grip on how finicky it can be about whitespace. 2. [Makefiles](http://linuxdevcenter.com/pub/a/linux/2002/01/31/make_intro.html) - I knew \`make\` is how Linux compiles or otherwise builds software. But I was not aware of how to put Makefiles into play to control this behavior. (I'm really getting sick of mentioning this guy here, but Brett Hoerner has a simple Makefile [here](https://github.com/bretthoerner/bretthoerner.com/blob/master/Makefile) that I incorporated into my own workflow.) 3. [virtualenv](http://pypi.python.org/pypi/virtualenv) - Though virtualenv is now so pervasive in my dev work that I don't really remember a time when I _wasn't_ using it, I know I first used it for my blog. I consider [this](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip) to be a canonical explanation of why virtualenv is great. (Not that I'm a keeper of canon or anything.) 4. [RVM](https://rvm.beginrescueend.com/) - I use [Blueprint](http://blueprintcss.org) to manage CSS files for each of my websites. Blueprint requires Ruby. I'm an idiot, so I need Ruby Version Manager to help me be not stupid.
+
+## Workflow
+
+The big, tough nut to crack for rstblog, from my perspective, has been workflow. Nowadays, mine looks like this:
+
+> 1.  Fire up emacs on my local machine and create blog post.
+> 2.  Tab over to terminal, cd to my blog's root directory (still on local machine).
+> 3.  \`$ make clean\`
+> 4.  \`$ make build\`
+> 5.  \`$ make upload\`
+> 6.  ???
+> 7.  Publish
+
+Pretty fast. It's nearly instant. However, there were some confusing spots when I first started.
+
+### Stay local
+
+First, note that **I did no work on the server hosting my blog**, excepting the initial directory creation. Everything was created locally, and my Makefile took care of pushing data to my live server, courtesy of [scp](http://linux.die.net/man/1/scp). Don't make the mistake I did last December/January in doing all the work on the remote end. Make a single /blog/ directory on your local machine and use that as your staging area.
+
+### Beware extraneous files
+
+The second thing to be aware of is that the build process for rstblog is a big vacuum. It does not discern between .rst, .rst~, #foo.rst#, overmyhead.jpg, asco.png, etc., files. It will create a blog entry for every file that is in either a \`<yyyy>/<mm>/<dd>/\` format directory or in the blog's root directory (mine is \`/a/mattdeboard.net/blog\` on my local machine). Before you \`make build\`, ensure that there's nothing but entry.rst in that day's directory.
+
+For example, if use vim and you're working on an entry titled "Matt's birthday" for June 3, 2011, you'll do:
+
+\`\`\`bash
+<matt@Ubuntu>:/a/mattdeboard.net/blog$ mkdir -p 2011/06/03
+<matt@Ubuntu>:/a/mattdeboard.net/blog$ vim 2011/06/03/matts-birthday.rst
+\`\`\`
+
+If vim does an auto-save/backup of your file mid-edit, you may wind up with a matts-birthday.rst~ file in the directory along with matts-birthday.rst. rstblog's build process will create a blog entry for each. So make sure you somehow curate your directories and remove extraneous files. (For emacs, I added the following to my .emacs file:
+
+\`\`\`clj
+(setq backup-directory-alist '(("." . "~/.emacs_backups")))
+\`\`\`
+
+If you use anything else, [you're on your own](http://google.com)).
+
+### index.html wonkiness
+
+I found that when I accidentally created unwanted blog entries as described above, they were really persistent about sticking around my root index.html file. Finally I figured out that I had to **delete the remote blog/index.html file** and re-\`make upload\`. That fixes it.
+
+### CSS & syntax highlighting
+
+As you may be able to tell, I'm as excited as a puppy who just found his penis about syntax highlighting in my blog posts. That's because I recently figured out how to get it working using [Pygments](http://pygments.org/docs/quickstart/) and CSS.
+
+A word about CSS: Use [Blueprint](http://blueprintcss.org) for organizing and maintaining your CSS files. It makes things a million times easier once you get the hang of it. The finer points of Blueprint are beyond the scope of this post, but here is my bash alias I use to roll any CSS changes into my build:
+
+\`\`\`bash
+
+alias er="cd /a/mattdeboard.net; . bin/activate; cd /home/matt/blueprint/lib/; ruby compress.rb -p blog; cd /a/mattdeboard.net/blog; make clean; make build"
+\`\`\`
+
+I am 100% sure I'm doing it wrong with Pygments. I have the styles hard-coded in my stylesheet, which I don't think I need to do. rstblog has support for Pygments, so it doesn't make sense that I'd need to put them in my stylesheet. However, it's done, it works, it looks how I want, so fixing it is an extremely low priority. If you've got insight on how this actually works, I'm all ears!
+
+## Conclusion
+
+I like having this much control over the under-the-hood components of my blog. If you don't see the need, it's probably not worth the time investment. However, if you're a relative newcomer to Linux and/or Python, and you have the desire to learn more about both while simultaneously wanting to stab yourself in the face occasionally, I strongly recommend checking out rstblog. It is a great vehicle for self-education.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date7)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-6f834a7a.js
+  var index_6f834a7a_exports = {};
+  __export(index_6f834a7a_exports, {
+    default: () => _12,
+  });
+  var date8, _12;
+  var init_index_6f834a7a = __esm({
+    ".svelte-kit/output/server/chunks/index-6f834a7a.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date8 = "2011/05/12";
+      _12 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Python-Powered Smash'n'Grab
+
+After watching and listening my girlfriend wrestling with her course schedule for the fall semester, I got a "big idea" for another project. It's not ready to see the light of day, but suffice it to say it involves a better way of scheduling classes.
+
+To start down the road of iterating on my project, I needed data. Specifically, I needed the schedule of every course offered by [IUPUI](http://iupui.edu) in the fall: what days of the week each class was held, and at what times.
+
+I assumed it would be as easy as sending a data request to the university helpdesk. I also assumed it would take 1-3 weeks for them to respond with the data. After all, they do make the schedule available [as a PDF](http://registrar.iupui.edu/enrollment/4118/4118_standard.pdf). That's clearly autogenerated, so they must have raw data sitting in a database somewhere, right?
+
+The response I got was indecisive and confusing:
+
+> "Hi Matt,
+>
+> I'm sorry but **we currently don't have a way for students to obtain this type of information**. Contact your instructor or department to see if they can provide a dataset for you.
+>
+> Also, the IUPUI Registrar's website might help build your own dataset <http://registrar.iupui.edu/schedule.html>.
+> Thanks,
+>
+> SIS Help Desk"
+
+_(Emphasis added)_
+
+I sent a follow-up email asking what the bolded text actually means, but got nothing back. So instead of waiting, I decided to just make my own.
+
+I used Python's [lxml library](http://lxml.de/) to power a script that scrapes IUPUI's [Schedule of Classes](http://registrar.iupui.edu/enrollment/4118/) sub-site. Then the script builds a JSON document populated with the data from the course relevant to my project. The structure of the sub-site, thankfully, is RESTful, which made writing the logic much easier.
+
+I won't bore you with the nitty-gritty whys and wherefores of the problems I ran into here (plus, my code is commented). scrapeDepts() initializes the JSON file and populates it with department names:
+
+\`\`\`python
+import string
+import json
+import time
+import sys
+import os
+import re
+import lxml.html as lh
+
+jsonSched = "sched.json"
+
+
+def scrapeDepts():
+    """Scrape the departments and export to json."""
+    divMain = parse("<http://registrar.iupui.edu/enrollment/4118/index.html>")
+    depts = [link.text for link in divMain.findall(".//a")]
+    deptDict = {}
+
+    for dept in depts:
+        d = parse(
+            "[http://registrar.iupui.edu/enrollment/4118/classes/%s/inde](http://registrar.iupui.edu/enrollment/4118/classes/%s/inde)"
+            "x.html" % dept
+        )
+        crs = [
+            {a.text.replace(" ", ""): {}}
+            for a in d.findall(".//a")
+            if a.text.startswith(dept)
+        ]
+        deptDict[dept] = crs
+
+    with open(os.path.abspath(jsonSched), "w+") as f:
+        json.dump(deptDict, f)
+
+    return
+\`\`\`
+
+\`scrapeCourses()\` is heavily commented for my own sanity. I've got probably more list comprehensions than I need, but they're more readable this way. Plus, it works, and the part of the process the list comprehensions handle aren't going to impact total run time in any appreciable way on a dataset this small.
+
+\`\`\`python
+def scrapeCourses():
+    """Scrape the courses for each department."""
+    item_counter = 0
+    with open(os.path.abspath("sched.json"), "r+") as f:
+        deptDict = json.load(f)
+
+    for key in deptDict.keys():
+        # item_counter keeps a running tally of all the department and
+        # course pages the parser touches. It increments once for a dept.
+        # page, and once for each course page on the department.
+        item_counter += 1
+        for d in deptDict[key]:
+            item_counter += 1
+            try:
+                # Some courses did not parse properly in scrapeDepts() so
+                # I had to include this try/except loop to handle
+                # IOErrors.
+                f = parse(
+                    "http://registrar.iupui.edu/enrollment/4118/class"
+                    "es/%s/%s.html" % (key, d.keys()[0])
+                )
+            except:
+                continue
+
+            # This is lxml syntax to find all <pre></pre> tags. \`.//foo\`
+            # finds all <foo></foo> tags.
+            pre = f.findall(".//pre")[0]
+
+            # The text content for the <pre> tag on a given dept/course
+            # web page comes through as an unformatted block of text. \`t\`
+            # is a list comprehension that splits this block of text into
+            # separate lines, including each separate line iff. it has at
+            # least one character. This conditional is necessary because
+            # splitlines() will include empty strings as lines. e.g.:
+            #
+            #    ['hello world', '', 'my name is matt', '', 'how are you']
+            t = [
+                l.strip() for l in pre.text_content().splitlines() if len(l.strip()) > 0
+            ]
+
+            # \`lines\` is a list comprehension to gather all the lines
+            # from \`t\` that began with a digit. This is a heuristic
+            # particular to registrar.iupui.edu.
+            lines = [line for line in t if line[0] in string.digits]
+
+            for line in lines:
+                sid = "session%d" % lines.index(line)
+                d[d.keys()[0]][sid] = {"time": "", "days": ""}
+                try:
+                    # This regex matches string segments like:
+                    #    '03:30P-04:45P     MWF'
+                    # Exceptions are caused when a course is closed,
+                    # or when the times of the class are TBD.
+                    reg = re.search(
+                        r"(?P<time>d+:d+[AP]-d+:d+[AP]W+[MTWRF" "]{1,5})", line
+                    )
+                    dt = reg.group("time").split()
+                    time = dt[0]
+                    days = dt[1]
+                    d[d.keys()[0]][sid]["time"] = time
+                    d[d.keys()[0]][sid]["days"] = days
+                except AttributeError:
+                    d[d.keys()[0]][sid]["time"] = "UNK"
+                    d[d.keys()[0]][sid]["days"] = "UNK"
+                    continue
+                except IndexError:
+                    d[d.keys()[0]][sid]["time"] = "CLOSED"
+                    d[d.keys()[0]][sid]["days"] = "CLOSED"
+                    continue
+
+    with open(os.path.abspath("sched.json"), "w") as f:
+        json.dump(deptDict, f)
+
+    return item_counter
+\`\`\`
+
+\`parse()\` is a helper function for \`scrapeDepts()\` and \`scrapeCourses()\`.
+
+\`\`\`python
+def parse(link):
+  print >> sys.stderr, "Parsing %s" % link[-15:]
+  ind = lh.parse(link)
+  print >> sys.stderr, "Parsing complete. Fetching div#main"
+  main = [div for div in ind.findall(".//div") if div.get("id") == "main"]
+  print >> sys.stderr, "Fetch complete. Returning to main process."
+  return main[0]
+\`\`\`
+
+\`maketime()\` is basically the function I had been wanting to write in the first place, if I had been provided with some legit raw data. It takes the machine-readable data and turns it into a much more manageable data structure. In this case, it's a list. Then using the [time library](http://docs.python.org/library/time.html) it transforms the string describing the course start and end times, first into a list of [time.struct_time](http://docs.python.org/library/time.html#time.struct_time) objects. Finally, I use \`struct_time\`'s attributes to transform that list into a list of integers.
+
+\`\`\`python
+def maketime():
+    with open("sched.json", "r") as f:
+        sched = json.load(f)
+    courses = []
+
+    for k in sched.iterkeys():
+        for i in sched[k]:
+            for j in i.iterkeys():
+                for h in i[j]:
+                    courses.append([j, h, i[j][h]["time"], i[j][h]["days"]])
+
+    # Strip out all 'UNK' and 'CLOSED' courses.
+    courses = [course for course in courses if isinstance(course[2][0], int)]
+
+    for course in courses:
+        timeSplit = course[2].split("-")
+        for t in timeSplit:
+            y = time.strptime(t, "%I:%M%p")
+
+            if y.tm_min == 0:
+                minute = "00"
+            else:
+                minute = str(y.tm_min)
+
+            hour = str(y.tm_hour)
+            y = int(hour + minute)
+            timeSplit[timeSplit.index(t)] = y
+        course[2] = timeSplit
+
+    return courses
+
+
+if __name__ == "__main__":
+    scrapeDepts()
+    ic = scrapeCourses()
+    print(ic)
+\`\`\`
+
+Turned out I was scraping about 2,850 individual pages to compile the data. Running this script took about an hour each time I ran it. At least now I'm past that and can move on with the rest of the project, which I _hope_ to start this weekend.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date8)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-278d42f7.js
+  var index_278d42f7_exports = {};
+  __export(index_278d42f7_exports, {
+    default: () => _13,
+  });
+  var date9, _13;
+  var init_index_278d42f7 = __esm({
+    ".svelte-kit/output/server/chunks/index-278d42f7.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date9 = "2011/05/13";
+      _13 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Chebyshev polynomials in LaTeX
+
+I'm recovering from an obsession with [Chebyshev polynomials](http://mathworld.wolfram.com/ChebyshevPolynomialoftheFirstKind.html). Despite the fancy title and somewhat-intimidating definition, Chebyshev polynomials are actually a fantastic shortcut -- relative to what we're taught from the book -- to factoring out trigonometric double-angle problems like \`cos(6x)\`.
+
+I was originally going to write a script that calculated the Chebyshev polynomials, but when I learned Python's [SciPy](http://www.scipy.org/) library already has a function, I "pivoted." Instead I wanted to write the below script, which calculates the polynomial using scipy.special.orthogonal.chebyt(), then creates a [LaTeX](http://www.latex-project.org/) -formatted string representation of the equation. For example, the output for the ninth-degree Chebyshev polynomial is rendered thusly:
+
+![image](http://mathbin.net/equations/62360_0.png)
+
+Here's the code, it should be pretty straightforward:
+
+\`\`\`python
+import sys
+import math
+from scipy.special import orthogonal as orth
+
+
+def chebyTex(n):
+    """Returns a LaTeX-formatted string for a Chebyshev polynomial of
+    order n."""
+    c = orth.chebyt(n)
+    coeffs = []
+    for i in c:
+        if i >= 1 or i <= -1:
+            coeffs.append(int(round(i)))
+        else:
+            pass
+
+    pows = [coeffs.index(i) * 2 for i in coeffs]
+    pows.sort(reverse=True)
+
+    # The only "magic" in this function is some string manipulation to
+    # handle the LaTeX formatting for super- and subscript characters.
+    arrays = zip(coeffs, pows)
+    latex_string = "[T](){%s}(x) = " % n
+    for array in arrays:
+        z = n - arrays.index(array) * 2
+        if arrays[-1] != array:
+            latex_string += r"%sx" % array[0]
+            latex_string += r"^{%s} + " % z
+        else:
+            if not n % 2:
+                latex_string += "%s" % array[0]
+            else:
+                latex_string += "%sx" % array[0]
+
+    return latex_string
+
+
+if __name__ == "__main__":
+    s = chebyTex(int(sys.argv[1]))
+    print(s)
+\`\`\`
+
+It would be trivial to connect to something like [MathBin](http://mathbin.net) pull down and store the resulting image, but was beyond the scope of this little script.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date9)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-79e8f665.js
+  var index_79e8f665_exports = {};
+  __export(index_79e8f665_exports, {
+    default: () => _17,
+  });
+  var date10, _17;
+  var init_index_79e8f665 = __esm({
+    ".svelte-kit/output/server/chunks/index-79e8f665.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date10 = "2011/06/17";
+      _17 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Changing Careers at 31
+
+I won't bury the lead: About a month ago, I got my first job as a programmer after years of working in PR and marketing.
+
+As I noted [here](http://mattdeboard.net/2011/05/04/no-regrets), I spent this spring a "stay-at-home dad," and spent practically every waking moment becoming a better programmer, with the intent of joining the ranks of professional hackers and getting an awesome job making awesome things. Well, a few days after [my last blog post](http://mattdeboard.net/2011/05/13/chebyshev-polynomials-in-latex), an acquaintance I'd through a local Python meetup [tweeted a job opening](http://twitter.com/#!/wehrlock/status/68811203329261568). I responded, interviewed, and amazingly enough, got the job.
+
+I should point out that I live in Indiana. Development jobs using Python are _extremely_ rare, and one using Django is rarer still. In fact, as far as I know, I may very well have snagged the only job _in Indiana_ that offered the opportunity to work with both Python and Django.
+
+I consider myself very fortunate. It is a great place to work, with smart people, and every day I do interesting things. Every day I learn something new. Working with geeks is _very_ different than working with marketers. My boss's bookshelf is filled with books like, [*Leading Geeks*](http://www.amazon.com/Leading-Geeks-Manage-Deliver-Technology/dp/0787961485/ref=sr_1_1?ie=UTF8&qid=1308409661&sr=8-1). When I talk about something I read on [HN](http://news.ycombinator.com), there's a conversation, not a bunch of blank stares.
+
+Though I get up at 5:30am to get Emma off to day camp and drop my girlfriend off downtown for her classes at [IUPUI](http://iupui.edu), I practically bounce out of bed. I love going to work. I'm a little disappointed when I have to go home for the night. Putting in those long hours reading and hacking have paid off. Best decision ever.
+
+If you're curious, at work I'm working on deployment automation. It's not super sexy objectively speaking, but I feel like I've achieved a moderate level of expertise with [Fabric](http://fabfile.org). Plus, it has been a great way to learn the ins and outs of the various systems we use at work. Eventually I hope to roll it up into the Django admin panel and make provisioning and deployment as easy as clicking a few radio buttons.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date10)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-07c2717c.js
+  var index_07c2717c_exports = {};
+  __export(index_07c2717c_exports, {
+    default: () => _01,
+  });
+  var date11, _01;
+  var init_index_07c2717c = __esm({
+    ".svelte-kit/output/server/chunks/index-07c2717c.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date11 = "2011/07/01";
+      _01 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Export ALL Your Facebook Photos Easily
+
+It's no secret that [Google+](http://plus.google.com) is gaining new users as fast as the acceptance pipeline will let invitees click "Make me an account."
+
+I love G+, and am thrilled that someone has finally, IMO, smashed Facebook's reign as top dog. There's been a poverty of choice for years when it comes to the social stuff. Google has hit it out of the park. If you are undecided about trying out G+, do it. It's well worth it.
+
+At any rate, on to why I'm writing. If there's a way to download all your Facebook photos at one fell swoop, I don't know what it is. Of course, I don't use Facebook apps or anything, so I'm sure there's something there. It's just easier for me to write it myself.
+
+It will download all of your pictures from your Facebook account, and store them in whatever directory you specify (default is your current working directory). Additionally, this script will create a subdirectory for each album, and tuck each photo into the appropriate subdir. This way, when you go to upload them to [Picasa](http://picasaweb.google.com), you can just create whatever Picasa folder, and just "select all" in a particular album subdirectory for easy uploadin'.
+
+I guess I could plug this in to the Picasa API, and may do so this weekend.
+
+\`\`\`python
+import optparse
+import os
+import re
+import subprocess
+import sys
+import urllib2
+
+import facepy
+
+from mytoken import token, username
+
+
+def get_photos(dl_dir):
+    dest = os.path.abspath(dl_dir)
+    p = re.compile(r"[,!' /]")
+    fb_photos = find_photos()
+    for album in fb_photos:
+        albname = p.sub("_", album).lower()
+        mk_album_dirs(dest, albname)
+        folder = albname
+        for img_url in fb_photos[album]["images"]:
+            img_name = img_url.split("/")[-1]
+            url = urllib2.urlopen(img_url)
+
+            with open("%s/%s/%s" % (dest, folder, img_name), "w") as f:
+                meta = url.info()
+                filesize = int(meta.getheaders("Content-Length")[0])
+                # print "Downloading: %s Bytes: %s" % (img_name, filesize)
+                filesize_dl = 0
+                blocksize = 8192
+                while True:
+                    buff = url.read(blocksize)
+                    if not buff:
+                        break
+
+                    filesize_dl += blocksize
+                    f.write(buff)
+                    status = r"%10d [%3.2f%%]" % (
+                        filesize_dl,
+                        filesize_dl * 100.0 / filesize,
+                    )
+                    status = status + chr(8) * (len(status) + 1)
+                    # print status,
+
+
+def find_photos():
+    """
+    Creates a dictionary, with album id as key and a list of images
+    in the album as the value.
+    """
+    albums = {}
+    graph = facepy.GraphAPI(token)
+    my_albums = graph.get("%s/albums" % username)
+    for album in my_albums:
+        albums[album["name"]] = {}
+        albums[album["name"]]["id"] = album["id"]
+        my_pics = graph.get("%s/photos?limit=100" % album["id"])
+        albums[album["name"]]["images"] = [pic["source"] for pic in my_pics]
+    return albums
+
+
+def mk_album_dirs(dest, album):
+    """
+    Create a subfolder for each facebook album.
+    """
+    if not os.path.exists("%s/%s" % (dest, album)):
+        os.mkdir("%s/%s" % (dest, album))
+    return
+
+
+if __name__ == "__main__":
+    d = os.getcwd()
+    parser = optparse.OptionParser()
+    parser.add_option(
+        "-d",
+        "--dest",
+        action="store",
+        type="string",
+        dest="dest_dir",
+        default=os.getcwd(),
+        help=(
+            "Specify the directory where you want your photos t"
+            "o be downloaded. Photos will be downloaded to cur"
+            "rent working dir by default."
+        ),
+    )
+    args = sys.argv[1:]
+    (options, args) = parser.parse_args(args)
+    get_photos(options.dest_dir)
+\`\`\`
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date11)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-6c504a46.js
+  var index_6c504a46_exports = {};
+  __export(index_6c504a46_exports, {
+    default: () => _23,
+  });
+  var date12, _23;
+  var init_index_6c504a46 = __esm({
+    ".svelte-kit/output/server/chunks/index-6c504a46.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date12 = "2011/11/23";
+      _23 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+# How I Became a Programmer
+
+I posted a [very brief response](http://news.ycombinator.com/item?id=3268469) to a post on HackerNews yesterday challenging the notion that 8 weeks of guided tutelage on [Ruby on Rails](http://rubyonrails.org/) is not going to produce someone who you might consider a "junior RoR developer." It did not garner many upvotes so I figured that like most conversation on the Internet it faded into the general ambient chatter. Imagine my surprise when I woke up to couple handfuls' worth of emails from around the world asking me what I did, how I did it, and how I got a job. I'm assuming, judging by the relatively small amount of mail I got from a random aside on HN*, that there must be a lot of people who are trying to figure out how to pursue a career in programming.
+
+## First, A Disclaimer or Two
+
+Please note that this blog post is entitled, "How **I** Became a Programmer", not, "How **You** Can Become a Programmer." I'm not a self-help guru or wise or even a particularly good programmer. I did, however, decide at an inflection point in my life to pursue something vigorously and it paid off. Any insights gleaned from my experience are yours to make on your own; I doubt I'll have much insight for your personal situation.
+
+Also, after consulting with my girlfriend, my total time of dedicated effort to becoming a paid programmer was actually about 12 weeks, not ~10 as I stated in the post I linked to above. So, there you go.
+
+## My Story: tl;dr
+
+In brief: I left the Marine Corps after more than a decade in July 2010. I got a job at the state lottery as a PR flak in August of that year, and lost it in mid-February. In mid-May I got hired as a part-time "junior User Experience engineer" at [DirectEmployers Association](http://directemployers.org). By late August I was a full-time, regular old "User Experience engineer."
+
+When I lost my job I decided that I was done doing PR; I wanted to be a programmer. I took my tax return and stretched it out on a ramen and water diet. My family (dad, mostly...) was nervous as hell. In that February to May span I spent basically every waking moment learning to program, learning about Linux, and learning about computer science. I taught myself Python, I taught myself Django, I learned some functional and imperative programming, and got semi-decent at the Linux command line.
+
+Voila. Without further ado, I'm going to write about what I didn't do, then dive into the questions I got via email.
+
+## What I Didn't Do
+
+One of the things that was asked in almost every email was, "How did you learn Django in 11 weeks?"
+
+I want to make it clear that I didn't set out to learn Django per se. Django is just a very nice toolkit of abstractions that makes creating web applications easy using Python. As far as I'm concerned learning Django was incidental to learning to program. I did not -- and still don't -- want to be considered a "Django developer." I'm not even sure I want to refer to myself as "a Python programmer."
+
+In other words, I do not feel that I would be as modestly competent as I am today if I had spent an inordinate time becoming an expert at the abstraction layer of Django, instead of learning the concepts that make Django work.
+
+## Questions From Email
+
+**Did you begin with web or book resources?**
+
+Yes I did. :) [Django](http://djangoproject.com) has excellent documentation, but [StackOverflow](http://stackoverflow.com) is a much more comprehensive help source. On more general topics, I believe that MIT's OpenCourseware [Introduction to Computer Science](http://www.youtube.com/watch?v=k6U-i4gXkLM) video lecture series was one of the first real computer science resources I consumed. I watched through lecture 13 or something.
+
+**What kind of hours were you putting in on a daily and weekly basis?**
+
+A lot. Sometimes 8, sometimes 12, sometimes 16. I was a willfully unemployed single parent, so I not only had a passion for programming, I was also hungry (figuratively speaking) and desperate. I put myself in a position where I had no room to be lazy or complacent. I think above all else that made me work 10x harder. I didn't play video games, I didn't watch TV, I didn't sleep all day. All I did all day every day was code, hack, program and develop.
+
+**Did you have a mentor of any kind?**
+
+I did indeed. A very smart guy was and is my mentor still, though I've learned enough that I don't rely on him as much for guidance as I used to. He mentored my metamorphosis into a programmer in nearly every way. Some specific ways he provided leadership: Practical programming knowledge (especially Python & Django); command-line expertise; got me up-and-running with emacs & vim; career advice. It helps that he is a very successful & well-respected guy who has a reputation for informed skepticism.
+
+**Was there anything from your previous background and experience that you feel was a particular asset in your self-guided studies?**
+
+Not really. I was a computer geek from way back, had a few BBSes in the late 80s (yes, I'm a child of the 80s & 90s), learned QBasic & VisualBasic back in the day, and tinkered with Python for a few years off and on... mostly off. Other than that, nope.
+
+**How did you come to choose Django to study?**
+
+The [guy](http://bretthoerner.com) whose career I was trying to emulate had made a very successful career for himself with Django. Pretty straightforward from there.
+
+**Would you mind sharing your learning process?**
+
+I want to restate that I am not a self-help guru or particularly special in any way. I just worked hard because I was hungry and in a self-made corner where I had no choice but to succeed. I consumed everything I could that would get me to a place where I could make money doing something I love. That was my learning process. Seriously.
+
+**I would appreciate it if you can show me how you learned Django and give me any tips/tricks sites/books to look at to learn Django or even HTML/CSS, JavaScript (Front-end Engineering stuff)**
+
+I don't have any tips or tricks to learning except just doing it. I spent a lot of long (but enjoyable) hours learning stuff.
+
+As I said above, I did not and do not consider it fruitful to "learn Django," "learn Ruby on Rails," or "learn [Noir](http://webnoir.org)." I think a contributor to my success was learning the languages and the concepts behind them, then using a web framework to better learn that language. I learned the framework incidentally to my education in the language.
+
+Go read the Django docs, join #django on irc.freenode.net and ask questions constantly. That's what I did and it worked ok for me. But honestly I didn't just sit down and read stuff most of the time. Usually I was making things in order to learn concepts better, then reading in support of my goals. I'm a hands-on learner. Some people aren't, but I am so it worked for me. Decide on your own if that's good for you.
+
+As far as HTML & CSS there is just so much information out there, and they're such straightforward concepts. I learned as much HTML & CSS as I needed to do what I needed to do. I did not memorize much about how HTML & CSS work, i.e. syntax & semantics. I don't know right off the top of my head how to create a gradient, but I do know right off the top of my head how to find out. I think that's the important thing.
+
+**How did you show the company your skills? Did you show them the projects you've made?**
+
+[Github, Github, Github](http://github.com/mattdeboard). I can't emphasize it enough. Make stuff, put it on github, show people you're passionate and smart and curious.
+
+Also, network. Attend meetups. Meet people. Tweet. Blog. Interact with the community around your language(s). Get to know people. Demonstrate to the world that you really love programming. The week before I saw the job posting for my first programming job I delivered a lightning talk on [Fabric](http://fabfile.org), Python's Capistrano analog. That got me on a few people's radar.
+
+## Conclusion
+
+If I had to summarize the big overview of how I did what I did, I'd say:
+
+1.  Ask questions, be curious, be passionate
+2.  Learn a language, not a web framework for god's sake.
+3.  Work hard
+4.  Network, attend meetups, tweet, blog, be social and show people you'd be fun to work with, and a credit to team.
+5.  (Optional) Put yourself in a position of desperation, so there is no choice but to succeed
+
+My final point really is that I got lucky. I'm not an amazing developer. At the end of the day I'm a newb and I still have a lot to learn. My career is just beginning but I am proud of the effort I put into changing my life. I hope my experiences can help some other folks.
+
+* _I should note that I was already of a mind to blog about this since my cousin Jeff has also taken up programming after leaving the environmental consultancy business._
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date12)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-2b468914.js
+  var index_2b468914_exports = {};
+  __export(index_2b468914_exports, {
+    default: () => _29,
+  });
+  var date13, _29;
+  var init_index_2b468914 = __esm({
+    ".svelte-kit/output/server/chunks/index-2b468914.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date13 = "2011/12/29";
+      _29 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+# Displacing MySQL with...Solr?
+
+We recently completed a big refactor at [work](http://directemployers.org), the intent for which was implementing search for one of our products, a Django-based web CMS called DirectSEO. It did not take long, however, to realize that by choosing Solr as our search backend, we had the opportunity to make some much-needed optimizations. Now, after analyzing three weeks' worth of data related to the refactor, I can say the time investment has yielded real, measurable gains. They came mainly from removing some very expensive database calls from our views, then fetching the same data via calls to the [Solr](http://lucene.apache.org/solr/) index. This resulted in a simplified code base and decreased page-load times. This post is intended to explain a bit about our approach to leveraging Solr's feature set.
+
+(This is my first truly technical post so I'm sure I'm leaving things out, or explaining poorly. Please contact me or leave comments if I didn't cover something in enough detail or if you've got any questions.)
+
+## Some Background
+
+As part of their membership in DirectEmployers, member organizations are provided with a job board on a domain of their choosing to present their job listings in an SEO-friendly way. These sites often live on the [.jobs TLD](http://en.wikipedia.org/wiki/.jobs); however, members can -- and often do -- use subdomains of their own site for their job board. An example of each: [Lockheed-Martin](http://lockheedmartin.jobs) (.jobs); [Arrow Electronics](http://jobsearch.arrow.com) (other).
+
+### How It Works
+
+The job boards are generated dynamically. Members give us some basic information -- header images, brand colors, and so forth -- which we use to create a site configuration. This configuration is then referenced to lookup all the jobs associated with a particular member organization. Sometimes, a member organization may have multiple job sites catering to specific job categories: [IBM Brazil](http://ibm-brazil.jobs) or [Lockheed-Martin InfoSec](http://lockheedmartin-infosec.jobs), for example. In these cases, the corpus of jobs for that member organization are then refined to only include jobs which fall into that category.
+
+From here, users can drill down into the jobs using standard navigation links which we generated based on facets for title, location and custom facets we call [Saved Search](https://github.com/DirectEmployers/saved-search) (not to be confused with [saved-searches](https://github.com/toastdriven/saved_searches)).
+
+## Implementation Details
+
+Simply put, we use Django to deal with MySQL, and we use [Django-Haystack](http://haystacksearch.org) to deal with Solr. We run our [own fork](https://github.com/DirectEmployers/django-haystack) of Haystack, which capitalizes on some hacks in my own [fork of pysolr](https://github.com/mattdeboard/pysolr).
+
+Our saved-search app gives our members a way to create and maintain persistent, user-defined queries. In practice we use these to create sites like the aforementioned [Lockheed-Martin InfoSec](http://lockheedmartin-infosec.jobs). They also give our members the ability to create custom job verticals. [Hilton](http://hiltonworldwide.jobs) has saved searches built around departments; [Unilever](http://unilevercareers.jobs) has a saved search for "hot jobs" they want to fill quickly.
+
+### Architectural Aside
+
+A problem arises, however, when a site has a lot of saved searches. But to understand the problem, I should explain a little bit about how our data is stored in the database and how it gets indexed.
+
+Each job listing is a row on our \`joblisting\` table. This is currently the only table Solr indexes. Haystack uses a module called [search_indexes.py](http://p.mattdeboard.net/search_indexes.py.html) to set the parameters in \`schema.xml\`. In it, we specify model fields to index directly, plus several fields Haystack calls "prepared fields," which contain denormalized or calculated data. Native model fields like \`title\`, \`state\`, \`country\`, etc., can be used to create [facets](http://www.lucidimagination.com/devzone/technical-articles/faceted-search-solr). Facets are what you see under "Filter by (TitleState|Country)" [here](http://arinc.jobs/). Something like the below snippet will return all the values for those fields along with counts of each (which is what faceting is):
+
+\`\`\`python
+
+sqs = SearchQuerySet().facet('title_slab').facet('city_slab') .facet('state_slab').facet('country_slab')
+facet_counts = sqs.facet_counts()['fields']
+\`\`\`
+
+("slabs" are calculated fields such that the \`city_slab\` field would have a format like:
+
+    "/manassas/virginia/usa/jobs/::Manassas, VA"
+
+We use these to precalculate URL segments in the index so we can keep string manipulation to a minimum in the application. We split on "::" and handle those substrings as needed.)
+
+However, since saved searches are ad-hoc filters that can be composed of any permutation of index fields, they cannot be properly faceted. This means that to get counts of job listings for each saved search, we'd normally have to perform a single HTTP request for each.
+
+To circumvent this costly routine, I hacked up pysolr to implement support for Solr's [field collapsing/group query functionality](http://wiki.apache.org/solr/FieldCollapsing), then wrote [a backend](https://github.com/DirectEmployers/saved-search/blob/master/saved_search/groupsearch.py) to support it. The effect is that for \`n\` saved searches configured for a particular site, only one query is required; the saved search concept would otherwise involve far too many HTTP requests to be practical.
+
+### Haystack & Solr Setup
+
+On the Python side, we use Haystack's [RealTimeSearchIndex](http://docs.haystacksearch.org/dev/searchindex_api.html#realtimesearchindex) class as the basis for our index. In short, it's the exact same as the SearchIndex class, but with post-save/delete listeners for the jobListing table. It gets us as close as we really need to get to ElasticSearch-style real-time search. While Solr 4.0 is going to have "near real-time" search, it's just not a feature we have a need for now. If that changes in the future, we'll re-evaluate.
+
+For Solr, we run two servers in a master-slave configuration. The master handles the real-time updates. The (read-only) slave handles all the queries, and is set to do replication checks every 60 seconds. The side effect of this is that when the master is handling a large volume of updates, average query response time by the slave slows by 50-75ms. For comparison, it normally takes around 200ms for our application to calculate and return an HTTP response.
+
+The one caveat for using Solr in this way is that unlike some other document databases, there is absolutely no notion of relations whatsoever. Plus, obviously, it wouldn't be responsible to use Solr as a primary datastore (A good read on why can be found in [this](http://stackoverflow.com/questions/4960952/when-to-consider-solr/4961973#4961973) response on SO).
+
+## Performance & Reliability
+
+Performance has improved measurably, especially on [pages with a lot of jobs, a lot of facets and a lot of saved searches](http://lockheedmartin.jobs). Some very costly SQL queries have been eliminated. By utilizing Solr's query-tuning tools like \`facet.mincount\`, \`start\` and \`offset\`, we've kept the amount of data transfered per request is low. Using Solr to power saved searches eliminates a lot of complexity from our code base.
+
+Getting data reliability right has taken longer, involving some diligent bug-hunting. I've spent the past four months learning about how Solr works, how to intelligently leverage Haystack's API, and implementing some features of Solr in Haystack that aren't included out-of-the-box. It is important to keep in mind that a Solr match is not necessarily binary. A thing might match, it might not, but more likely it will "kinda" match. Tightening up queries as needed is vital if you want exact results _only_. One of my big hurdles in getting this working right was making sure matches were fuzzy where they should be fuzzy, and exact where they should be exact.
+
+Finally, I think that as we add more features to our application, we'll have to start putting standard RDBMS queries back into play in some areas. For the past 3 months I've been rewiring a Django application, cutting out the old relational stuff and replacing it with simpler, faster methods. It is a dramatic shift. As time goes on we'll be building out more features that will require relational information.
+
+## Conclusion
+
+Utilizing Solr in this way is both ordinary and novel. It's novel because when people think of Solr, they think a search box with a button that says "Search". You click on the button and get results. It's ordinary because Solr is, after all, a document database. It stores documents in a flat structure, and you compose queries to retrieve them. Not exotic, unusual or special in any way. In a use case such as ours, however, where the need for relations is minimal and practically all of our content is generated based on text searching, Solr is great.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date13)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-948cc17e.js
+  var index_948cc17e_exports = {};
+  __export(index_948cc17e_exports, {
+    default: () => _07,
+  });
+  var date14, _07;
+  var init_index_948cc17e = __esm({
+    ".svelte-kit/output/server/chunks/index-948cc17e.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date14 = "2012/02/07";
+      _07 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# REST API for search results
+
+**Updated:** _So after talking with the author of Tastypie I added the_ \`SearchDeclarativeMetaclass\` _and_ \`SearchOptions\` _to handle inheritance of the metaclass attributes on_ \`SearchResource\`. _I almost entirely copied his_ \`ModelDeclarativeMetaclass\` _and it works well. In-house, we further subclass_ \`SearchResource\` _to model our job postings data in our search index, and it works great._
+
+So, first things first: [django-tastypie](https://github.com/toastdriven/django-tastypie) is pretty great. If you're running a Django web application and want to expose your data via a REST API, tastypie will do it. I got everything up-and-running in just a few hours (95% reading, 5% writing).
+
+Tastypie -- written by [Daniel Lindsley](https://twitter.com/#!/daniellindsley), the guy behind [django-haystack](http://haystacksearch.org) -- uses a \`Resource\` class to handle all the API hairiness; it comes with a \`ModelResource\` subclass out of the box to provide an interface to a Django model & the ORM. If you want a better explanation, or want to know more, go [read the docs](http://django-tastypie.readthedocs.org/en/latest/index.html).
+
+Speaking of the documentation, there is an example \`Resource\` subclass in the docs' [cookbook](http://readthedocs.org/docs/django-tastypie/en/latest/cookbook.html#adding-search-functionality), though that was more about adding search to an existing resource. We want to serve resources -- i.e. Solr documents -- exclusively from Lucene. Our resource is literally a document from the search engine, so we needed a class to model that behavior. (You can read more about how we use Solr [here](http://mattdeboard.net/2011/12/29/displacing-mysql-with-solr/).) To accomplish this, I put together [this](https://github.com/mattdeboard/mattdeboard.net/blob/master/2012/02/07/resources.py) \`SearchResource\` subclass which others may find useful.
+
+If you use Haystack, you know that it goes to great lengths to emulate the API of Django's ORM to provide a familiar interface to the search index. In that vein, \`SearchResource\` emulates the \`ModelResource\` class.
+
+One issue we have in-house is that there are in some cases discrepancies between the semantics we want to expose as part of our API and the fields we're going to be leveraging to look up resources. To address that, I created a map of querystring parameters to the actual fields in the search index in which their values would be sought:
+
+\`\`\`python
+class JobSearchResource(SearchResource):
+    field_aliases = {
+        "city": "city_exact__exact",
+        "state": "state_exact__exact",
+        "country": "country_exact__exact",
+        "company": "company_exact__exact",
+        "title": None,
+        "date_new": None,
+        "uid": None,
+    }
+
+    def __init__(self, **kwargs):
+        super(JobSearchResource, self).__init__(**kwargs)
+        self._meta.index_fields = self.field_aliases.keys()
+\`\`\`
+
+We use \`field_aliases.keys()\` to populate \`index_fields\`, so now we need to add in logic to look up those keys and replace them in the query logic with the fields we actually want to search against. In this case, we want to search against \`(country|state|city|company)_exact\`, which, if you're familiar with Lucene, are stored, unanalyzed fields. We use Haystack's \`__exact\` lookup which has the effect of turning the term query into a phrase by wrapping it in quotes, e.g. \`q=country_exact:"United States"\`. We don't want tokenized field lookup because we don't want to match, say, "United Kingdom" when we are looking for "United States" due to the match on "United." (There are a million ways to do this of course, but this is how we chose to do it.)
+
+Now we need to override \`SearchResource.build_filters\`:
+
+\`\`\`python
+def build_filters(self, filters=None):
+    terms = []
+
+    if filters is None:
+        filters = {}
+
+    for param_alias, value in filters.items():
+
+        if param_alias not in self._meta.index_fields:
+            continue
+
+        param = self.field_aliases.get(param_alias, param_alias)  # <---
+        tokens = value.split(self._meta.lookup_sep)
+        field_queries = []
+
+        for token in tokens:
+
+            if token:
+                field_queries.append(self._meta.query_object((param, token)))
+
+        terms.append(reduce(operator.or_, filter(lambda x: x, field_queries)))
+
+    if terms:
+        return reduce(operator.and_, filter(lambda x: x, terms))
+    else:
+        return terms
+\`\`\`
+
+Note the line with the commented \`<---\`: This is where the alias->index field translation takes place. If you find yourself with a need to alias search fields this may be a solution for you.
+
+Finally, I made the decision to force some additional configuration overhead -- about 5 attributes on the metaclass -- in order to completely preserve the amazing extensibility of Haystack. I know that [in-house](http://directemployersfoundation.org) we subclass just about everything from Haystack, including the \`SearchQuerySet\`; I assume there are others out there doing the same, and more, so you are not forced to use Haystack's built-in \`SQ\` object to compose query trees if you've created your own. (If you have I'd be curious to see it.)
+
+Let me know in the comments if you have any problems, spot bugs or think I'm an idiot.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date14)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-3cd1cd51.js
+  var index_3cd1cd51_exports = {};
+  __export(index_3cd1cd51_exports, {
+    default: () => _05,
+  });
+  var date15, _05;
+  var init_index_3cd1cd51 = __esm({
+    ".svelte-kit/output/server/chunks/index-3cd1cd51.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date15 = "2012/10/05";
+      _05 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Larry the Software Guy
+
+Anil Dash published [a blog post](http://dashes.com/anil/2012/10/the-blue-collar-coder.html) today I think is a victim of a bad title: "The Blue Collar Coder." I normally skim over the "Is programming an art, craft or science?" discussions but there were a couple of very smart programmers discussing it on Twitter, and I joined in. During the conversation, I vacillated between agreeing with Anil's proposition and agreeing with [Alex Feinberg](https://twitter.com/strlen/status/254369312884805632).
+
+I think the title is poor because programming will never be "blue collar." Anil knows that; he more or less admits it was basically caste-baiting in the first sentence of the final paragraph. Unfortunately, I think people reacted to the notion of a programmer being considered "blue collar" more than the _real_ points I think he was trying to make. The tl;dr of Anil's blog post seems to be:
+
+1.  A CS degree is overkill for most job openings
+2.  The "tech community" (??) should be focused on creating lots of jobs, not entrepreneurship
+3.  Huge amounts of good for people & business can be done by creating a vocational training program for software development
+
+I don't even want to touch (1) because people seem to have such ridiculously strong feelings one way or the other (and possession of a CS degree seems to be no indicator of which way those feelings will go). I don't have a CS degree, and I am enjoying my career. I recognize though that in a few years maybe I'll be bored of the nature of problems I'm working on and maybe getting that degree would have been a smart move after all. In other words, I don't have an opinion on this because I don't know what I don't know.
+
+The second point is eyeroll-worthy, in my opinion, because I think the impression the "tech community" is hyper-focused on producing "the next Zuckerburg" is the result of Hacker News's own "reality distortion field" about startups. Hacker News is the modern equivalent of a sweaty, manic Steve Ballmer trying to pump up a room full of nerds, but instead of "Developers! Developers! Developers!", HN is chanting, "Startups! Startups! Startups!" But what're you gonna do? HN exists for a very specific reason: startup news. Point being that it's not good or bad that this reality distortion effect exists, but you have to seek other perspectives.
+
+I agree with the third point. Full stop. My [SWAG](http://en.wikipedia.org/wiki/Scientific_Wild-Ass_Guess) (pretty light on the "S") is higher ed could serve more people with lower per-person costs, deliver employees to the job market with high skills, while maintaining/building a reputation as a high-quality institution by offering associates degree & certification programs in software development compared to the current BS/BA in CS.
+
+This is where I think Anil's points get lost because of the title, illustrated by something Alex F. wrote:
+
+> There will be demand for "non-programmers who code" for sure, but these positions will still require analytical thinking.
+
+Maybe I'm misreading it, but the implication seems to be that "blue collar" implies work where analytical thinking is optional. There's no less analytical thinking in e.g. managing inventory, [building windmills](http://jacquesmattheij.com/how-to-build-a-windmill-ii), etc. My opinion, based on my military experience, is that there are many smart and savvy people out there with great analytical abilities, who couldn't get into or complete a CS degree. For these people an associates of applied science or 1-year certificate in software development would be FAR more accessible. Not only that, I'd wager the distribution of skill among graduates would look pretty close to that of most CS programs. What I'm saying is, in my short time doing this I've met some dumb/bad/lazy programmers with CS degrees from universities with respected programs.
+
+Now obviously I don't do much manual labor anymore, but I'm proud of and enjoy the maintenance work I do. Most programming IMO boils down to the equivalent of "blue collar" work: refactoring code you or someone else wrote; patching over and smoothing out ugly spots; squashing bugs that have been around so long they're just considered part of the product. This isn't something I'm claiming I discovered by the way; this is a conclusion other people have drawn that is supported by my own anecdotes.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date15)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-f78c67c1.js
+  var index_f78c67c1_exports = {};
+  __export(index_f78c67c1_exports, {
+    default: () => _19,
+  });
+  var date16, _19;
+  var init_index_f78c67c1 = __esm({
+    ".svelte-kit/output/server/chunks/index-f78c67c1.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date16 = "2012/10/19";
+      _19 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# How to Run a Windows Service As A Linux Daemon
+
+**Premise:** You've got a Windows service that you want to run on a Linux server
+
+**Problem:** Your code is written using the .NET framework and some language that targets the CLR (C#, VB, Clojure-CLR, etc.)
+
+**Solution:** [Mono](http://www.mono-project.com/Main_Page) is an open-source implementation of the .NET framework. By installing mono you gain access to a ton of useful stuff, but the relevant item here is the \`mono-service\` executable. (Installing mono is out of the scope of this blog post, but odds are pretty good mono is available from your distro's package management system.)
+
+Once installed, you can run your compiled code like so:
+
+    mono-service SomeExecutable.exe
+
+By default, this creates a lockfile in \`/tmp\`. You can change this by using the \`-l:<lockfile>\` option. This is great, because now your service is running in the background! However, this is really flimsy; what if the process dies? What if the server needs rebooted? To solve this I'm using [supervisor](http://supervisord.org/).
+
+## Get It Running In 4 Steps
+
+Once you've got supervisor and mono installed, follow these steps:
+
+1.  Create a supervisor file in \`/etc/supervisor/conf.d/\` with a descriptive name. We'll use \`mysvc.conf\`.
+2.  Edit \`mysvc.conf\` so it looks similar to this^1,2^:
+
+        [program:mysvc]
+        command=mono-service MyWindowsService.exe --no-daemon
+        directory=/path/to/executable
+        user=someuser
+        stdout_logfile=/home/someuser/mysvc/out.log
+        redirect_stderr=true
+
+3.  \`sudo service supervisor update\`. This will reload the config file you edited above.
+4.  To confirm that your process started, run \`ps aux|grep mono\`. You should see it in the process list.
+
+## Conclusion
+
+Hope this helps. Supervisor has a ton of different options for configuring how a process runs, it's worth it to RTFM.
+
+### Footnotes
+
+**1.** The directory specified in your \`stdout_logfile\` parameter must already exist. If you try to start the \`mysvc\` process without creating it, supervisor will throw an error. Also, the \`user\` parameter should be set to a user that has permissions to write to the directory where you're keeping the \`stdout_logfile\`. Please consult the relevant [supervisor docs](http://supervisord.org/configuration.html#program-x-section-values) for more about users & processes.
+
+**2**. You must use the \`--no-daemon\` flag to avoid creation of the lockfile which indirectly allows supervisor to capture/redirect stdout/stderr to a logfile.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date16)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/index-1c767a19.js
+  var index_1c767a19_exports = {};
+  __export(index_1c767a19_exports, {
+    default: () => _142,
+  });
+  var date17, _142;
+  var init_index_1c767a19 = __esm({
+    ".svelte-kit/output/server/chunks/index-1c767a19.js"() {
+      init_app_bb99931b();
+      init_SvelteMarkdown_b91e19e3();
+      date17 = "2014/01/14";
+      _142 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+        let source = `
+
+# Using git & Python to autogen changelogs
+
+## Background
+
+As part of the communication process at work, devs maintain changelogs for some of our projects. What these consist of is a single \`RELEASE NOTES.md\` file in the project root, where each each line is a Markdown hyperlink to the pull request that introduced the change. These pull request links are then grouped together by date of release. The changelog looks like:
+
+\`\`\`
+    ## v1.7 2013/03/17
+    * [#100](https://github.com/courseload/project/pull/100) - Finalized previously preliminary stuff
+    * [#99](https://github.com/courseload/project/pull/99) - Did some preliminary stuff
+
+    ## v1.6.4 2013/03/14
+    * [#98](https://github.com/courseload/project/pull/98) - Made dongles brighter.
+    * [#97](https://github.com/courseload/project/pull/97) - Improved widget performance by 3.8x
+\`\`\`
+
+At first, these were created by having devs also update \`RELEASE NOTES.md\` with each pull request. This distributed the workload, but it also made having multiple pull requests a big pain in the ass since the same file, usually the same line in the same file, was being modified by multiple pull requests. So we stopped that practice and instead moved to a hand-made \`RELEASE NOTES.md\` file, maintained by these de facto primaries. Obviously this kind of work is sub-optimal and ripe for automation. For months though, streamlining the process fell far down on the priority list until I just couldn't take it anymore.
+
+## git log
+
+When I am automating a repetitive task like this, my goal is to write as little code as possible. In thise case, that means massaging the output of [git log to get me as close to the desired final format of the changelog lines as possible. In other words, I only want to output merge commits. We can do that with:
+
+\`\`\`sh
+    git log --merges
+\`\`\`
+
+This is good, but it shows a lot of extra information I'd have to parse out. If you'll notice in my example above, the lines in \`RELEASE NOTES.md\` are formatted like \`[#<pull request number>](https://github.com/courseload/project/pull/<pull request number>) - <pull request description>\`. So we notice right away we need two things from \`git log\`:
+
+1.  The commit message of the merge. Think of this as the subject line of an email. We want this because this has the number of the pull request.
+2.  The pull request description, which works out to be, for the sake of this blog post, the equivalent of the first line of the body of the aforementioned email.
+
+This git command gets us this info without a bunch of cruft:
+
+\`\`\`sh
+    git log --pretty=format:'%s%n%b' --merges
+\`\`\`
+
+But let's get really close now to the desired final output:
+
+\`\`\`sh
+    git log --pretty=format:'%s%n* [#{pr_num}](https://github.com/courseload/project/pull/{pr_num}) - %b)'
+\`\`\`
+
+Now, every merge commit appears as a two-line entry. The first is the merge commit message. The second is the pull request description. For bonus points ,the second line looks almost exactly like the changelog lines, except using Python string interpolation variables embedded in place of the PR number.
+
+## Python
+
+It's great that we have just the info we want, but I know we're also going to need to do two things:
+
+1.  Parse out the pull request number from the [git log output, and
+2.  Use the PR number to create the changelog entry
+
+By running the above [git log command via [subprocess.check_output I can automate all this with [this script](https://gist.github.com/mattdeboard/68f7009e847e36e6c107):
+
+\`\`\`python
+#!/usr/bin/env python
+"""This script generates release notes for each merged pull request from
+git merge-commit messages.
+Usage:
+ \`python release.py <start_commit> <end_commit> [--output {file,stdout}]\`
+For example, if you wanted to find the diff between version 1.0 and 1.2,
+and write the output to the release notes file, you would type the
+following:
+ \`python release.py 1.0 1.2 -f CHANGELOG.md\`
+"""
+import os.path as op
+import re
+import subprocess
+from collections import deque
+
+PROJECT_URI = "https://github.com/foo/bar"
+
+
+def commit_msgs(start_commit, end_commit):
+    """Run the git command that outputs the merge commits (both subject
+    and body) to stdout, and return the output.
+    """
+    fmt_string = "'%s%n* [#{pr_num}]" "(" + PROJECT_URI + "/{pr_num}) - %b'"
+    return subprocess.check_output(
+        [
+            "git",
+            "log",
+            "--pretty=format:%s" % fmt_string,
+            "--merges",
+            "%s..%s" % (start_commit, end_commit),
+        ]
+    )
+
+
+def release_note_lines(msgs):
+    """Parse the lines from git output and format the strings using the
+    pull request number.
+    """
+    ptn = r"Merge pull request #(d+).*
+([^
+]*)'$"
+    pairs = re.findall(ptn, msgs, re.MULTILINE)
+    return deque(body.format(pr_num=pr_num) for pr_num, body in pairs)
+
+
+def release_header_line(version, release_date=None):
+    release_date = release_date or datetime.date.today().strftime("%Y/%m/%d")
+    return "## %s - %s" % (version, release_date)
+
+
+def prepend(filename, lines, release_header=False):
+    """Write \`lines\` (i.e. release notes) to file \`filename\`."""
+    if op.exists(filename):
+        with open(filename, "r+") as f:
+            first_line = f.read()
+            f.seek(0, 0)
+            f.write("
+
+".join([lines, first_line]))
+    else:
+        with open(filename, "w") as f:
+            f.write(lines)
+            f.write("
+")
+
+
+if __name__ == "__main__":
+    import argparse
+    import datetime
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("start_commit", metavar="START_COMMIT_OR_TAG")
+    parser.add_argument("end_commit", metavar="END_COMMIT_OR_TAG")
+    parser.add_argument("--filepath", "-f", help="Absolute path to output file.")
+    parser.add_argument("--tag", "-t", metavar="NEW_TAG")
+    parser.add_argument(
+        "--date",
+        "-d",
+        metavar="RELEASE_DATE",
+        help="Date of release for listed patch notes. Use yyyy/mm/dd format.",
+    )
+    args = parser.parse_args()
+    start, end = args.start_commit, args.end_commit
+    lines = release_note_lines(commit_msgs(start, end))
+
+    if args.tag:
+        lines.appendleft(release_header_line(args.tag, args.date))
+
+    lines = "
+".join(lines)
+
+    if args.filepath:
+        filename = op.abspath(args.filepath)
+        prepend(filename, lines)
+    else:
+        print(lines)
+\`\`\`
+
+To view the output in stdout, at the command line type:
+
+\`\`\`
+$ ./release.py 1.7 HEAD
+\`\`\`
+
+Or, specify an output file:
+
+\`\`\`
+$ ./release 1.7 HEAD ./RELEASE NOTES.md
+\`\`\`
+
+## Conclusion
+
+One additional step I took is to create a git alias for the git log command, but prettied up a bit, for when I want to just scan through the differences from one version to the next. If you'd like to do the same, add the following to the [alias] section of \`~/.gitconfig\`:
+
+\`\`\`shell
+    lm = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset       -%C(yellow)%d%Creset %C(bold cyan)%s %Cgreen(%cr)%n%Creset%n - %b%n'       --abbrev-commit --date=relative --merges
+\`\`\`
+
+You can also achieve the same effect by entering the following at the CLI:
+
+\`\`\`shell
+    git config --global alias.lm "log --pretty=format:'%Cred%h%Creset       %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %C(bold cyan)%s       %Cgreen(%cr)%n%Creset%n - %b%n' --abbrev-commit --date=relative --merges"
+\`\`\`
+
+(The escaped newlines aren't necessary, only including them to keep the line length down on the page.)
+
+Please leave a comment if you have questions or spot an error. Thanks.
+`;
+        return `<div>
+  <p class="${"date"}">written on ${escape(date17)}</p>
+  <div class="${"content"}">
+    ${validate_component(SvelteMarkdown, "SvelteMarkdown").$$render(
+      $$result,
+      { source },
+      {},
+      {},
+    )}</div>
+</div>`;
+      });
+    },
+  });
+
+  // .svelte-kit/output/server/chunks/app-bb99931b.js
   function get_single_valued_header(headers, key2) {
     const value = headers[key2];
     if (Array.isArray(value)) {
@@ -3690,13 +5368,13 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
     result += '"';
     return result;
   }
-  function noop$1() {}
+  function noop() {}
   function safe_not_equal(a, b) {
     return a != a
       ? b == b
       : a !== b || (a && typeof a === "object") || typeof a === "function";
   }
-  function writable(value, start = noop$1) {
+  function writable(value, start = noop) {
     let stop;
     const subscribers = new Set();
     function set(new_value) {
@@ -3720,11 +5398,11 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
     function update(fn) {
       set(fn(value));
     }
-    function subscribe(run2, invalidate = noop$1) {
+    function subscribe(run2, invalidate = noop) {
       const subscriber = [run2, invalidate];
       subscribers.add(subscriber);
       if (subscribers.size === 1) {
-        stop = start(set) || noop$1;
+        stop = start(set) || noop;
       }
       run2(value);
       return () => {
@@ -4746,12 +6424,6 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
       };
     }
   }
-  function noop() {}
-  function is_promise(value) {
-    return (
-      value && typeof value === "object" && typeof value.then === "function"
-    );
-  }
   function run(fn) {
     return fn();
   }
@@ -4881,11 +6553,11 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
       amp: false,
       dev: false,
       entry: {
-        file: assets + "/_app/start-676f41ec.js",
+        file: assets + "/_app/start-cb793a53.js",
         css: [assets + "/_app/assets/start-61d1577b.css"],
         js: [
-          assets + "/_app/start-676f41ec.js",
-          assets + "/_app/chunks/vendor-ee965c0a.js",
+          assets + "/_app/start-cb793a53.js",
+          assets + "/_app/chunks/vendor-feb08219.js",
         ],
       },
       fetched: void 0,
@@ -4961,8 +6633,8 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
     get_hooks,
     module_lookup,
     metadata_lookup;
-  var init_app_f96727fd = __esm({
-    ".svelte-kit/output/server/chunks/app-f96727fd.js"() {
+  var init_app_bb99931b = __esm({
+    ".svelte-kit/output/server/chunks/app-bb99931b.js"() {
       __accessCheck = (obj, member, msg) => {
         if (!member.has(obj)) throw TypeError("Cannot " + msg);
       };
@@ -5175,26 +6847,314 @@ ${``}`;
         [Symbol.toStringTag]: "Module",
       });
       template = ({ head, body }) =>
-        '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' +
+        '<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8" />\n    <link rel="icon" href="/favicon.png" />\n    <meta name="viewport" content="width=device-width, initial-scale=1" />\n    ' +
         head +
-        '\n	</head>\n	<body>\n		<div id="svelte">' +
+        '\n  </head>\n  <body>\n    <div id="svelte">' +
         body +
-        "</div>\n	</body>\n</html>\n";
+        "</div>\n  </body>\n</html>\n";
       options = null;
       default_settings = { paths: { base: "", assets: "" } };
       empty = () => ({});
       manifest = {
-        assets: [{ file: "favicon.png", size: 1571, type: "image/png" }],
-        layout: ".svelte-kit/build/components/layout.svelte",
+        assets: [
+          {
+            file: "_app/assets/pages/index.svelte-cb24eba0.css",
+            size: 2265,
+            type: "text/css",
+          },
+          {
+            file: "_app/assets/start-61d1577b.css",
+            size: 200,
+            type: "text/css",
+          },
+          {
+            file: "_app/chunks/vendor-feb08219.js",
+            size: 129649,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/error.svelte-9cc943df.js",
+            size: 2947,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2010/12/27/index.svelte-71cf4507.js",
+            size: 3618,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/01/27/index.svelte-e4d8bd2b.js",
+            size: 3420,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/02/14/index.svelte-1ff2f290.js",
+            size: 5171,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/05/04/index.svelte-765e234a.js",
+            size: 3808,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/05/06/index.svelte-c022b1a5.js",
+            size: 5108,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/05/08/index.svelte-a7f2dced.js",
+            size: 5274,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/05/09/index.svelte-9b8fcb7f.js",
+            size: 8442,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/05/12/index.svelte-83e3a4d9.js",
+            size: 10285,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/05/13/index.svelte-7d2c934c.js",
+            size: 3880,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/06/17/index.svelte-534a9d74.js",
+            size: 3950,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/07/01/index.svelte-efda5319.js",
+            size: 5530,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/11/23/index.svelte-9a0ab73f.js",
+            size: 10455,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2011/12/29/index.svelte-4fb9dab2.js",
+            size: 10757,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2012/02/07/index.svelte-1d99d5d9.js",
+            size: 6950,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2012/10/05/index.svelte-412f5be3.js",
+            size: 6005,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2012/10/19/index.svelte-dda75825.js",
+            size: 4178,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/2014/01/14/index.svelte-4cbc6b32.js",
+            size: 9185,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/__layout.svelte-feb19916.js",
+            size: 4576,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/pages/index.svelte-a3946b7d.js",
+            size: 6812,
+            type: "application/javascript",
+          },
+          {
+            file: "_app/start-ff3528b1.js",
+            size: 34334,
+            type: "application/javascript",
+          },
+        ],
+        layout: "src/routes/__layout.svelte",
         error: ".svelte-kit/build/components/error.svelte",
         routes: [
           {
             type: "page",
             pattern: /^\/$/,
             params: empty,
+            a: ["src/routes/__layout.svelte", "src/routes/index.svelte"],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2010\/12\/27\/?$/,
+            params: empty,
             a: [
-              ".svelte-kit/build/components/layout.svelte",
-              "src/routes/index.svelte",
+              "src/routes/__layout.svelte",
+              "src/routes/2010/12/27/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/01\/27\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/01/27/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/02\/14\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/02/14/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/05\/04\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/05/04/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/05\/06\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/05/06/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/05\/08\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/05/08/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/05\/09\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/05/09/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/05\/12\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/05/12/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/05\/13\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/05/13/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/06\/17\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/06/17/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/07\/01\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/07/01/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/11\/23\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/11/23/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2011\/12\/29\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2011/12/29/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2012\/02\/07\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2012/02/07/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2012\/10\/05\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2012/10/05/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2012\/10\/19\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2012/10/19/index.svelte",
+            ],
+            b: [".svelte-kit/build/components/error.svelte"],
+          },
+          {
+            type: "page",
+            pattern: /^\/2014\/01\/14\/?$/,
+            params: empty,
+            a: [
+              "src/routes/__layout.svelte",
+              "src/routes/2014/01/14/index.svelte",
             ],
             b: [".svelte-kit/build/components/error.svelte"],
           },
@@ -5211,36 +7171,260 @@ ${``}`;
         externalFetch: hooks.externalFetch || fetch,
       });
       module_lookup = {
-        ".svelte-kit/build/components/layout.svelte": () =>
+        "src/routes/__layout.svelte": () =>
           Promise.resolve().then(
-            () => (init_layout_84a7d8b4(), layout_84a7d8b4_exports),
+            () => (init_layout_5c9bf14a(), layout_5c9bf14a_exports),
           ),
         ".svelte-kit/build/components/error.svelte": () =>
           Promise.resolve().then(
-            () => (init_error_85466862(), error_85466862_exports),
+            () => (init_error_b49918bc(), error_b49918bc_exports),
           ),
         "src/routes/index.svelte": () =>
           Promise.resolve().then(
-            () => (init_index_c0b20ccf(), index_c0b20ccf_exports),
+            () => (init_index_c092dd3d(), index_c092dd3d_exports),
+          ),
+        "src/routes/2010/12/27/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_4a3e7509(), index_4a3e7509_exports),
+          ),
+        "src/routes/2011/01/27/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_915fe2f8(), index_915fe2f8_exports),
+          ),
+        "src/routes/2011/02/14/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_6d9e28b3(), index_6d9e28b3_exports),
+          ),
+        "src/routes/2011/05/04/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_99dbca5b(), index_99dbca5b_exports),
+          ),
+        "src/routes/2011/05/06/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_afd76937(), index_afd76937_exports),
+          ),
+        "src/routes/2011/05/08/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_ee0262a0(), index_ee0262a0_exports),
+          ),
+        "src/routes/2011/05/09/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_01a7a94d(), index_01a7a94d_exports),
+          ),
+        "src/routes/2011/05/12/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_6f834a7a(), index_6f834a7a_exports),
+          ),
+        "src/routes/2011/05/13/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_278d42f7(), index_278d42f7_exports),
+          ),
+        "src/routes/2011/06/17/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_79e8f665(), index_79e8f665_exports),
+          ),
+        "src/routes/2011/07/01/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_07c2717c(), index_07c2717c_exports),
+          ),
+        "src/routes/2011/11/23/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_6c504a46(), index_6c504a46_exports),
+          ),
+        "src/routes/2011/12/29/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_2b468914(), index_2b468914_exports),
+          ),
+        "src/routes/2012/02/07/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_948cc17e(), index_948cc17e_exports),
+          ),
+        "src/routes/2012/10/05/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_3cd1cd51(), index_3cd1cd51_exports),
+          ),
+        "src/routes/2012/10/19/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_f78c67c1(), index_f78c67c1_exports),
+          ),
+        "src/routes/2014/01/14/index.svelte": () =>
+          Promise.resolve().then(
+            () => (init_index_1c767a19(), index_1c767a19_exports),
           ),
       };
       metadata_lookup = {
-        ".svelte-kit/build/components/layout.svelte": {
-          entry: "layout.svelte-9b276872.js",
+        "src/routes/__layout.svelte": {
+          entry: "pages/__layout.svelte-feb19916.js",
           css: [],
-          js: ["layout.svelte-9b276872.js", "chunks/vendor-ee965c0a.js"],
+          js: [
+            "pages/__layout.svelte-feb19916.js",
+            "chunks/vendor-feb08219.js",
+          ],
           styles: [],
         },
         ".svelte-kit/build/components/error.svelte": {
-          entry: "error.svelte-409a1b85.js",
+          entry: "error.svelte-9cc943df.js",
           css: [],
-          js: ["error.svelte-409a1b85.js", "chunks/vendor-ee965c0a.js"],
+          js: ["error.svelte-9cc943df.js", "chunks/vendor-feb08219.js"],
           styles: [],
         },
         "src/routes/index.svelte": {
-          entry: "pages/index.svelte-36d588d1.js",
+          entry: "pages/index.svelte-f57fac13.js",
           css: [],
-          js: ["pages/index.svelte-36d588d1.js", "chunks/vendor-ee965c0a.js"],
+          js: ["pages/index.svelte-f57fac13.js", "chunks/vendor-feb08219.js"],
+          styles: [],
+        },
+        "src/routes/2010/12/27/index.svelte": {
+          entry: "pages/2010/12/27/index.svelte-71cf4507.js",
+          css: [],
+          js: [
+            "pages/2010/12/27/index.svelte-71cf4507.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/01/27/index.svelte": {
+          entry: "pages/2011/01/27/index.svelte-e4d8bd2b.js",
+          css: [],
+          js: [
+            "pages/2011/01/27/index.svelte-e4d8bd2b.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/02/14/index.svelte": {
+          entry: "pages/2011/02/14/index.svelte-1ff2f290.js",
+          css: [],
+          js: [
+            "pages/2011/02/14/index.svelte-1ff2f290.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/05/04/index.svelte": {
+          entry: "pages/2011/05/04/index.svelte-765e234a.js",
+          css: [],
+          js: [
+            "pages/2011/05/04/index.svelte-765e234a.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/05/06/index.svelte": {
+          entry: "pages/2011/05/06/index.svelte-c022b1a5.js",
+          css: [],
+          js: [
+            "pages/2011/05/06/index.svelte-c022b1a5.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/05/08/index.svelte": {
+          entry: "pages/2011/05/08/index.svelte-a7f2dced.js",
+          css: [],
+          js: [
+            "pages/2011/05/08/index.svelte-a7f2dced.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/05/09/index.svelte": {
+          entry: "pages/2011/05/09/index.svelte-9b8fcb7f.js",
+          css: [],
+          js: [
+            "pages/2011/05/09/index.svelte-9b8fcb7f.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/05/12/index.svelte": {
+          entry: "pages/2011/05/12/index.svelte-83e3a4d9.js",
+          css: [],
+          js: [
+            "pages/2011/05/12/index.svelte-83e3a4d9.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/05/13/index.svelte": {
+          entry: "pages/2011/05/13/index.svelte-7d2c934c.js",
+          css: [],
+          js: [
+            "pages/2011/05/13/index.svelte-7d2c934c.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/06/17/index.svelte": {
+          entry: "pages/2011/06/17/index.svelte-534a9d74.js",
+          css: [],
+          js: [
+            "pages/2011/06/17/index.svelte-534a9d74.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/07/01/index.svelte": {
+          entry: "pages/2011/07/01/index.svelte-efda5319.js",
+          css: [],
+          js: [
+            "pages/2011/07/01/index.svelte-efda5319.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/11/23/index.svelte": {
+          entry: "pages/2011/11/23/index.svelte-9a0ab73f.js",
+          css: [],
+          js: [
+            "pages/2011/11/23/index.svelte-9a0ab73f.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2011/12/29/index.svelte": {
+          entry: "pages/2011/12/29/index.svelte-4fb9dab2.js",
+          css: [],
+          js: [
+            "pages/2011/12/29/index.svelte-4fb9dab2.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2012/02/07/index.svelte": {
+          entry: "pages/2012/02/07/index.svelte-1d99d5d9.js",
+          css: [],
+          js: [
+            "pages/2012/02/07/index.svelte-1d99d5d9.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2012/10/05/index.svelte": {
+          entry: "pages/2012/10/05/index.svelte-412f5be3.js",
+          css: [],
+          js: [
+            "pages/2012/10/05/index.svelte-412f5be3.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2012/10/19/index.svelte": {
+          entry: "pages/2012/10/19/index.svelte-dda75825.js",
+          css: [],
+          js: [
+            "pages/2012/10/19/index.svelte-dda75825.js",
+            "chunks/vendor-feb08219.js",
+          ],
+          styles: [],
+        },
+        "src/routes/2014/01/14/index.svelte": {
+          entry: "pages/2014/01/14/index.svelte-4cbc6b32.js",
+          css: [],
+          js: [
+            "pages/2014/01/14/index.svelte-4cbc6b32.js",
+            "chunks/vendor-feb08219.js",
+          ],
           styles: [],
         },
       };
@@ -6732,7 +8916,7 @@ ${``}`;
   });
 
   // .svelte-kit/output/server/app.js
-  init_app_f96727fd();
+  init_app_bb99931b();
 
   // .svelte-kit/cloudflare-workers/entry.js
   var import_kv_asset_handler = __toModule(require_dist());

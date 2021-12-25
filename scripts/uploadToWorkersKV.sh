@@ -97,7 +97,7 @@ export -f get_title
 export -f create_index
 echo "let articles = [" >articles.js
 # Create the index.svelte file for every blog post in src/posts
-find $(pwd)/src/posts/ -name "*.md" -type f -print0 | xargs -0 -I{} bash -c 'process_posts "{}"'
+find $(pwd)/src/posts/ -name "*.md" -type f | sort -r | xargs -I{} bash -c 'process_posts "{}"'
 echo "]" >>articles.js
 rm ARTICLE*
 create_index
