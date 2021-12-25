@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-  let date = "2010/12/27";
-  let source = `
+	let date = '2010/12/27';
+	let source = `
 
 # Initiative and Assistance
 

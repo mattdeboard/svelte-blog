@@ -2,6 +2,7 @@
 	import SvelteMarkdown from 'svelte-markdown';
 	let date = '2011/05/06';
 	let source = `
+
 # Python code deployment with Fabric
 
 So last night at the [IndyPy](http://www.meetup.com/python-182/) meetup I gave a very impromptu talk on [Fabric](http://www.meetup.com/python-182/). It lasted maybe five minutes and afterward I really felt like I just did not do this great tool justice. In order to make up for that, I thought I'd dive in a little deeper to Fabric.

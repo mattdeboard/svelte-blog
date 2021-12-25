@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-  let date = "2011/11/23";
-  let source = `
+	let date = '2011/11/23';
+	let source = `
 # How I Became a Programmer
 
 I posted a [very brief response](http://news.ycombinator.com/item?id=3268469) to a post on HackerNews yesterday challenging the notion that 8 weeks of guided tutelage on [Ruby on Rails](http://rubyonrails.org/) is not going to produce someone who you might consider a "junior RoR developer." It did not garner many upvotes so I figured that like most conversation on the Internet it faded into the general ambient chatter. Imagine my surprise when I woke up to couple handfuls' worth of emails from around the world asking me what I did, how I did it, and how I got a job. I'm assuming, judging by the relatively small amount of mail I got from a random aside on HN\*, that there must be a lot of people who are trying to figure out how to pursue a career in programming.
