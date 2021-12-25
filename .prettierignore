@@ -1,0 +1,10 @@
+build
+workers-site
+.gitignore
+.svelte-kit
+static
+src/posts
+package.json
+package-lock.json
+Pipfile
+Pipfile.lock
