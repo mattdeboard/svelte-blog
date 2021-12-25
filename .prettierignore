@@ -8,3 +8,5 @@ package.json
 package-lock.json
 Pipfile
 Pipfile.lock
+.eslintrc.cjs
+.prettierrc
