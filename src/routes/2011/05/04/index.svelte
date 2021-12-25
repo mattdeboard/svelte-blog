@@ -1,7 +1,7 @@
 <script lang="ts">
-	import SvelteMarkdown from 'svelte-markdown';
-	let date = '2011/05/04';
-	let source = `
+  import SvelteMarkdown from "svelte-markdown";
+  let date = "2011/05/04";
+  let source = `
 # No Regrets
 
 I was inspired by the farewell post of a man I've never heard of, published the day of his death. Well, maybe less "inspired" and more "filled with relief and gratitude." You can read his letter [here](http://www.penmachine.com/2011/05/the-last-post). At the time of this writing, however, that link is being hammered by, I'm sure, an overwhelming surge of traffic as word of this post makes its way around the web. Here is Google's [cache](http://webcache.googleusercontent.com/search?q=cache:http://www.penmachine.com/2011/05/the-last-post), and here is a [pastebin](http://pastebin.ca/2053916) copy. It's worth a read, but be forewarned: It is pretty wrenching.
@@ -19,10 +19,10 @@ Reading Derek's post has affirmed the decisions I've made to put me in this posi
 </script>
 
 <div>
-	<!-- <h1 class="title">{title}</h1> -->
-	<p class="date">written on {date}</p>
-	<div class="content">
-		<!-- svelte-ignore missing-declaration -->
-		<SvelteMarkdown {source} />
-	</div>
+  <!-- <h1 class="title">{title}</h1> -->
+  <p class="date">written on {date}</p>
+  <div class="content">
+    <!-- svelte-ignore missing-declaration -->
+    <SvelteMarkdown {source} />
+  </div>
 </div>

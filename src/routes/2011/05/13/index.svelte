@@ -1,7 +1,7 @@
 <script lang="ts">
-	import SvelteMarkdown from 'svelte-markdown';
-	let date = '2011/05/13';
-	let source = `
+  import SvelteMarkdown from "svelte-markdown";
+  let date = "2011/05/13";
+  let source = `
 
 # Chebyshev polynomials in LaTeX
 
@@ -61,10 +61,10 @@ It would be trivial to connect to something like [MathBin](http://mathbin.net) p
 </script>
 
 <div>
-	<!-- <h1 class="title">{title}</h1> -->
-	<p class="date">written on {date}</p>
-	<div class="content">
-		<!-- svelte-ignore missing-declaration -->
-		<SvelteMarkdown {source} />
-	</div>
+  <!-- <h1 class="title">{title}</h1> -->
+  <p class="date">written on {date}</p>
+  <div class="content">
+    <!-- svelte-ignore missing-declaration -->
+    <SvelteMarkdown {source} />
+  </div>
 </div>

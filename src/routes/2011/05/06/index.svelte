@@ -1,7 +1,7 @@
 <script lang="ts">
-	import SvelteMarkdown from 'svelte-markdown';
-	let date = '2011/05/06';
-	let source = `
+  import SvelteMarkdown from "svelte-markdown";
+  let date = "2011/05/06";
+  let source = `
 
 # Python code deployment with Fabric
 
@@ -91,10 +91,10 @@ def update_search():
 </script>
 
 <div>
-	<!-- <h1 class="title">{title}</h1> -->
-	<p class="date">written on {date}</p>
-	<div class="content">
-		<!-- svelte-ignore missing-declaration -->
-		<SvelteMarkdown {source} />
-	</div>
+  <!-- <h1 class="title">{title}</h1> -->
+  <p class="date">written on {date}</p>
+  <div class="content">
+    <!-- svelte-ignore missing-declaration -->
+    <SvelteMarkdown {source} />
+  </div>
 </div>

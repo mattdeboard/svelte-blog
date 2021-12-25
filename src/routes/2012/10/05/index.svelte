@@ -1,7 +1,7 @@
 <script lang="ts">
-	import SvelteMarkdown from 'svelte-markdown';
-	let date = '2012/10/05';
-	let source = `
+  import SvelteMarkdown from "svelte-markdown";
+  let date = "2012/10/05";
+  let source = `
 
 # Larry the Software Guy
 
@@ -30,10 +30,10 @@ Now obviously I don't do much manual labor anymore, but I'm proud of and enjoy t
 </script>
 
 <div>
-	<!-- <h1 class="title">{title}</h1> -->
-	<p class="date">written on {date}</p>
-	<div class="content">
-		<!-- svelte-ignore missing-declaration -->
-		<SvelteMarkdown {source} />
-	</div>
+  <!-- <h1 class="title">{title}</h1> -->
+  <p class="date">written on {date}</p>
+  <div class="content">
+    <!-- svelte-ignore missing-declaration -->
+    <SvelteMarkdown {source} />
+  </div>
 </div>

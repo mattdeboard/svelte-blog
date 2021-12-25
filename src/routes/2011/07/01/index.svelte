@@ -1,7 +1,7 @@
 <script lang="ts">
-	import SvelteMarkdown from 'svelte-markdown';
-	let date = '2011/07/01';
-	let source = `
+  import SvelteMarkdown from "svelte-markdown";
+  let date = "2011/07/01";
+  let source = `
 
 # Export ALL Your Facebook Photos Easily
 
@@ -110,10 +110,10 @@ if __name__ == "__main__":
 </script>
 
 <div>
-	<!-- <h1 class="title">{title}</h1> -->
-	<p class="date">written on {date}</p>
-	<div class="content">
-		<!-- svelte-ignore missing-declaration -->
-		<SvelteMarkdown {source} />
-	</div>
+  <!-- <h1 class="title">{title}</h1> -->
+  <p class="date">written on {date}</p>
+  <div class="content">
+    <!-- svelte-ignore missing-declaration -->
+    <SvelteMarkdown {source} />
+  </div>
 </div>
