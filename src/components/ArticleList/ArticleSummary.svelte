@@ -1,7 +1,5 @@
 <script lang="ts">
-  let date = "::date::";
-  let summary = "::summary::";
-  let title = "::title::";
+  export let date: string, summary: string, title: string;
 </script>
 
 <div class="entry-overview">
