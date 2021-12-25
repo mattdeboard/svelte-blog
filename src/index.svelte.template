@@ -1,0 +1,9 @@
+<script>
+  import ArticleSummary from "../components/ArticleList/ArticleSummary.svelte";
+
+  "::articles::";
+</script>
+
+{#each articles as article}
+  <ArticleSummary {...article} />
+{/each}

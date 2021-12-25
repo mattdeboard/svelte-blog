@@ -59,7 +59,7 @@ EOM
   let summary = "$summary"
 EOM
 
-  echo '{"summary": "'$summary'", "title": "'$title'", "date": "'$the_key'"},' >>articles.json
+  echo '{"summary": "'$summary'", "title": "'$title'", "date": "'$the_key'"},' >>articles.js
   mkdir -p src/routes/$the_key/
   sed -e '/::source::/{r ARTICLE' -e 'd}; /::date::/{r ARTICLE_DATE' -e 'd}' src/components/Article.svelte >src/routes/$the_key/index.svelte
 }
@@ -87,13 +87,19 @@ get_title() {
     echo $trimmed
   fi
 }
+
+create_index() {
+  sed -e '/::articles::/{r articles.js' -e 'd}' src/index.svelte.template >src/routes/index.svelte
+}
 export -f process_posts
 export -f create_summary
 export -f get_title
-
-echo "[" >articles.json
+export -f create_index
+echo "let articles = [" >articles.js
 # Create the index.svelte file for every blog post in src/posts
 find $(pwd)/src/posts/ -name "*.md" -type f -print0 | xargs -0 -I{} bash -c 'process_posts "{}"'
-echo "]" >>articles.json
+echo "]" >>articles.js
 rm ARTICLE*
+create_index
+rm articles.js
 npm run format
