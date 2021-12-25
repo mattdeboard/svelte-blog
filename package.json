@@ -22,7 +22,6 @@
 		"eslint-plugin-svelte3": "^3.2.1",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
-		"pygmentize-bundled-cached": "^1.1.0",
 		"rst2html": "^1.0.4",
 		"rst2mdown": "^0.1.0",
 		"svelte": "^3.42.6",
