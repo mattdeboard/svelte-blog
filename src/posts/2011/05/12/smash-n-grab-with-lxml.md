@@ -144,7 +144,7 @@ def scrapeCourses():
     return item_counter
 ```
 
-parse() is a helper function for scrapeDepts() and scrapeCourses().
+`parse()` is a helper function for `scrapeDepts()` and `scrapeCourses()`.
 
 ```python
 def parse(link):
