@@ -43,7 +43,7 @@ process_posts() {
   header=$(head -n3 $f | sed -z 's/\n/,/g; s/,$//')
   cat <<-EOM >ARTICLE
   let source = \`
-$(tail -n +4 $f)
+$(tail -n +4 $f | sed -e 's/`/\\`/g')
 \`;
 EOM
   cat <<-EOM >ARTICLE_DATE
@@ -54,8 +54,7 @@ EOM
 }
 
 export -f process_posts
-# export -f put_public_status
-# export -f put_summaries
-# export -f put_tags
 
+# Create the index.svelte file for every blog post in src/posts
 find $(pwd)/src/posts/ -name "*.md" -type f -print0 | xargs -0 -I{} bash -c 'process_posts "{}"'
+npm run format
