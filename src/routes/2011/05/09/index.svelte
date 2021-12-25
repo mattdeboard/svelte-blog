@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-  let date = "2011/05/09";
-  let source = `
+	let date = '2011/05/09';
+	let source = `
 
 # My guide to rstblog
 
@@ -15,7 +15,7 @@ First, rstblog is so called because it is powered by [reStructuredText](http://d
 
 Some other concepts & tech with which I've had to get familiar in support of rstblog:
 
-: 1. [YAML](http://www.yaml.org/spec/1.2/spec.html) - Specifically, getting a grip on how finicky it can be about whitespace. 2. [Makefiles](http://linuxdevcenter.com/pub/a/linux/2002/01/31/make_intro.html) - I knew `make` is how Linux compiles or otherwise builds software. But I was not aware of how to put Makefiles into play to control this behavior. (I'm really getting sick of mentioning this guy here, but Brett Hoerner has a simple Makefile [here](https://github.com/bretthoerner/bretthoerner.com/blob/master/Makefile) that I incorporated into my own workflow.) 3. [virtualenv](http://pypi.python.org/pypi/virtualenv) - Though virtualenv is now so pervasive in my dev work that I don't really remember a time when I _wasn't_ using it, I know I first used it for my blog. I consider [this](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip) to be a canonical explanation of why virtualenv is great. (Not that I'm a keeper of canon or anything.) 4. [RVM](https://rvm.beginrescueend.com/) - I use [Blueprint](http://blueprintcss.org) to manage CSS files for each of my websites. Blueprint requires Ruby. I'm an idiot, so I need Ruby Version Manager to help me be not stupid.
+: 1. [YAML](http://www.yaml.org/spec/1.2/spec.html) - Specifically, getting a grip on how finicky it can be about whitespace. 2. [Makefiles](http://linuxdevcenter.com/pub/a/linux/2002/01/31/make_intro.html) - I knew \`make\` is how Linux compiles or otherwise builds software. But I was not aware of how to put Makefiles into play to control this behavior. (I'm really getting sick of mentioning this guy here, but Brett Hoerner has a simple Makefile [here](https://github.com/bretthoerner/bretthoerner.com/blob/master/Makefile) that I incorporated into my own workflow.) 3. [virtualenv](http://pypi.python.org/pypi/virtualenv) - Though virtualenv is now so pervasive in my dev work that I don't really remember a time when I _wasn't_ using it, I know I first used it for my blog. I consider [this](http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip) to be a canonical explanation of why virtualenv is great. (Not that I'm a keeper of canon or anything.) 4. [RVM](https://rvm.beginrescueend.com/) - I use [Blueprint](http://blueprintcss.org) to manage CSS files for each of my websites. Blueprint requires Ruby. I'm an idiot, so I need Ruby Version Manager to help me be not stupid.
 
 ## Workflow
 
@@ -23,9 +23,9 @@ The big, tough nut to crack for rstblog, from my perspective, has been workflow.
 
 > 1.  Fire up emacs on my local machine and create blog post.
 > 2.  Tab over to terminal, cd to my blog's root directory (still on local machine).
-> 3.  `$ make clean`
-> 4.  `$ make build`
-> 5.  `$ make upload`
+> 3.  \`$ make clean\`
+> 4.  \`$ make build\`
+> 5.  \`$ make upload\`
 > 6.  ???
 > 7.  Publish
 
@@ -37,26 +37,26 @@ First, note that **I did no work on the server hosting my blog**, excepting the 
 
 ### Beware extraneous files
 
-The second thing to be aware of is that the build process for rstblog is a big vacuum. It does not discern between .rst, .rst~, #foo.rst#, overmyhead.jpg, asco.png, etc., files. It will create a blog entry for every file that is in either a `<yyyy>/<mm>/<dd>/` format directory or in the blog's root directory (mine is `/a/mattdeboard.net/blog` on my local machine). Before you `make build`, ensure that there's nothing but entry.rst in that day's directory.
+The second thing to be aware of is that the build process for rstblog is a big vacuum. It does not discern between .rst, .rst~, #foo.rst#, overmyhead.jpg, asco.png, etc., files. It will create a blog entry for every file that is in either a \`<yyyy>/<mm>/<dd>/\` format directory or in the blog's root directory (mine is \`/a/mattdeboard.net/blog\` on my local machine). Before you \`make build\`, ensure that there's nothing but entry.rst in that day's directory.
 
 For example, if use vim and you're working on an entry titled "Matt's birthday" for June 3, 2011, you'll do:
 
-```bash
+\`\`\`bash
 <matt@Ubuntu>:/a/mattdeboard.net/blog$ mkdir -p 2011/06/03
 <matt@Ubuntu>:/a/mattdeboard.net/blog$ vim 2011/06/03/matts-birthday.rst
-```
+\`\`\`
 
 If vim does an auto-save/backup of your file mid-edit, you may wind up with a matts-birthday.rst~ file in the directory along with matts-birthday.rst. rstblog's build process will create a blog entry for each. So make sure you somehow curate your directories and remove extraneous files. (For emacs, I added the following to my .emacs file:
 
-```clj
+\`\`\`clj
 (setq backup-directory-alist '(("." . "~/.emacs_backups")))
-```
+\`\`\`
 
 If you use anything else, [you're on your own](http://google.com)).
 
 ### index.html wonkiness
 
-I found that when I accidentally created unwanted blog entries as described above, they were really persistent about sticking around my root index.html file. Finally I figured out that I had to **delete the remote blog/index.html file** and re-`make upload`. That fixes it.
+I found that when I accidentally created unwanted blog entries as described above, they were really persistent about sticking around my root index.html file. Finally I figured out that I had to **delete the remote blog/index.html file** and re-\`make upload\`. That fixes it.
 
 ### CSS & syntax highlighting
 
@@ -64,10 +64,10 @@ As you may be able to tell, I'm as excited as a puppy who just found his penis a
 
 A word about CSS: Use [Blueprint](http://blueprintcss.org) for organizing and maintaining your CSS files. It makes things a million times easier once you get the hang of it. The finer points of Blueprint are beyond the scope of this post, but here is my bash alias I use to roll any CSS changes into my build:
 
-```bash
+\`\`\`bash
 
 alias er="cd /a/mattdeboard.net; . bin/activate; cd /home/matt/blueprint/lib/; ruby compress.rb -p blog; cd /a/mattdeboard.net/blog; make clean; make build"
-```
+\`\`\`
 
 I am 100% sure I'm doing it wrong with Pygments. I have the styles hard-coded in my stylesheet, which I don't think I need to do. rstblog has support for Pygments, so it doesn't make sense that I'd need to put them in my stylesheet. However, it's done, it works, it looks how I want, so fixing it is an extremely low priority. If you've got insight on how this actually works, I'm all ears!
 

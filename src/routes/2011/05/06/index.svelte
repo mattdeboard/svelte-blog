@@ -1,7 +1,7 @@
 <script lang="ts">
-  import SvelteMarkdown from 'svelte-markdown';
-  let date = "2011/05/06";
-  let source = `
+	import SvelteMarkdown from 'svelte-markdown';
+	let date = '2011/05/06';
+	let source = `
 # Python code deployment with Fabric
 
 So last night at the [IndyPy](http://www.meetup.com/python-182/) meetup I gave a very impromptu talk on [Fabric](http://www.meetup.com/python-182/). It lasted maybe five minutes and afterward I really felt like I just did not do this great tool justice. In order to make up for that, I thought I'd dive in a little deeper to Fabric.
@@ -10,13 +10,13 @@ So last night at the [IndyPy](http://www.meetup.com/python-182/) meetup I gave a
 
 First and foremost, I love Fabric because **it lets me be lazy**. For far too long while I was developing [Yukmarks](http://yukmarks.com), I was manually typing things like:
 
-```bash
+\`\`\`bash
 # On local:
 ssh my-ip-address.com
 
 # On remote:
 git pull && sudo /etc/init.d/apache2 restart && ./manage.py dump_data && pg_dump >> foo.txt
-```
+\`\`\`
 
 That's right:
 
@@ -36,7 +36,7 @@ So then [someone](http://bretthoerner.com) introduced me to Fabric. I now use Fa
 
 To make Fabric work, you just import the API and you're off:
 
-```python
+\`\`\`python
 
 from fabric.api import *
 from hosts import hosts, secret
@@ -51,7 +51,7 @@ def git_pull():
 
     :   " --auto yuk; ./manage.py migrate yuk;cp %s* %s;sudo /etc/init.d/apache2"
         " force-reload" % (domain_dir, appdir, css_dir, static_file_dir))
-```
+\`\`\`
 
 The above code is exactly what it looks like: a number of semicolon-separated shell commands. It's probably the most idiot-proof, time-saving thing I've ever used. Please see the below:
 
@@ -61,7 +61,7 @@ Stop typing so much. Fabric makes things ridiculously easy.
 
 **Edit 5/8/11**: I actually reduced the complexity of my update_index() fabfile function quite a bit. I was doing a lot of really stupid chowning back and forth, which I've now fixed. Old:
 
-```python
+\`\`\`python
 
 def update_search():
 
@@ -70,11 +70,11 @@ def update_search():
     "sudo chown www-<data:www-data> %s*; sudo /etc/init.d/apache2 force-reloa"
     "d" % (domain_dir, appdir, whoosh_dir,
     whoosh_dir, whoosh_dir, whoosh_dir))
-```
+\`\`\`
 
 New:
 
-```python
+\`\`\`python
 
 def update_search():
 
@@ -83,7 +83,7 @@ def update_search():
     run("sudo -u www-data /a/mattdeboard.net/bin/python %smanage.py update_inde"
 
     :   "x; sudo /etc/init.d/apache2 force-reload" % appdir)
-```
+\`\`\`
 
 **p.s.** In addition to Fabric, you'll definitely want to incorporate cron & creative use of your Makefile to make your life easier. Consult [the github repo](https://github.com/mattdeboard/Yuk) for Yukmarks.
 `;

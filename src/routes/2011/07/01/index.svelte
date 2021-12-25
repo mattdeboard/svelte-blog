@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-  let date = "2011/07/01";
-  let source = `
+	let date = '2011/07/01';
+	let source = `
 
 # Export ALL Your Facebook Photos Easily
 
@@ -15,7 +15,7 @@ It will download all of your pictures from your Facebook account, and store them
 
 I guess I could plug this in to the Picasa API, and may do so this weekend.
 
-```python
+\`\`\`python
 import optparse
 import os
 import re
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     (options, args) = parser.parse_args(args)
     get_photos(options.dest_dir)
-```
+\`\`\`
 `;
 </script>
 

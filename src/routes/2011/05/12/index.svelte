@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-  let date = "2011/05/12";
-  let source = `
+	let date = '2011/05/12';
+	let source = `
 
 # Python-Powered Smash'n'Grab
 
@@ -30,7 +30,7 @@ I used Python's [lxml library](http://lxml.de/) to power a script that scrapes I
 
 I won't bore you with the nitty-gritty whys and wherefores of the problems I ran into here (plus, my code is commented). scrapeDepts() initializes the JSON file and populates it with department names:
 
-```python
+\`\`\`python
 import string
 import json
 import time
@@ -64,11 +64,11 @@ def scrapeDepts():
         json.dump(deptDict, f)
 
     return
-```
+\`\`\`
 
-`scrapeCourses()` is heavily commented for my own sanity. I've got probably more list comprehensions than I need, but they're more readable this way. Plus, it works, and the part of the process the list comprehensions handle aren't going to impact total run time in any appreciable way on a dataset this small.
+\`scrapeCourses()\` is heavily commented for my own sanity. I've got probably more list comprehensions than I need, but they're more readable this way. Plus, it works, and the part of the process the list comprehensions handle aren't going to impact total run time in any appreciable way on a dataset this small.
 
-```python
+\`\`\`python
 def scrapeCourses():
     """Scrape the courses for each department."""
     item_counter = 0
@@ -93,12 +93,12 @@ def scrapeCourses():
             except:
                 continue
 
-            # This is lxml syntax to find all <pre></pre> tags. `.//foo`
+            # This is lxml syntax to find all <pre></pre> tags. \`.//foo\`
             # finds all <foo></foo> tags.
             pre = f.findall(".//pre")[0]
 
             # The text content for the <pre> tag on a given dept/course
-            # web page comes through as an unformatted block of text. `t`
+            # web page comes through as an unformatted block of text. \`t\`
             # is a list comprehension that splits this block of text into
             # separate lines, including each separate line iff. it has at
             # least one character. This conditional is necessary because
@@ -109,8 +109,8 @@ def scrapeCourses():
                 l.strip() for l in pre.text_content().splitlines() if len(l.strip()) > 0
             ]
 
-            # `lines` is a list comprehension to gather all the lines
-            # from `t` that began with a digit. This is a heuristic
+            # \`lines\` is a list comprehension to gather all the lines
+            # from \`t\` that began with a digit. This is a heuristic
             # particular to registrar.iupui.edu.
             lines = [line for line in t if line[0] in string.digits]
 
@@ -143,11 +143,11 @@ def scrapeCourses():
         json.dump(deptDict, f)
 
     return item_counter
-```
+\`\`\`
 
-parse() is a helper function for scrapeDepts() and scrapeCourses().
+\`parse()\` is a helper function for \`scrapeDepts()\` and \`scrapeCourses()\`.
 
-```python
+\`\`\`python
 def parse(link):
   print >> sys.stderr, "Parsing %s" % link[-15:]
   ind = lh.parse(link)
@@ -155,11 +155,11 @@ def parse(link):
   main = [div for div in ind.findall(".//div") if div.get("id") == "main"]
   print >> sys.stderr, "Fetch complete. Returning to main process."
   return main[0]
-```
+\`\`\`
 
-`maketime()` is basically the function I had been wanting to write in the first place, if I had been provided with some legit raw data. It takes the machine-readable data and turns it into a much more manageable data structure. In this case, it's a list. Then using the [time library](http://docs.python.org/library/time.html) it transforms the string describing the course start and end times, first into a list of [time.struct_time](http://docs.python.org/library/time.html#time.struct_time) objects. Finally, I use `struct_time`'s attributes to transform that list into a list of integers.
+\`maketime()\` is basically the function I had been wanting to write in the first place, if I had been provided with some legit raw data. It takes the machine-readable data and turns it into a much more manageable data structure. In this case, it's a list. Then using the [time library](http://docs.python.org/library/time.html) it transforms the string describing the course start and end times, first into a list of [time.struct_time](http://docs.python.org/library/time.html#time.struct_time) objects. Finally, I use \`struct_time\`'s attributes to transform that list into a list of integers.
 
-```python
+\`\`\`python
 def maketime():
     with open("sched.json", "r") as f:
         sched = json.load(f)
@@ -196,7 +196,7 @@ if __name__ == "__main__":
     scrapeDepts()
     ic = scrapeCourses()
     print(ic)
-```
+\`\`\`
 
 Turned out I was scraping about 2,850 individual pages to compile the data. Running this script took about an hour each time I ran it. At least now I'm past that and can move on with the rest of the project, which I _hope_ to start this weekend.
 `;

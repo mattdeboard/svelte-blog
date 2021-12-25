@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-  let date = "2011/05/08";
-  let source = `
+	let date = '2011/05/08';
+	let source = `
 
 # Haystack index update script + cronjob
 
@@ -11,7 +11,7 @@ However, I am seriously, profoundly lazy, so all those keystrokes were getting a
 
 ## The code
 
-```python
+\`\`\`python
 
 import subprocess
 import sys
@@ -60,21 +60,21 @@ def update():
 
 if __name__ == '__main__':
   update()
-```
+\`\`\`
 
 The (root) cron job:
 
-```bash
+\`\`\`bash
 
 0,15,30,45 * * * * /a/mattdeboard.net/bin/python /a/mattdeboard.net/src/yukproj/
 srchupdate.py -c|mail -s "Search Update Complete" matt
-```
+\`\`\`
 
 (I have it all on one line in crontab, but broken up into two here for ease of reading.)
 
 ## What do
 
-So basically every 15 minutes, the server runs [srchupdate.py](https://github.com/mattdeboard/Yuk/srchupdate.py), and logs the results to a log file outside the project directory. If the update fails, it logs the exit status values, stderr and stdout data (using the communicate() method and returnvalue attribute of Python's excellent `subprocess.Popen`). This captures traceback info and has made debugging much easier.
+So basically every 15 minutes, the server runs [srchupdate.py](https://github.com/mattdeboard/Yuk/srchupdate.py), and logs the results to a log file outside the project directory. If the update fails, it logs the exit status values, stderr and stdout data (using the communicate() method and returnvalue attribute of Python's excellent \`subprocess.Popen\`). This captures traceback info and has made debugging much easier.
 
 The biggest source of friction is [Whoosh](https://bitbucket.org/mchaput/whoosh/wiki/Home), which powers my Haystack install. Whoosh is pure Python, and very easy to install. However, it is _extremely_ slow. I'd probably even say ponderous. For ~350 bookmark entries on Yuk, it takes about 10 seconds to update. From what I understand, Solr is much faster, but has a much steeper learning curve. For Yukmarks, I think Whoosh is fine, but I doubt going forward I'd use it for any serious projects where speed is important.
 

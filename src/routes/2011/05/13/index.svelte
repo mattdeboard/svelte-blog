@@ -1,11 +1,11 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
-  let date = "2011/05/13";
-  let source = `
+	let date = '2011/05/13';
+	let source = `
 
 # Chebyshev polynomials in LaTeX
 
-I'm recovering from an obsession with [Chebyshev polynomials](http://mathworld.wolfram.com/ChebyshevPolynomialoftheFirstKind.html). Despite the fancy title and somewhat-intimidating definition, Chebyshev polynomials are actually a fantastic shortcut -- relative to what we're taught from the book -- to factoring out trigonometric double-angle problems like `cos(6x)`.
+I'm recovering from an obsession with [Chebyshev polynomials](http://mathworld.wolfram.com/ChebyshevPolynomialoftheFirstKind.html). Despite the fancy title and somewhat-intimidating definition, Chebyshev polynomials are actually a fantastic shortcut -- relative to what we're taught from the book -- to factoring out trigonometric double-angle problems like \`cos(6x)\`.
 
 I was originally going to write a script that calculated the Chebyshev polynomials, but when I learned Python's [SciPy](http://www.scipy.org/) library already has a function, I "pivoted." Instead I wanted to write the below script, which calculates the polynomial using scipy.special.orthogonal.chebyt(), then creates a [LaTeX](http://www.latex-project.org/) -formatted string representation of the equation. For example, the output for the ninth-degree Chebyshev polynomial is rendered thusly:
 
@@ -13,7 +13,7 @@ I was originally going to write a script that calculated the Chebyshev polynomia
 
 Here's the code, it should be pretty straightforward:
 
-```python
+\`\`\`python
 import sys
 import math
 from scipy.special import orthogonal as orth
@@ -54,7 +54,7 @@ def chebyTex(n):
 if __name__ == "__main__":
     s = chebyTex(int(sys.argv[1]))
     print(s)
-```
+\`\`\`
 
 It would be trivial to connect to something like [MathBin](http://mathbin.net) pull down and store the resulting image, but was beyond the scope of this little script.
 `;
