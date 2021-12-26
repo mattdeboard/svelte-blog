@@ -8,7 +8,7 @@ summary: Use git & Python to auto-generate changelogs.
 
 As part of the communication process at work, devs maintain changelogs for some of our projects. What these consist of is a single `RELEASE NOTES.md` file in the project root, where each each line is a Markdown hyperlink to the pull request that introduced the change. These pull request links are then grouped together by date of release. The changelog looks like:
 
-```
+```text
     ## v1.7 2013/03/17
     * [#100](https://github.com/courseload/project/pull/100) - Finalized previously preliminary stuff
     * [#99](https://github.com/courseload/project/pull/99) - Did some preliminary stuff
@@ -151,13 +151,13 @@ if __name__ == "__main__":
 
 To view the output in stdout, at the command line type:
 
-```
+```shell
 $ ./release.py 1.7 HEAD
 ```
 
 Or, specify an output file:
 
-```
+```shell
 $ ./release 1.7 HEAD ./RELEASE NOTES.md
 ```
 
@@ -165,17 +165,17 @@ $ ./release 1.7 HEAD ./RELEASE NOTES.md
 
 One additional step I took is to create a git alias for the git log command, but prettied up a bit, for when I want to just scan through the differences from one version to the next. If you'd like to do the same, add the following to the \[alias\] section of `~/.gitconfig`:
 
-```shell
-    lm = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset \
-      -%C(yellow)%d%Creset %C(bold cyan)%s %Cgreen(%cr)%n%Creset%n - %b%n' \
+```text
+    lm = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset \\
+      -%C(yellow)%d%Creset %C(bold cyan)%s %Cgreen(%cr)%n%Creset%n - %b%n' \\
       --abbrev-commit --date=relative --merges
 ```
 
 You can also achieve the same effect by entering the following at the CLI:
 
-```shell
-    git config --global alias.lm "log --pretty=format:'%Cred%h%Creset \
-      %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %C(bold cyan)%s \
+```sh
+    git config --global alias.lm "log --pretty=format:'%Cred%h%Creset \\
+      %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %C(bold cyan)%s \\
       %Cgreen(%cr)%n%Creset%n - %b%n' --abbrev-commit --date=relative --merges"
 ```
 

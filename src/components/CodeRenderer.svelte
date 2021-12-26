@@ -5,4 +5,5 @@
   export let text;
 </script>
 
-<pre class={lang}><code>{@html hljs.highlightAuto(text).value}</code></pre>
+<pre
+  class={lang}><code>{@html hljs.highlight(text, {language: lang || "text"}).value}</code></pre>
