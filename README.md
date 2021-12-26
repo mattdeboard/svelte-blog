@@ -1,6 +1,6 @@
 # What is this?
 
-This is the source code for my static blog which is currently hosted at <https://svelte-blog.mattdeboard.workers.dev>.
+This is the source code for my static blog which is currently hosted at <https://svelte-blog.mattdeboard.workers.dev>. It is a rewrite of my [original blog](https://github.com/mattdeboard/mattdeboard.net).
 
 ## Notes for myself
 
