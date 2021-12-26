@@ -8,9 +8,7 @@
 
 I'm recovering from an obsession with [Chebyshev polynomials](http://mathworld.wolfram.com/ChebyshevPolynomialoftheFirstKind.html). Despite the fancy title and somewhat-intimidating definition, Chebyshev polynomials are actually a fantastic shortcut -- relative to what we're taught from the book -- to factoring out trigonometric double-angle problems like \`cos(6x)\`.
 
-I was originally going to write a script that calculated the Chebyshev polynomials, but when I learned Python's [SciPy](http://www.scipy.org/) library already has a function, I "pivoted." Instead I wanted to write the below script, which calculates the polynomial using scipy.special.orthogonal.chebyt(), then creates a [LaTeX](http://www.latex-project.org/) -formatted string representation of the equation. For example, the output for the ninth-degree Chebyshev polynomial is rendered thusly:
-
-![image](http://mathbin.net/equations/62360_0.png)
+I was originally going to write a script that calculated the Chebyshev polynomials, but when I learned Python's [SciPy](http://www.scipy.org/) library already has a function, I "pivoted." Instead I wanted to write the below script, which calculates the polynomial using scipy.special.orthogonal.chebyt(), then creates a [LaTeX](http://www.latex-project.org/) -formatted string representation of the equation.
 
 Here's the code, it should be pretty straightforward:
 
