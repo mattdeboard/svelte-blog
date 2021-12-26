@@ -1,5 +1,5 @@
 <div class="span-24 last" id="header">
-  <a href="http://mattdeboard.net">Matt DeBoard</a>
+  <a href="/">Matt DeBoard</a>
 </div>
 
 <div class="span-24" id="menu">
