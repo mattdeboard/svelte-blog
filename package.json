@@ -10,7 +10,6 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. .",
-    "publish": "wrangler publish"
   },
   "devDependencies": {
     "@sveltejs/adapter-cloudflare-workers": "^1.0.0-next.25",
