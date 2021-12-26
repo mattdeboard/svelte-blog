@@ -19,10 +19,8 @@ Reading Derek's post has affirmed the decisions I've made to put me in this posi
 </script>
 
 <div>
-  <!-- <h1 class="title">{title}</h1> -->
   <p class="date">written on {date}</p>
   <div class="content">
-    <!-- svelte-ignore missing-declaration -->
     <SvelteMarkdown {source} />
   </div>
 </div>

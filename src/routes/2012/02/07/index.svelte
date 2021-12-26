@@ -76,10 +76,8 @@ Let me know in the comments if you have any problems, spot bugs or think I'm an 
 </script>
 
 <div>
-  <!-- <h1 class="title">{title}</h1> -->
   <p class="date">written on {date}</p>
   <div class="content">
-    <!-- svelte-ignore missing-declaration -->
     <SvelteMarkdown {source} />
   </div>
 </div>

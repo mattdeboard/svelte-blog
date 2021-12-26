@@ -1,3 +1,11 @@
+<script>
+  import github from "svelte-highlight/src/styles/github";
+</script>
+
+<svelt:head>
+  {@html github}
+</svelt:head>
+
 <div class="container">
   <div class="span-24 last" id="header">
     <a href="http://mattdeboard.net">Matt DeBoard</a>

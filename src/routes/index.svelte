@@ -1,5 +1,5 @@
 <script>
-  import ArticleSummary from "../components/ArticleList/ArticleSummary.svelte";
+  import ArticleSummary from "$components/ArticleList/ArticleSummary.svelte";
 
   let articles = [
     {

@@ -47,10 +47,8 @@ Hope this helps. Supervisor has a ton of different options for configuring how a
 </script>
 
 <div>
-  <!-- <h1 class="title">{title}</h1> -->
   <p class="date">written on {date}</p>
   <div class="content">
-    <!-- svelte-ignore missing-declaration -->
     <SvelteMarkdown {source} />
   </div>
 </div>
