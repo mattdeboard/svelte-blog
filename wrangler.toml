@@ -1,5 +1,5 @@
 name = "svelte-blog"
-type = "javascript"
+type = "webpack"
 
 account_id = "ff404933c2aa00ddef4fe1e588481df5"
 workers_dev = true
