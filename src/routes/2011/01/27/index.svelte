@@ -1,5 +1,6 @@
 <script lang="ts">
   import SvelteMarkdown from "svelte-markdown";
+  import CodeRenderer from "$components/CodeRenderer.svelte";
   let date = "2011/01/27";
   let source = `
 
@@ -16,8 +17,10 @@ Getting my blog in a somewhat finalized form also marks the end of the beginning
 </script>
 
 <div>
+  <!-- <h1 class="title">{title}</h1> -->
   <p class="date">written on {date}</p>
   <div class="content">
-    <SvelteMarkdown {source} />
+    <!-- svelte-ignore missing-declaration -->
+    <SvelteMarkdown {source} renderers={{ code: CodeRenderer }} />
   </div>
 </div>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import SvelteMarkdown from "svelte-markdown";
+  import CodeRenderer from "$components/CodeRenderer.svelte";
   let date = "2011/06/17";
   let source = `
 
@@ -20,8 +21,10 @@ If you're curious, at work I'm working on deployment automation. It's not super 
 </script>
 
 <div>
+  <!-- <h1 class="title">{title}</h1> -->
   <p class="date">written on {date}</p>
   <div class="content">
-    <SvelteMarkdown {source} />
+    <!-- svelte-ignore missing-declaration -->
+    <SvelteMarkdown {source} renderers={{ code: CodeRenderer }} />
   </div>
 </div>

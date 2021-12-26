@@ -1,5 +1,6 @@
 <script lang="ts">
   import SvelteMarkdown from "svelte-markdown";
+  import CodeRenderer from "$components/CodeRenderer.svelte";
   let date = "2010/12/27";
   let source = `
 
@@ -18,8 +19,10 @@ I guess the lesson here is that to find a project to work on in order to hone yo
 </script>
 
 <div>
+  <!-- <h1 class="title">{title}</h1> -->
   <p class="date">written on {date}</p>
   <div class="content">
-    <SvelteMarkdown {source} />
+    <!-- svelte-ignore missing-declaration -->
+    <SvelteMarkdown {source} renderers={{ code: CodeRenderer }} />
   </div>
 </div>

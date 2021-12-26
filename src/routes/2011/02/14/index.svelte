@@ -1,5 +1,6 @@
 <script lang="ts">
   import SvelteMarkdown from "svelte-markdown";
+  import CodeRenderer from "$components/CodeRenderer.svelte";
   let date = "2011/02/14";
   let source = `
 
@@ -24,8 +25,10 @@ Yuk isn't done. It's really ugly, and there are some features on my back-of-a-na
 </script>
 
 <div>
+  <!-- <h1 class="title">{title}</h1> -->
   <p class="date">written on {date}</p>
   <div class="content">
-    <SvelteMarkdown {source} />
+    <!-- svelte-ignore missing-declaration -->
+    <SvelteMarkdown {source} renderers={{ code: CodeRenderer }} />
   </div>
 </div>
