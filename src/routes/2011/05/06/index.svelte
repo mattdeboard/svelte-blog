@@ -57,7 +57,7 @@ def git_pull():
 
 The above code is exactly what it looks like: a number of semicolon-separated shell commands. It's probably the most idiot-proof, time-saving thing I've ever used. Please see the below:
 
-![Curiously, coding in Java while flying an airplane moves both dots toward the center.](/static/GRAPH.png)
+![Curiously, coding in Java while flying an airplane moves both dots toward the center.](/GRAPH.png)
 
 Stop typing so much. Fabric makes things ridiculously easy.
 

@@ -6,7 +6,7 @@
 <svelt:head>
   {@html github}
   <link
-    href="http://fonts.googleapis.com/css?family=Vollkorn&amp;subset=latin"
+    href="https://fonts.googleapis.com/css?family=Vollkorn&amp;subset=latin"
     rel="stylesheet"
     type="text/css"
   />
@@ -16,6 +16,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
     crossorigin="anonymous"
   />
+  <title>MattDeBoard.net</title>
 </svelt:head>
 
 <div class="container">

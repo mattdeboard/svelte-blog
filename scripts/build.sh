@@ -11,17 +11,23 @@ process_posts() {
   summary=$(create_summary "$header")
   title=$(get_title "$header")
 
+  # Assign the article's raw markdown to a variable lol
+  # Doing this so the SvelteMarkdown component can render it like it
+  # is supposed to.
   cat <<-EOM >ARTICLE
   let source = \`
 $(tail -n +4 $f | sed -e 's/\\/\\\\/g' | sed -e 's/`/\\`/g')
 \`;
 EOM
+
   cat <<-EOM >ARTICLE_DATE
   let date = "$the_key";
 EOM
+
   cat <<-EOM >ARTICLE_TITLE
   let title = "$title"
 EOM
+
   cat <<-EOM >ARTICLE_SUMMARY
   let summary = "$summary"
 EOM

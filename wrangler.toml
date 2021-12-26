@@ -8,4 +8,4 @@ zone_id = ""
 compatibility_date = "2021-11-18"
 
 [site]
-bucket = "./static"
+bucket = "./build"
