@@ -8,18 +8,26 @@ process_posts() {
   the_key=$(dirname $ppath)
   the_filename=$(basename $f)
   header=$(head -n5 $f | sed -z 's/\n/,/g; s/,$//')
-  summary=$(create_summary "$header")
+  summary=$(get_summary "$header")
   title=$(get_title "$header")
 
-  # Assign the article's raw markdown to a variable lol
-  # Doing this so the SvelteMarkdown component can render it like it
-  # is supposed to.
+  # Assign the article's raw markdown to a variable lol Doing this so
+  # the SvelteMarkdown component can render it like it is supposed to.
+
+  # The `tail...sed...sed` bit is taking the contents of the markdown
+  # file from the 3rd line forward, piping that to sed to escape "\" in
+  # the post text, then escaping backticks in the post text so they
+  # render right.
   cat <<-EOM >ARTICLE
   let source = \`
 $(tail -n +4 $f | sed -e 's/\\/\\\\/g' | sed -e 's/`/\\`/g')
 \`;
 EOM
 
+  # `cat <<-EOM >VARIABLE_NAME` is writing a file to disk called
+  # `VARIABLE_NAME`. This file is then read from later in the script.
+  # These temporary files need to be cleaned up at the end of the
+  # script's run time.
   cat <<-EOM >ARTICLE_DATE
   let date = "$the_key";
 EOM
@@ -37,7 +45,7 @@ EOM
   sed -e '/::source::/{r ARTICLE' -e 'd}; /::date::/{r ARTICLE_DATE' -e 'd}' src/components/Article.svelte >src/routes/$the_key/index.svelte
 }
 
-create_summary() {
+get_summary() {
   header="$1"
   ptn='summary:[[:space:]]([^,]*)'
   trimmed=-1
@@ -65,7 +73,7 @@ create_index() {
   sed -e '/::articles::/{r articles.js' -e 'd}' src/index.svelte.template >src/routes/index.svelte
 }
 export -f process_posts
-export -f create_summary
+export -f get_summary
 export -f get_title
 export -f create_index
 echo "let articles = [" >articles.js
