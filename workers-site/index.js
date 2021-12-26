@@ -29,15 +29,15 @@
     return __reExport(__markAsModule(__defProp(module != null ? __create(__getProtoOf(module)) : {}, "default", module && module.__esModule && "default" in module ? { get: () => module.default, enumerable: true } : { value: module, enumerable: true })), module);
   };
 
-  // .svelte-kit/output/server/chunks/__layout-116f1c46.js
-  var layout_116f1c46_exports = {};
-  __export(layout_116f1c46_exports, {
+  // .svelte-kit/output/server/chunks/__layout-608a1e49.js
+  var layout_608a1e49_exports = {};
+  __export(layout_608a1e49_exports, {
     default: () => _layout
   });
   var github, github$1, NavBar, css, _layout;
-  var init_layout_116f1c46 = __esm({
-    ".svelte-kit/output/server/chunks/__layout-116f1c46.js"() {
-      init_app_5f96e930();
+  var init_layout_608a1e49 = __esm({
+    ".svelte-kit/output/server/chunks/__layout-608a1e49.js"() {
+      init_app_a308694c();
       github = `<style>pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
   Theme: GitHub
   Description: Light theme as seen on github.com
@@ -59,7 +59,7 @@
   <a href="${"http://mattdeboard.net/feed.atom"}" target="${"_blank"}">rss feed</a></div>`;
       });
       css = {
-        code: 'body{margin:0;padding:0}#main{width:950px;margin:0}#header{width:100%;height:80px;clear:both;border-bottom:solid 4px #000000}#menu{width:100%;height:35px;float:left;clear:both;background-color:#f0f0f0}#content{width:550px;float:left;padding-top:20px}#side{width:250px;height:500px;float:right;background-color:#f0f0f0}#footer{width:100%;float:left;clear:both;text-align:center;background-color:#f0f0f0;border-top:solid 4px #000000}ul{color:#575757;font:14px "Vollkorn", "Georgia", serif;list-style:#575757;list-style-type:square}.header a{font:bold 30px "Vollkorn", "Georgia", serif;line-height:120px;text-decoration:none}.menu a{color:#575757;font:bold 21px "Vollkorn", "Georgia", serif;letter-spacing:-1px;text-decoration:none}#main{font:20px "Vollkorn", "Georgia", serif;letter-spacing:1px}.side a{color:#575757;font:14px "Vollkorn", "Georgia", serif}h1{font:bold 30px "Rock Salt", "Georgia", serif}h2{font:bold 25px "Rock Salt", "Georgia", serif}a{color:#575757;font:20px "Vollkorn", "Georgia", serif}.tags{font:14px "Vollkorn", "Georgia", serif}.foot{color:#6e6e6e;font:italic 14px "Vollkorn", "Georgia", serif}',
+        code: '#header{border-bottom:solid 4px #000000}#header a{font-family:"Helvetica Neue", Helvetica, Arial, serf;font-size:50px;font-style:bold}#menu{height:35px;float:left;clear:both;background-color:#f0f0f0}#content{float:left;padding-top:20px}#footer{float:left;clear:both;text-align:center;background-color:#f0f0f0;border-top:solid 4px #000000}ul{color:#575757;font-family:"Helvetica Neue", Helvetica, Arial, serif;font-size:14px;font-style:italic;list-style:#575757;list-style-type:square}li a:hover{color:#24b200;border-bottom:1px dotted}.header a{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:30px;font-style:bold;line-height:120px;text-decoration:none}#menu a{color:#575757;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:21px;font-style:bold;text-decoration:none;padding-left:5px;padding-right:5px}#menu a:hover{color:#24b200;border-bottom:1px dotted}#entry{font:16px Times New Roman}#entry .date{font-style:italic;font-size:14px}#entry a{color:#24b200;border-bottom:1px dotted}#entry a:hover{color:#99fe80;border-bottom:1px solid}#entry h2{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:24px;font-style:bold}#entry h3{font-size:1.3em;margin-bottom:0.5em;font-style:italic}#main{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:20px;letter-spacing:1px}.detail a{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:20px;letter-spacing:1px;color:#0c7500}.detail a:hover{color:#99fe80;border-bottom:1px dotted}.detail a:visited{color:#24b200}.detail .summary{font-family:Times New Roman, Garamond, serif;font-size:18px}.side a{color:#575757;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:14px}.tags{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:20px}tt{font-size:14px;color:#4070a0}li a:hover{color:#24b200;border-bottom:1px dotted}body{margin:0;padding:0}#main{width:950px;margin:0}#header{width:100%;height:80px;clear:both;border-bottom:solid 4px #000000}#menu{width:100%;height:35px;float:left;clear:both;background-color:#f0f0f0}#content{width:75%;float:left;padding-top:20px}#side{width:250px;height:500px;float:right;background-color:#f0f0f0}#footer{width:100%;float:left;clear:both;text-align:center;background-color:#f0f0f0;border-top:solid 4px #000000}ul{color:#575757;font:14px "Vollkorn", "Georgia", serif;list-style:#575757;list-style-type:square}.header a{font:bold 30px "Vollkorn", "Georgia", serif;line-height:120px;text-decoration:none}.menu a{color:#575757;font:bold 21px "Vollkorn", "Georgia", serif;letter-spacing:-1px;text-decoration:none}#main{font:20px "Vollkorn", "Georgia", serif;letter-spacing:1px}.side a{color:#575757;font:14px "Vollkorn", "Georgia", serif}a{color:#575757;font:20px "Vollkorn", "Georgia", serif}.tags{font:14px "Vollkorn", "Georgia", serif}.foot{color:#6e6e6e;font:italic 14px "Vollkorn", "Georgia", serif}',
         map: null
       };
       _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -79,9 +79,9 @@
     }
   });
 
-  // .svelte-kit/output/server/chunks/error-d1dad4f9.js
-  var error_d1dad4f9_exports = {};
-  __export(error_d1dad4f9_exports, {
+  // .svelte-kit/output/server/chunks/error-b2862e63.js
+  var error_b2862e63_exports = {};
+  __export(error_b2862e63_exports, {
     default: () => Error2,
     load: () => load
   });
@@ -89,9 +89,9 @@
     return { props: { error: error2, status } };
   }
   var Error2;
-  var init_error_d1dad4f9 = __esm({
-    ".svelte-kit/output/server/chunks/error-d1dad4f9.js"() {
-      init_app_5f96e930();
+  var init_error_b2862e63 = __esm({
+    ".svelte-kit/output/server/chunks/error-b2862e63.js"() {
+      init_app_a308694c();
       Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         let { status } = $$props;
         let { error: error2 } = $$props;
@@ -111,15 +111,15 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-591619c7.js
-  var index_591619c7_exports = {};
-  __export(index_591619c7_exports, {
+  // .svelte-kit/output/server/chunks/index-6ba3a447.js
+  var index_6ba3a447_exports = {};
+  __export(index_6ba3a447_exports, {
     default: () => Routes
   });
   var ArticleSummary, Routes;
-  var init_index_591619c7 = __esm({
-    ".svelte-kit/output/server/chunks/index-591619c7.js"() {
-      init_app_5f96e930();
+  var init_index_6ba3a447 = __esm({
+    ".svelte-kit/output/server/chunks/index-6ba3a447.js"() {
+      init_app_a308694c();
       ArticleSummary = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         let { date: date18, summary, title } = $$props;
         if ($$props.date === void 0 && $$bindings.date && date18 !== void 0)
@@ -46263,7 +46263,7 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
     }
   });
 
-  // .svelte-kit/output/server/chunks/CodeRenderer-5a5287b2.js
+  // .svelte-kit/output/server/chunks/CodeRenderer-af7f887c.js
   function getDefaults$1() {
     return {
       baseUrl: null,
@@ -46605,9 +46605,9 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
     }
   }
   var Parser$1, defaults$5, escapeTest, escapeReplace, escapeTestNoEncode, escapeReplaceNoEncode, escapeReplacements, getEscapeReplacement, unescapeTest, caret, nonWordAndColonTest, originIndependentUrl, baseUrls, justDomain, protocol, domain, noopTest$1, helpers, defaults$4, rtrim, splitCells, escape$2, findClosingBracket, Tokenizer_1, noopTest2, edit, merge$1, block$1, inline$1, rules, Tokenizer$1, defaults$3, block, inline, repeatString, Lexer_1, defaults$2, cleanUrl, escape$1, Renderer_1, TextRenderer_1, Slugger_1, Renderer$1, TextRenderer$1, Slugger$1, defaults$1, unescape, Parser_1, Lexer$1, Parser2, Tokenizer2, Renderer2, TextRenderer2, Slugger$2, merge, checkSanitizeDeprecation, escape2, getDefaults, changeDefaults, defaults, marked_1, key, Heading, Paragraph, Text, Image, Link, Em, Del, Codespan, Strong, Table, TableHead, TableBody, TableRow, TableCell, List, ListItem, Hr, Html, Blockquote, Code, Br, defaultRenderers, defaultOptions, Lexer2, Slugger2, SvelteMarkdown, CodeRenderer;
-  var init_CodeRenderer_5a5287b2 = __esm({
-    ".svelte-kit/output/server/chunks/CodeRenderer-5a5287b2.js"() {
-      init_app_5f96e930();
+  var init_CodeRenderer_af7f887c = __esm({
+    ".svelte-kit/output/server/chunks/CodeRenderer-af7f887c.js"() {
+      init_app_a308694c();
       init_es();
       Parser$1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         let $$restProps = compute_rest_props($$props, ["type", "tokens", "ordered", "renderers"]);
@@ -48543,16 +48543,16 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-41efa8f2.js
-  var index_41efa8f2_exports = {};
-  __export(index_41efa8f2_exports, {
+  // .svelte-kit/output/server/chunks/index-dd1e0100.js
+  var index_dd1e0100_exports = {};
+  __export(index_dd1e0100_exports, {
     default: () => _27
   });
   var date, _27;
-  var init_index_41efa8f2 = __esm({
-    ".svelte-kit/output/server/chunks/index-41efa8f2.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_dd1e0100 = __esm({
+    ".svelte-kit/output/server/chunks/index-dd1e0100.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date = "2010/12/27";
       _27 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -48581,16 +48581,16 @@ I guess the lesson here is that to find a project to work on in order to hone yo
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-bc0fc702.js
-  var index_bc0fc702_exports = {};
-  __export(index_bc0fc702_exports, {
+  // .svelte-kit/output/server/chunks/index-d15a46ea.js
+  var index_d15a46ea_exports = {};
+  __export(index_d15a46ea_exports, {
     default: () => _272
   });
   var date2, _272;
-  var init_index_bc0fc702 = __esm({
-    ".svelte-kit/output/server/chunks/index-bc0fc702.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_d15a46ea = __esm({
+    ".svelte-kit/output/server/chunks/index-d15a46ea.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date2 = "2011/01/27";
       _272 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -48600,7 +48600,7 @@ I guess the lesson here is that to find a project to work on in order to hone yo
 
 A week or two ago I decided to stop using Tumblr and "roll my own" blog. Since I've been using [flask](http://flask.pocoo.org) to put [some projects](http://mattdeboard.net/projects) on the web, I decided to give [rstblog](https://github.com/mitsuhiko/rstblog) a go. (Both written by the [same guy](http://lucumr.pocoo.org).)
 
-rstblog is very much a very "small" blog app, with only very minimal documentation. Thankfully [Morten Siebuhr](http://sbhr.dk/2010/11/30/using_rstblog/) put together a nice beginner's course on how to implement it. I referenced it heavily, though there were still some bumps on the road. Mostly, it took me awhile to realize you have to rm -r _build/ everytime you run-rstblog build. I was wondering why all of my links weren't updating; it was because when you do "run-rstblog build", it only seems to create templates that already exist. I don't have a great explanation. But if you're looking for rstblog tips, here's mine: rm -r _build/ every time you run-rstblog build.
+rstblog is very much a very "small" blog app, with only very minimal documentation. Thankfully [Morten Siebuhr](http://sbhr.dk/2010/11/30/using_rstblog/) put together a nice beginner's course on how to implement it. I referenced it heavily, though there were still some bumps on the road. Mostly, it took me awhile to realize you have to rm -r \\_build/ everytime you run-rstblog build. I was wondering why all of my links weren't updating; it was because when you do "run-rstblog build", it only seems to create templates that already exist. I don't have a great explanation. But if you're looking for rstblog tips, here's mine: rm -r \\_build/ every time you run-rstblog build.
 
 I have also added a link to select projects in the header and generally cleaned and centralized everything.
 
@@ -48617,16 +48617,16 @@ Getting my blog in a somewhat finalized form also marks the end of the beginning
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-95518341.js
-  var index_95518341_exports = {};
-  __export(index_95518341_exports, {
+  // .svelte-kit/output/server/chunks/index-b6aed593.js
+  var index_b6aed593_exports = {};
+  __export(index_b6aed593_exports, {
     default: () => _14
   });
   var date3, _14;
-  var init_index_95518341 = __esm({
-    ".svelte-kit/output/server/chunks/index-95518341.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_b6aed593 = __esm({
+    ".svelte-kit/output/server/chunks/index-b6aed593.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date3 = "2011/02/14";
       _14 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -48642,7 +48642,7 @@ Though the name was a play off "del.icio.us", I have actually written the site u
 
 My first task was to set about getting Yuk's own core functionality -- saving user-defined URLs to a database -- working. For the framework I chose Django, and for the database I chose sqlite3, for simplicity. An additional point to this project was to gain familiarity with databases, especially how to design them so that model relations not only work, but make sense. I've still got a long, long way to go on this point. Be that as it may, as I said I chose sqlite3 for simplicity (simplicity being a codeword for what the Django docs recommended for a small project). It is fine for my uses and has been a great hands-on exercise.
 
-One side effect of this project was finally getting a handle on Python classes. Since I'd never undertaken a project that called for them, I'd never really understood what they were for/why they would be used. That is, I could implement a class by regurgitating I'd read -- the 'self' concept, the __init__ function, and so forth -- but I wouldn't actually understand. However, because of some of the details of implementing a bookmarking service, I have had the opportunity to define classes, subclasses, overwrite functions, and so forth within Django's MVC structure. If I learned absolutely nothing else, the time I've spent on this project would have been worth it simply for having a reason to implement classes.
+One side effect of this project was finally getting a handle on Python classes. Since I'd never undertaken a project that called for them, I'd never really understood what they were for/why they would be used. That is, I could implement a class by regurgitating I'd read -- the 'self' concept, the \\_\\_init\\_\\_ function, and so forth -- but I wouldn't actually understand. However, because of some of the details of implementing a bookmarking service, I have had the opportunity to define classes, subclasses, overwrite functions, and so forth within Django's MVC structure. If I learned absolutely nothing else, the time I've spent on this project would have been worth it simply for having a reason to implement classes.
 
 After nailing down storing bookmarks to the database, then came user registration/accounts. I don't have much to say about this since Django core and the [django-registration](http://code.google.com/p/django-registration/) app make it ridiculously simple. I still need to customize the URL config for the registration/login/logout views, but since it works so well right out of the box, it has been a low priority.
 
@@ -48661,16 +48661,16 @@ Yuk isn't done. It's really ugly, and there are some features on my back-of-a-na
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-177faa1d.js
-  var index_177faa1d_exports = {};
-  __export(index_177faa1d_exports, {
+  // .svelte-kit/output/server/chunks/index-dd609acc.js
+  var index_dd609acc_exports = {};
+  __export(index_dd609acc_exports, {
     default: () => _04
   });
   var date4, _04;
-  var init_index_177faa1d = __esm({
-    ".svelte-kit/output/server/chunks/index-177faa1d.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_dd609acc = __esm({
+    ".svelte-kit/output/server/chunks/index-dd609acc.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date4 = "2011/05/04";
       _04 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -48700,16 +48700,16 @@ Reading Derek's post has affirmed the decisions I've made to put me in this posi
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-af257375.js
-  var index_af257375_exports = {};
-  __export(index_af257375_exports, {
+  // .svelte-kit/output/server/chunks/index-0c941bed.js
+  var index_0c941bed_exports = {};
+  __export(index_0c941bed_exports, {
     default: () => _06
   });
   var date5, _06;
-  var init_index_af257375 = __esm({
-    ".svelte-kit/output/server/chunks/index-af257375.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_0c941bed = __esm({
+    ".svelte-kit/output/server/chunks/index-0c941bed.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date5 = "2011/05/06";
       _06 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -48811,16 +48811,16 @@ def update_search():
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-aa12b473.js
-  var index_aa12b473_exports = {};
-  __export(index_aa12b473_exports, {
+  // .svelte-kit/output/server/chunks/index-139594b9.js
+  var index_139594b9_exports = {};
+  __export(index_139594b9_exports, {
     default: () => _08
   });
   var date6, _08;
-  var init_index_aa12b473 = __esm({
-    ".svelte-kit/output/server/chunks/index-aa12b473.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_139594b9 = __esm({
+    ".svelte-kit/output/server/chunks/index-139594b9.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date6 = "2011/05/08";
       _08 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -48916,16 +48916,16 @@ _Edit: Removed a paragraph about incremental indexing. Haystack does this by def
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-dde32d0d.js
-  var index_dde32d0d_exports = {};
-  __export(index_dde32d0d_exports, {
+  // .svelte-kit/output/server/chunks/index-145c36f7.js
+  var index_145c36f7_exports = {};
+  __export(index_145c36f7_exports, {
     default: () => _09
   });
   var date7, _09;
-  var init_index_dde32d0d = __esm({
-    ".svelte-kit/output/server/chunks/index-dde32d0d.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_145c36f7 = __esm({
+    ".svelte-kit/output/server/chunks/index-145c36f7.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date7 = "2011/05/09";
       _09 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -49014,16 +49014,16 @@ I like having this much control over the under-the-hood components of my blog. I
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-e9965566.js
-  var index_e9965566_exports = {};
-  __export(index_e9965566_exports, {
+  // .svelte-kit/output/server/chunks/index-8ecaa57d.js
+  var index_8ecaa57d_exports = {};
+  __export(index_8ecaa57d_exports, {
     default: () => _12
   });
   var date8, _12;
-  var init_index_e9965566 = __esm({
-    ".svelte-kit/output/server/chunks/index-e9965566.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_8ecaa57d = __esm({
+    ".svelte-kit/output/server/chunks/index-8ecaa57d.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date8 = "2011/05/12";
       _12 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -49149,7 +49149,7 @@ def scrapeCourses():
                     # Exceptions are caused when a course is closed,
                     # or when the times of the class are TBD.
                     reg = re.search(
-                        r"(?P<time>d+:d+[AP]-d+:d+[AP]W+[MTWRF" "]{1,5})", line
+                        r"(?P<time>\\d+:\\d+[AP]-\\d+:\\d+[AP]\\W+[MTWRF" "]{1,5})", line
                     )
                     dt = reg.group("time").split()
                     time = dt[0]
@@ -49237,16 +49237,16 @@ Turned out I was scraping about 2,850 individual pages to compile the data. Runn
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-c2c4af77.js
-  var index_c2c4af77_exports = {};
-  __export(index_c2c4af77_exports, {
+  // .svelte-kit/output/server/chunks/index-4f652ad2.js
+  var index_4f652ad2_exports = {};
+  __export(index_4f652ad2_exports, {
     default: () => _13
   });
   var date9, _13;
-  var init_index_c2c4af77 = __esm({
-    ".svelte-kit/output/server/chunks/index-c2c4af77.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_4f652ad2 = __esm({
+    ".svelte-kit/output/server/chunks/index-4f652ad2.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date9 = "2011/05/13";
       _13 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -49316,16 +49316,16 @@ It would be trivial to connect to something like [MathBin](http://mathbin.net) p
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-862ecc60.js
-  var index_862ecc60_exports = {};
-  __export(index_862ecc60_exports, {
+  // .svelte-kit/output/server/chunks/index-564bc152.js
+  var index_564bc152_exports = {};
+  __export(index_564bc152_exports, {
     default: () => _17
   });
   var date10, _17;
-  var init_index_862ecc60 = __esm({
-    ".svelte-kit/output/server/chunks/index-862ecc60.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_564bc152 = __esm({
+    ".svelte-kit/output/server/chunks/index-564bc152.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date10 = "2011/06/17";
       _17 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -49339,7 +49339,7 @@ As I noted [here](http://mattdeboard.net/2011/05/04/no-regrets), I spent this sp
 
 I should point out that I live in Indiana. Development jobs using Python are _extremely_ rare, and one using Django is rarer still. In fact, as far as I know, I may very well have snagged the only job _in Indiana_ that offered the opportunity to work with both Python and Django.
 
-I consider myself very fortunate. It is a great place to work, with smart people, and every day I do interesting things. Every day I learn something new. Working with geeks is _very_ different than working with marketers. My boss's bookshelf is filled with books like, [*Leading Geeks*](http://www.amazon.com/Leading-Geeks-Manage-Deliver-Technology/dp/0787961485/ref=sr_1_1?ie=UTF8&qid=1308409661&sr=8-1). When I talk about something I read on [HN](http://news.ycombinator.com), there's a conversation, not a bunch of blank stares.
+I consider myself very fortunate. It is a great place to work, with smart people, and every day I do interesting things. Every day I learn something new. Working with geeks is _very_ different than working with marketers. My boss's bookshelf is filled with books like, [\\*Leading Geeks\\*](http://www.amazon.com/Leading-Geeks-Manage-Deliver-Technology/dp/0787961485/ref=sr_1_1?ie=UTF8&qid=1308409661&sr=8-1). When I talk about something I read on [HN](http://news.ycombinator.com), there's a conversation, not a bunch of blank stares.
 
 Though I get up at 5:30am to get Emma off to day camp and drop my girlfriend off downtown for her classes at [IUPUI](http://iupui.edu), I practically bounce out of bed. I love going to work. I'm a little disappointed when I have to go home for the night. Putting in those long hours reading and hacking have paid off. Best decision ever.
 
@@ -49356,16 +49356,16 @@ If you're curious, at work I'm working on deployment automation. It's not super 
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-066fd605.js
-  var index_066fd605_exports = {};
-  __export(index_066fd605_exports, {
+  // .svelte-kit/output/server/chunks/index-7b505d27.js
+  var index_7b505d27_exports = {};
+  __export(index_7b505d27_exports, {
     default: () => _01
   });
   var date11, _01;
-  var init_index_066fd605 = __esm({
-    ".svelte-kit/output/server/chunks/index-066fd605.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_7b505d27 = __esm({
+    ".svelte-kit/output/server/chunks/index-7b505d27.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date11 = "2011/07/01";
       _01 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -49398,7 +49398,7 @@ from mytoken import token, username
 
 def get_photos(dl_dir):
     dest = os.path.abspath(dl_dir)
-    p = re.compile(r"[,!' /]")
+    p = re.compile(r"[,!'\\ /]")
     fb_photos = find_photos()
     for album in fb_photos:
         albname = p.sub("_", album).lower()
@@ -49486,29 +49486,29 @@ if __name__ == "__main__":
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-06ab670c.js
-  var index_06ab670c_exports = {};
-  __export(index_06ab670c_exports, {
+  // .svelte-kit/output/server/chunks/index-b6f46db7.js
+  var index_b6f46db7_exports = {};
+  __export(index_b6f46db7_exports, {
     default: () => _23
   });
   var date12, _23;
-  var init_index_06ab670c = __esm({
-    ".svelte-kit/output/server/chunks/index-06ab670c.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_b6f46db7 = __esm({
+    ".svelte-kit/output/server/chunks/index-b6f46db7.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date12 = "2011/11/23";
       _23 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         let source = `
 # How I Became a Programmer
 
-I posted a [very brief response](http://news.ycombinator.com/item?id=3268469) to a post on HackerNews yesterday challenging the notion that 8 weeks of guided tutelage on [Ruby on Rails](http://rubyonrails.org/) is not going to produce someone who you might consider a "junior RoR developer." It did not garner many upvotes so I figured that like most conversation on the Internet it faded into the general ambient chatter. Imagine my surprise when I woke up to couple handfuls' worth of emails from around the world asking me what I did, how I did it, and how I got a job. I'm assuming, judging by the relatively small amount of mail I got from a random aside on HN*, that there must be a lot of people who are trying to figure out how to pursue a career in programming.
+I posted a [very brief response](http://news.ycombinator.com/item?id=3268469) to a post on HackerNews yesterday challenging the notion that 8 weeks of guided tutelage on [Ruby on Rails](http://rubyonrails.org/) is not going to produce someone who you might consider a "junior RoR developer." It did not garner many upvotes so I figured that like most conversation on the Internet it faded into the general ambient chatter. Imagine my surprise when I woke up to couple handfuls' worth of emails from around the world asking me what I did, how I did it, and how I got a job. I'm assuming, judging by the relatively small amount of mail I got from a random aside on HN\\*, that there must be a lot of people who are trying to figure out how to pursue a career in programming.
 
 ## First, A Disclaimer or Two
 
 Please note that this blog post is entitled, "How **I** Became a Programmer", not, "How **You** Can Become a Programmer." I'm not a self-help guru or wise or even a particularly good programmer. I did, however, decide at an inflection point in my life to pursue something vigorously and it paid off. Any insights gleaned from my experience are yours to make on your own; I doubt I'll have much insight for your personal situation.
 
-Also, after consulting with my girlfriend, my total time of dedicated effort to becoming a paid programmer was actually about 12 weeks, not ~10 as I stated in the post I linked to above. So, there you go.
+Also, after consulting with my girlfriend, my total time of dedicated effort to becoming a paid programmer was actually about 12 weeks, not \\~10 as I stated in the post I linked to above. So, there you go.
 
 ## My Story: tl;dr
 
@@ -49558,7 +49558,7 @@ I don't have any tips or tricks to learning except just doing it. I spent a lot 
 
 As I said above, I did not and do not consider it fruitful to "learn Django," "learn Ruby on Rails," or "learn [Noir](http://webnoir.org)." I think a contributor to my success was learning the languages and the concepts behind them, then using a web framework to better learn that language. I learned the framework incidentally to my education in the language.
 
-Go read the Django docs, join #django on irc.freenode.net and ask questions constantly. That's what I did and it worked ok for me. But honestly I didn't just sit down and read stuff most of the time. Usually I was making things in order to learn concepts better, then reading in support of my goals. I'm a hands-on learner. Some people aren't, but I am so it worked for me. Decide on your own if that's good for you.
+Go read the Django docs, join \\#django on irc.freenode.net and ask questions constantly. That's what I did and it worked ok for me. But honestly I didn't just sit down and read stuff most of the time. Usually I was making things in order to learn concepts better, then reading in support of my goals. I'm a hands-on learner. Some people aren't, but I am so it worked for me. Decide on your own if that's good for you.
 
 As far as HTML & CSS there is just so much information out there, and they're such straightforward concepts. I learned as much HTML & CSS as I needed to do what I needed to do. I did not memorize much about how HTML & CSS work, i.e. syntax & semantics. I don't know right off the top of my head how to create a gradient, but I do know right off the top of my head how to find out. I think that's the important thing.
 
@@ -49580,7 +49580,7 @@ If I had to summarize the big overview of how I did what I did, I'd say:
 
 My final point really is that I got lucky. I'm not an amazing developer. At the end of the day I'm a newb and I still have a lot to learn. My career is just beginning but I am proud of the effort I put into changing my life. I hope my experiences can help some other folks.
 
-* _I should note that I was already of a mind to blog about this since my cousin Jeff has also taken up programming after leaving the environmental consultancy business._
+\\* _I should note that I was already of a mind to blog about this since my cousin Jeff has also taken up programming after leaving the environmental consultancy business._
 `;
         return `<div>
   <p class="${"date"}">written on ${escape(date12)}</p>
@@ -49593,16 +49593,16 @@ My final point really is that I got lucky. I'm not an amazing developer. At the 
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-e1e180b8.js
-  var index_e1e180b8_exports = {};
-  __export(index_e1e180b8_exports, {
+  // .svelte-kit/output/server/chunks/index-11f54959.js
+  var index_11f54959_exports = {};
+  __export(index_11f54959_exports, {
     default: () => _29
   });
   var date13, _29;
-  var init_index_e1e180b8 = __esm({
-    ".svelte-kit/output/server/chunks/index-e1e180b8.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_11f54959 = __esm({
+    ".svelte-kit/output/server/chunks/index-11f54959.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date13 = "2011/12/29";
       _29 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -49682,16 +49682,16 @@ Utilizing Solr in this way is both ordinary and novel. It's novel because when p
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-28ac5623.js
-  var index_28ac5623_exports = {};
-  __export(index_28ac5623_exports, {
+  // .svelte-kit/output/server/chunks/index-ecb7fcc5.js
+  var index_ecb7fcc5_exports = {};
+  __export(index_ecb7fcc5_exports, {
     default: () => _07
   });
   var date14, _07;
-  var init_index_28ac5623 = __esm({
-    ".svelte-kit/output/server/chunks/index-28ac5623.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_ecb7fcc5 = __esm({
+    ".svelte-kit/output/server/chunks/index-ecb7fcc5.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date14 = "2012/02/07";
       _07 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -49778,16 +49778,16 @@ Let me know in the comments if you have any problems, spot bugs or think I'm an 
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-81703fb3.js
-  var index_81703fb3_exports = {};
-  __export(index_81703fb3_exports, {
+  // .svelte-kit/output/server/chunks/index-866d9245.js
+  var index_866d9245_exports = {};
+  __export(index_866d9245_exports, {
     default: () => _05
   });
   var date15, _05;
-  var init_index_81703fb3 = __esm({
-    ".svelte-kit/output/server/chunks/index-81703fb3.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_866d9245 = __esm({
+    ".svelte-kit/output/server/chunks/index-866d9245.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date15 = "2012/10/05";
       _05 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -49828,16 +49828,16 @@ Now obviously I don't do much manual labor anymore, but I'm proud of and enjoy t
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-eace21a6.js
-  var index_eace21a6_exports = {};
-  __export(index_eace21a6_exports, {
+  // .svelte-kit/output/server/chunks/index-7781f8b9.js
+  var index_7781f8b9_exports = {};
+  __export(index_7781f8b9_exports, {
     default: () => _19
   });
   var date16, _19;
-  var init_index_eace21a6 = __esm({
-    ".svelte-kit/output/server/chunks/index-eace21a6.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_7781f8b9 = __esm({
+    ".svelte-kit/output/server/chunks/index-7781f8b9.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date16 = "2012/10/19";
       _19 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -49847,7 +49847,7 @@ Now obviously I don't do much manual labor anymore, but I'm proud of and enjoy t
 
 **Premise:** You've got a Windows service that you want to run on a Linux server
 
-**Problem:** Your code is written using the .NET framework and some language that targets the CLR (C#, VB, Clojure-CLR, etc.)
+**Problem:** Your code is written using the .NET framework and some language that targets the CLR (C\\#, VB, Clojure-CLR, etc.)
 
 **Solution:** [Mono](http://www.mono-project.com/Main_Page) is an open-source implementation of the .NET framework. By installing mono you gain access to a ton of useful stuff, but the relevant item here is the \`mono-service\` executable. (Installing mono is out of the scope of this blog post, but odds are pretty good mono is available from your distro's package management system.)
 
@@ -49855,7 +49855,7 @@ Once installed, you can run your compiled code like so:
 
     mono-service SomeExecutable.exe
 
-By default, this creates a lockfile in \`/tmp\`. You can change this by using the \`-l:<lockfile>\` option. This is great, because now your service is running in the background! However, this is really flimsy; what if the process dies? What if the server needs rebooted? To solve this I'm using [supervisor](http://supervisord.org/).
+By default, this creates a lockfile in \`/tmp\`. You can change this by using the \`-l:\\<lockfile\\>\` option. This is great, because now your service is running in the background! However, this is really flimsy; what if the process dies? What if the server needs rebooted? To solve this I'm using [supervisor](http://supervisord.org/).
 
 ## Get It Running In 4 Steps
 
@@ -49872,7 +49872,7 @@ Once you've got supervisor and mono installed, follow these steps:
         redirect_stderr=true
 
 3.  \`sudo service supervisor update\`. This will reload the config file you edited above.
-4.  To confirm that your process started, run \`ps aux|grep mono\`. You should see it in the process list.
+4.  To confirm that your process started, run \`ps aux\\|grep mono\`. You should see it in the process list.
 
 ## Conclusion
 
@@ -49880,7 +49880,7 @@ Hope this helps. Supervisor has a ton of different options for configuring how a
 
 ### Footnotes
 
-**1.** The directory specified in your \`stdout_logfile\` parameter must already exist. If you try to start the \`mysvc\` process without creating it, supervisor will throw an error. Also, the \`user\` parameter should be set to a user that has permissions to write to the directory where you're keeping the \`stdout_logfile\`. Please consult the relevant [supervisor docs](http://supervisord.org/configuration.html#program-x-section-values) for more about users & processes.
+**1.** The directory specified in your \`stdout\\_logfile\` parameter must already exist. If you try to start the \`mysvc\` process without creating it, supervisor will throw an error. Also, the \`user\` parameter should be set to a user that has permissions to write to the directory where you're keeping the \`stdout\\_logfile\`. Please consult the relevant [supervisor docs](http://supervisord.org/configuration.html#program-x-section-values) for more about users & processes.
 
 **2**. You must use the \`--no-daemon\` flag to avoid creation of the lockfile which indirectly allows supervisor to capture/redirect stdout/stderr to a logfile.
 `;
@@ -49895,16 +49895,16 @@ Hope this helps. Supervisor has a ton of different options for configuring how a
     }
   });
 
-  // .svelte-kit/output/server/chunks/index-c8f8f083.js
-  var index_c8f8f083_exports = {};
-  __export(index_c8f8f083_exports, {
+  // .svelte-kit/output/server/chunks/index-97d425e6.js
+  var index_97d425e6_exports = {};
+  __export(index_97d425e6_exports, {
     default: () => _142
   });
   var date17, _142;
-  var init_index_c8f8f083 = __esm({
-    ".svelte-kit/output/server/chunks/index-c8f8f083.js"() {
-      init_app_5f96e930();
-      init_CodeRenderer_5a5287b2();
+  var init_index_97d425e6 = __esm({
+    ".svelte-kit/output/server/chunks/index-97d425e6.js"() {
+      init_app_a308694c();
+      init_CodeRenderer_af7f887c();
       init_es();
       date17 = "2014/01/14";
       _142 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -50003,9 +50003,7 @@ def release_note_lines(msgs):
     """Parse the lines from git output and format the strings using the
     pull request number.
     """
-    ptn = r"Merge pull request #(d+).*
-([^
-]*)'$"
+    ptn = r"Merge pull request #(\\d+).*\\n([^\\n]*)'$"
     pairs = re.findall(ptn, msgs, re.MULTILINE)
     return deque(body.format(pr_num=pr_num) for pr_num, body in pairs)
 
@@ -50021,14 +50019,11 @@ def prepend(filename, lines, release_header=False):
         with open(filename, "r+") as f:
             first_line = f.read()
             f.seek(0, 0)
-            f.write("
-
-".join([lines, first_line]))
+            f.write("\\n\\n".join([lines, first_line]))
     else:
         with open(filename, "w") as f:
             f.write(lines)
-            f.write("
-")
+            f.write("\\n")
 
 
 if __name__ == "__main__":
@@ -50053,8 +50048,7 @@ if __name__ == "__main__":
     if args.tag:
         lines.appendleft(release_header_line(args.tag, args.date))
 
-    lines = "
-".join(lines)
+    lines = "\\n".join(lines)
 
     if args.filepath:
         filename = op.abspath(args.filepath)
@@ -50077,19 +50071,19 @@ $ ./release 1.7 HEAD ./RELEASE NOTES.md
 
 ## Conclusion
 
-One additional step I took is to create a git alias for the git log command, but prettied up a bit, for when I want to just scan through the differences from one version to the next. If you'd like to do the same, add the following to the [alias] section of \`~/.gitconfig\`:
+One additional step I took is to create a git alias for the git log command, but prettied up a bit, for when I want to just scan through the differences from one version to the next. If you'd like to do the same, add the following to the \\[alias\\] section of \`~/.gitconfig\`:
 
 \`\`\`text
-    lm = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset \\
-      -%C(yellow)%d%Creset %C(bold cyan)%s %Cgreen(%cr)%n%Creset%n - %b%n' \\
+    lm = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset \\\\
+      -%C(yellow)%d%Creset %C(bold cyan)%s %Cgreen(%cr)%n%Creset%n - %b%n' \\\\
       --abbrev-commit --date=relative --merges
 \`\`\`
 
 You can also achieve the same effect by entering the following at the CLI:
 
 \`\`\`sh
-    git config --global alias.lm "log --pretty=format:'%Cred%h%Creset \\
-      %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %C(bold cyan)%s \\
+    git config --global alias.lm "log --pretty=format:'%Cred%h%Creset \\\\
+      %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %C(bold cyan)%s \\\\
       %Cgreen(%cr)%n%Creset%n - %b%n' --abbrev-commit --date=relative --merges"
 \`\`\`
 
@@ -50108,7 +50102,7 @@ Please leave a comment if you have questions or spot an error. Thanks.
     }
   });
 
-  // .svelte-kit/output/server/chunks/app-5f96e930.js
+  // .svelte-kit/output/server/chunks/app-a308694c.js
   function get_single_valued_header(headers, key2) {
     const value = headers[key2];
     if (Array.isArray(value)) {
@@ -51414,9 +51408,9 @@ Please leave a comment if you have questions or spot an error. Thanks.
       amp: false,
       dev: false,
       entry: {
-        file: assets + "/_app/start-9d0a8a4d.js",
+        file: assets + "/_app/start-3fc269a6.js",
         css: [assets + "/_app/assets/start-61d1577b.css"],
-        js: [assets + "/_app/start-9d0a8a4d.js", assets + "/_app/chunks/vendor-40f27b4e.js"]
+        js: [assets + "/_app/start-3fc269a6.js", assets + "/_app/chunks/vendor-40f27b4e.js"]
       },
       fetched: void 0,
       floc: false,
@@ -51460,8 +51454,8 @@ Please leave a comment if you have questions or spot an error. Thanks.
     return respond({ ...request, host }, options, { prerender });
   }
   var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, absolute, ReadOnlyFormData, current_component, escaped, missing_component, on_destroy, css2, Root, base, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-  var init_app_5f96e930 = __esm({
-    ".svelte-kit/output/server/chunks/app-5f96e930.js"() {
+  var init_app_a308694c = __esm({
+    ".svelte-kit/output/server/chunks/app-a308694c.js"() {
       __accessCheck = (obj, member, msg) => {
         if (!member.has(obj))
           throw TypeError("Cannot " + msg);
@@ -51627,7 +51621,7 @@ ${``}`;
       default_settings = { paths: { "base": "", "assets": "" } };
       empty = () => ({});
       manifest = {
-        assets: [{ "file": "_app/assets/start-61d1577b.css", "size": 161, "type": "text/css" }, { "file": "_app/chunks/CodeRenderer-8c0a1f9a.js", "size": 750, "type": "application/javascript" }, { "file": "_app/chunks/vendor-40f27b4e.js", "size": 1103964, "type": "application/javascript" }, { "file": "_app/error.svelte-0fd4d456.js", "size": 1598, "type": "application/javascript" }, { "file": "_app/pages/2010/12/27/index.svelte-7a4375d8.js", "size": 2993, "type": "application/javascript" }, { "file": "_app/pages/2011/01/27/index.svelte-4010fa45.js", "size": 2790, "type": "application/javascript" }, { "file": "_app/pages/2011/02/14/index.svelte-ce4bd2a8.js", "size": 4546, "type": "application/javascript" }, { "file": "_app/pages/2011/05/04/index.svelte-ea8ee806.js", "size": 3183, "type": "application/javascript" }, { "file": "_app/pages/2011/05/06/index.svelte-1eace63e.js", "size": 4478, "type": "application/javascript" }, { "file": "_app/pages/2011/05/08/index.svelte-7106ab2f.js", "size": 4649, "type": "application/javascript" }, { "file": "_app/pages/2011/05/09/index.svelte-12a45b15.js", "size": 7817, "type": "application/javascript" }, { "file": "_app/pages/2011/05/12/index.svelte-18f0fccd.js", "size": 9660, "type": "application/javascript" }, { "file": "_app/pages/2011/05/13/index.svelte-19ccf552.js", "size": 3122, "type": "application/javascript" }, { "file": "_app/pages/2011/06/17/index.svelte-86da172b.js", "size": 3325, "type": "application/javascript" }, { "file": "_app/pages/2011/07/01/index.svelte-66e19fec.js", "size": 4905, "type": "application/javascript" }, { "file": "_app/pages/2011/11/23/index.svelte-b7ac4887.js", "size": 9830, "type": "application/javascript" }, { "file": "_app/pages/2011/12/29/index.svelte-acf20a83.js", "size": 10127, "type": "application/javascript" }, { "file": "_app/pages/2012/02/07/index.svelte-30ac8d66.js", "size": 6325, "type": "application/javascript" }, { "file": "_app/pages/2012/10/05/index.svelte-f5f1a14f.js", "size": 5380, "type": "application/javascript" }, { "file": "_app/pages/2012/10/19/index.svelte-3cf35884.js", "size": 3553, "type": "application/javascript" }, { "file": "_app/pages/2014/01/14/index.svelte-e32f7c01.js", "size": 8587, "type": "application/javascript" }, { "file": "_app/pages/__layout.svelte-a7fca380.js", "size": 3609, "type": "application/javascript" }, { "file": "_app/pages/index.svelte-fff2b7c0.js", "size": 4194, "type": "application/javascript" }, { "file": "_app/start-b5beec54.js", "size": 22516, "type": "application/javascript" }],
+        assets: [{ "file": "_app/assets/pages/__layout.svelte-4a464c4a.css", "size": 1053, "type": "text/css" }, { "file": "_app/assets/start-61d1577b.css", "size": 161, "type": "text/css" }, { "file": "_app/chunks/CodeRenderer-8c0a1f9a.js", "size": 750, "type": "application/javascript" }, { "file": "_app/chunks/vendor-40f27b4e.js", "size": 1103964, "type": "application/javascript" }, { "file": "_app/error.svelte-0fd4d456.js", "size": 1598, "type": "application/javascript" }, { "file": "_app/pages/2010/12/27/index.svelte-7a4375d8.js", "size": 2993, "type": "application/javascript" }, { "file": "_app/pages/2011/01/27/index.svelte-4010fa45.js", "size": 2790, "type": "application/javascript" }, { "file": "_app/pages/2011/02/14/index.svelte-ce4bd2a8.js", "size": 4546, "type": "application/javascript" }, { "file": "_app/pages/2011/05/04/index.svelte-ea8ee806.js", "size": 3183, "type": "application/javascript" }, { "file": "_app/pages/2011/05/06/index.svelte-1eace63e.js", "size": 4478, "type": "application/javascript" }, { "file": "_app/pages/2011/05/08/index.svelte-7106ab2f.js", "size": 4649, "type": "application/javascript" }, { "file": "_app/pages/2011/05/09/index.svelte-12a45b15.js", "size": 7817, "type": "application/javascript" }, { "file": "_app/pages/2011/05/12/index.svelte-18f0fccd.js", "size": 9660, "type": "application/javascript" }, { "file": "_app/pages/2011/05/13/index.svelte-19ccf552.js", "size": 3122, "type": "application/javascript" }, { "file": "_app/pages/2011/06/17/index.svelte-86da172b.js", "size": 3325, "type": "application/javascript" }, { "file": "_app/pages/2011/07/01/index.svelte-66e19fec.js", "size": 4905, "type": "application/javascript" }, { "file": "_app/pages/2011/11/23/index.svelte-b7ac4887.js", "size": 9830, "type": "application/javascript" }, { "file": "_app/pages/2011/12/29/index.svelte-acf20a83.js", "size": 10127, "type": "application/javascript" }, { "file": "_app/pages/2012/02/07/index.svelte-30ac8d66.js", "size": 6325, "type": "application/javascript" }, { "file": "_app/pages/2012/10/05/index.svelte-f5f1a14f.js", "size": 5380, "type": "application/javascript" }, { "file": "_app/pages/2012/10/19/index.svelte-3cf35884.js", "size": 3553, "type": "application/javascript" }, { "file": "_app/pages/2014/01/14/index.svelte-e32f7c01.js", "size": 8587, "type": "application/javascript" }, { "file": "_app/pages/__layout.svelte-6f154c89.js", "size": 3609, "type": "application/javascript" }, { "file": "_app/pages/index.svelte-fff2b7c0.js", "size": 4194, "type": "application/javascript" }, { "file": "_app/start-9d0a8a4d.js", "size": 22560, "type": "application/javascript" }],
         layout: "src/routes/__layout.svelte",
         error: ".svelte-kit/build/components/error.svelte",
         routes: [
@@ -51766,28 +51760,28 @@ ${``}`;
         externalFetch: hooks.externalFetch || fetch
       });
       module_lookup = {
-        "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_116f1c46(), layout_116f1c46_exports)),
-        ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_d1dad4f9(), error_d1dad4f9_exports)),
-        "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_591619c7(), index_591619c7_exports)),
-        "src/routes/2010/12/27/index.svelte": () => Promise.resolve().then(() => (init_index_41efa8f2(), index_41efa8f2_exports)),
-        "src/routes/2011/01/27/index.svelte": () => Promise.resolve().then(() => (init_index_bc0fc702(), index_bc0fc702_exports)),
-        "src/routes/2011/02/14/index.svelte": () => Promise.resolve().then(() => (init_index_95518341(), index_95518341_exports)),
-        "src/routes/2011/05/04/index.svelte": () => Promise.resolve().then(() => (init_index_177faa1d(), index_177faa1d_exports)),
-        "src/routes/2011/05/06/index.svelte": () => Promise.resolve().then(() => (init_index_af257375(), index_af257375_exports)),
-        "src/routes/2011/05/08/index.svelte": () => Promise.resolve().then(() => (init_index_aa12b473(), index_aa12b473_exports)),
-        "src/routes/2011/05/09/index.svelte": () => Promise.resolve().then(() => (init_index_dde32d0d(), index_dde32d0d_exports)),
-        "src/routes/2011/05/12/index.svelte": () => Promise.resolve().then(() => (init_index_e9965566(), index_e9965566_exports)),
-        "src/routes/2011/05/13/index.svelte": () => Promise.resolve().then(() => (init_index_c2c4af77(), index_c2c4af77_exports)),
-        "src/routes/2011/06/17/index.svelte": () => Promise.resolve().then(() => (init_index_862ecc60(), index_862ecc60_exports)),
-        "src/routes/2011/07/01/index.svelte": () => Promise.resolve().then(() => (init_index_066fd605(), index_066fd605_exports)),
-        "src/routes/2011/11/23/index.svelte": () => Promise.resolve().then(() => (init_index_06ab670c(), index_06ab670c_exports)),
-        "src/routes/2011/12/29/index.svelte": () => Promise.resolve().then(() => (init_index_e1e180b8(), index_e1e180b8_exports)),
-        "src/routes/2012/02/07/index.svelte": () => Promise.resolve().then(() => (init_index_28ac5623(), index_28ac5623_exports)),
-        "src/routes/2012/10/05/index.svelte": () => Promise.resolve().then(() => (init_index_81703fb3(), index_81703fb3_exports)),
-        "src/routes/2012/10/19/index.svelte": () => Promise.resolve().then(() => (init_index_eace21a6(), index_eace21a6_exports)),
-        "src/routes/2014/01/14/index.svelte": () => Promise.resolve().then(() => (init_index_c8f8f083(), index_c8f8f083_exports))
+        "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_608a1e49(), layout_608a1e49_exports)),
+        ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_b2862e63(), error_b2862e63_exports)),
+        "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_6ba3a447(), index_6ba3a447_exports)),
+        "src/routes/2010/12/27/index.svelte": () => Promise.resolve().then(() => (init_index_dd1e0100(), index_dd1e0100_exports)),
+        "src/routes/2011/01/27/index.svelte": () => Promise.resolve().then(() => (init_index_d15a46ea(), index_d15a46ea_exports)),
+        "src/routes/2011/02/14/index.svelte": () => Promise.resolve().then(() => (init_index_b6aed593(), index_b6aed593_exports)),
+        "src/routes/2011/05/04/index.svelte": () => Promise.resolve().then(() => (init_index_dd609acc(), index_dd609acc_exports)),
+        "src/routes/2011/05/06/index.svelte": () => Promise.resolve().then(() => (init_index_0c941bed(), index_0c941bed_exports)),
+        "src/routes/2011/05/08/index.svelte": () => Promise.resolve().then(() => (init_index_139594b9(), index_139594b9_exports)),
+        "src/routes/2011/05/09/index.svelte": () => Promise.resolve().then(() => (init_index_145c36f7(), index_145c36f7_exports)),
+        "src/routes/2011/05/12/index.svelte": () => Promise.resolve().then(() => (init_index_8ecaa57d(), index_8ecaa57d_exports)),
+        "src/routes/2011/05/13/index.svelte": () => Promise.resolve().then(() => (init_index_4f652ad2(), index_4f652ad2_exports)),
+        "src/routes/2011/06/17/index.svelte": () => Promise.resolve().then(() => (init_index_564bc152(), index_564bc152_exports)),
+        "src/routes/2011/07/01/index.svelte": () => Promise.resolve().then(() => (init_index_7b505d27(), index_7b505d27_exports)),
+        "src/routes/2011/11/23/index.svelte": () => Promise.resolve().then(() => (init_index_b6f46db7(), index_b6f46db7_exports)),
+        "src/routes/2011/12/29/index.svelte": () => Promise.resolve().then(() => (init_index_11f54959(), index_11f54959_exports)),
+        "src/routes/2012/02/07/index.svelte": () => Promise.resolve().then(() => (init_index_ecb7fcc5(), index_ecb7fcc5_exports)),
+        "src/routes/2012/10/05/index.svelte": () => Promise.resolve().then(() => (init_index_866d9245(), index_866d9245_exports)),
+        "src/routes/2012/10/19/index.svelte": () => Promise.resolve().then(() => (init_index_7781f8b9(), index_7781f8b9_exports)),
+        "src/routes/2014/01/14/index.svelte": () => Promise.resolve().then(() => (init_index_97d425e6(), index_97d425e6_exports))
       };
-      metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-6f154c89.js", "css": ["assets/pages/__layout.svelte-4a464c4a.css"], "js": ["pages/__layout.svelte-6f154c89.js", "chunks/vendor-40f27b4e.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-0fd4d456.js", "css": [], "js": ["error.svelte-0fd4d456.js", "chunks/vendor-40f27b4e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-fff2b7c0.js", "css": [], "js": ["pages/index.svelte-fff2b7c0.js", "chunks/vendor-40f27b4e.js"], "styles": [] }, "src/routes/2010/12/27/index.svelte": { "entry": "pages/2010/12/27/index.svelte-7a4375d8.js", "css": [], "js": ["pages/2010/12/27/index.svelte-7a4375d8.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/01/27/index.svelte": { "entry": "pages/2011/01/27/index.svelte-4010fa45.js", "css": [], "js": ["pages/2011/01/27/index.svelte-4010fa45.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/02/14/index.svelte": { "entry": "pages/2011/02/14/index.svelte-ce4bd2a8.js", "css": [], "js": ["pages/2011/02/14/index.svelte-ce4bd2a8.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/04/index.svelte": { "entry": "pages/2011/05/04/index.svelte-ea8ee806.js", "css": [], "js": ["pages/2011/05/04/index.svelte-ea8ee806.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/06/index.svelte": { "entry": "pages/2011/05/06/index.svelte-1eace63e.js", "css": [], "js": ["pages/2011/05/06/index.svelte-1eace63e.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/08/index.svelte": { "entry": "pages/2011/05/08/index.svelte-7106ab2f.js", "css": [], "js": ["pages/2011/05/08/index.svelte-7106ab2f.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/09/index.svelte": { "entry": "pages/2011/05/09/index.svelte-12a45b15.js", "css": [], "js": ["pages/2011/05/09/index.svelte-12a45b15.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/12/index.svelte": { "entry": "pages/2011/05/12/index.svelte-18f0fccd.js", "css": [], "js": ["pages/2011/05/12/index.svelte-18f0fccd.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/13/index.svelte": { "entry": "pages/2011/05/13/index.svelte-19ccf552.js", "css": [], "js": ["pages/2011/05/13/index.svelte-19ccf552.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/06/17/index.svelte": { "entry": "pages/2011/06/17/index.svelte-86da172b.js", "css": [], "js": ["pages/2011/06/17/index.svelte-86da172b.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/07/01/index.svelte": { "entry": "pages/2011/07/01/index.svelte-66e19fec.js", "css": [], "js": ["pages/2011/07/01/index.svelte-66e19fec.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/11/23/index.svelte": { "entry": "pages/2011/11/23/index.svelte-b7ac4887.js", "css": [], "js": ["pages/2011/11/23/index.svelte-b7ac4887.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/12/29/index.svelte": { "entry": "pages/2011/12/29/index.svelte-acf20a83.js", "css": [], "js": ["pages/2011/12/29/index.svelte-acf20a83.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2012/02/07/index.svelte": { "entry": "pages/2012/02/07/index.svelte-30ac8d66.js", "css": [], "js": ["pages/2012/02/07/index.svelte-30ac8d66.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2012/10/05/index.svelte": { "entry": "pages/2012/10/05/index.svelte-f5f1a14f.js", "css": [], "js": ["pages/2012/10/05/index.svelte-f5f1a14f.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2012/10/19/index.svelte": { "entry": "pages/2012/10/19/index.svelte-3cf35884.js", "css": [], "js": ["pages/2012/10/19/index.svelte-3cf35884.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2014/01/14/index.svelte": { "entry": "pages/2014/01/14/index.svelte-e32f7c01.js", "css": [], "js": ["pages/2014/01/14/index.svelte-e32f7c01.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] } };
+      metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-6f154c89.js", "css": ["assets/pages/__layout.svelte-4461d4cb.css"], "js": ["pages/__layout.svelte-6f154c89.js", "chunks/vendor-40f27b4e.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-0fd4d456.js", "css": [], "js": ["error.svelte-0fd4d456.js", "chunks/vendor-40f27b4e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-fff2b7c0.js", "css": [], "js": ["pages/index.svelte-fff2b7c0.js", "chunks/vendor-40f27b4e.js"], "styles": [] }, "src/routes/2010/12/27/index.svelte": { "entry": "pages/2010/12/27/index.svelte-7a4375d8.js", "css": [], "js": ["pages/2010/12/27/index.svelte-7a4375d8.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/01/27/index.svelte": { "entry": "pages/2011/01/27/index.svelte-2083c7a2.js", "css": [], "js": ["pages/2011/01/27/index.svelte-2083c7a2.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/02/14/index.svelte": { "entry": "pages/2011/02/14/index.svelte-e3479b1d.js", "css": [], "js": ["pages/2011/02/14/index.svelte-e3479b1d.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/04/index.svelte": { "entry": "pages/2011/05/04/index.svelte-ea8ee806.js", "css": [], "js": ["pages/2011/05/04/index.svelte-ea8ee806.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/06/index.svelte": { "entry": "pages/2011/05/06/index.svelte-1eace63e.js", "css": [], "js": ["pages/2011/05/06/index.svelte-1eace63e.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/08/index.svelte": { "entry": "pages/2011/05/08/index.svelte-7106ab2f.js", "css": [], "js": ["pages/2011/05/08/index.svelte-7106ab2f.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/09/index.svelte": { "entry": "pages/2011/05/09/index.svelte-12a45b15.js", "css": [], "js": ["pages/2011/05/09/index.svelte-12a45b15.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/12/index.svelte": { "entry": "pages/2011/05/12/index.svelte-ae6a650d.js", "css": [], "js": ["pages/2011/05/12/index.svelte-ae6a650d.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/05/13/index.svelte": { "entry": "pages/2011/05/13/index.svelte-19ccf552.js", "css": [], "js": ["pages/2011/05/13/index.svelte-19ccf552.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/06/17/index.svelte": { "entry": "pages/2011/06/17/index.svelte-cde973e9.js", "css": [], "js": ["pages/2011/06/17/index.svelte-cde973e9.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/07/01/index.svelte": { "entry": "pages/2011/07/01/index.svelte-01affb23.js", "css": [], "js": ["pages/2011/07/01/index.svelte-01affb23.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/11/23/index.svelte": { "entry": "pages/2011/11/23/index.svelte-16e64691.js", "css": [], "js": ["pages/2011/11/23/index.svelte-16e64691.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2011/12/29/index.svelte": { "entry": "pages/2011/12/29/index.svelte-acf20a83.js", "css": [], "js": ["pages/2011/12/29/index.svelte-acf20a83.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2012/02/07/index.svelte": { "entry": "pages/2012/02/07/index.svelte-30ac8d66.js", "css": [], "js": ["pages/2012/02/07/index.svelte-30ac8d66.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2012/10/05/index.svelte": { "entry": "pages/2012/10/05/index.svelte-f5f1a14f.js", "css": [], "js": ["pages/2012/10/05/index.svelte-f5f1a14f.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2012/10/19/index.svelte": { "entry": "pages/2012/10/19/index.svelte-bf81719e.js", "css": [], "js": ["pages/2012/10/19/index.svelte-bf81719e.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] }, "src/routes/2014/01/14/index.svelte": { "entry": "pages/2014/01/14/index.svelte-49bdb3cc.js", "css": [], "js": ["pages/2014/01/14/index.svelte-49bdb3cc.js", "chunks/vendor-40f27b4e.js", "chunks/CodeRenderer-8c0a1f9a.js"], "styles": [] } };
     }
   });
 
@@ -52146,7 +52140,7 @@ ${``}`;
   });
 
   // .svelte-kit/output/server/app.js
-  init_app_5f96e930();
+  init_app_a308694c();
 
   // .svelte-kit/cloudflare-workers/entry.js
   var import_kv_asset_handler = __toModule(require_dist());
