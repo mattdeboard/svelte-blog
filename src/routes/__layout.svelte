@@ -112,12 +112,6 @@
     margin-bottom: 0.5em;
     font-style: italic;
   }
-  /**  :global(h1.title) {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 40px;
-    font-style: bold;
-    padding-bottom: 10px;
-  }*/
   :global(#main) {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
@@ -237,15 +231,6 @@
     color: #575757;
     font: 14px "Vollkorn", "Georgia", serif;
   }
-
-  /*content header*/
-  /** :global(h1) {
-    font: bold 30px "Rock Salt", "Georgia", serif;
-  } */
-
-  /* :global(h2) { */
-  /* font: bold 25px "Rock Salt", "Georgia"; */
-  /* } */
 
   /*content links*/
   :global(a) {
