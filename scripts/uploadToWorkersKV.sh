@@ -46,7 +46,7 @@ process_posts() {
 
   cat <<-EOM >ARTICLE
   let source = \`
-$(tail -n +4 $f | sed -e 's/`/\\`/g')
+$(tail -n +4 $f | sed -e 's/\\/\\\\/g' | sed -e 's/`/\\`/g')
 \`;
 EOM
   cat <<-EOM >ARTICLE_DATE

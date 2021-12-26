@@ -1,8 +1,4 @@
-<script lang="ts">
-  import SvelteMarkdown from "svelte-markdown";
-  import CodeRenderer from "$components/CodeRenderer.svelte";
-  let date = "2014/01/14";
-  let source = `
+import{S as E,i as k,s as T,N as C,e as c,t as b,k as I,j as q,c as g,a as f,g as y,d as l,n as j,m as A,b as w,f as R,D as n,o as S,E as x,x as O,u as $,v as N}from"../../../../chunks/vendor-40f27b4e.js";import{C as P}from"../../../../chunks/CodeRenderer-8c0a1f9a.js";function L(m){let e,s,h,u,d,a,o,i;return o=new C({props:{source:m[0],renderers:{code:P}}}),{c(){e=c("div"),s=c("p"),h=b("written on "),u=b(v),d=I(),a=c("div"),q(o.$$.fragment),this.h()},l(t){e=g(t,"DIV",{});var r=f(e);s=g(r,"P",{class:!0});var p=f(s);h=y(p,"written on "),u=y(p,v),p.forEach(l),d=j(r),a=g(r,"DIV",{class:!0});var _=f(a);A(o.$$.fragment,_),_.forEach(l),r.forEach(l),this.h()},h(){w(s,"class","date"),w(a,"class","content")},m(t,r){R(t,e,r),n(e,s),n(s,h),n(s,u),n(e,d),n(e,a),S(o,a,null),i=!0},p:x,i(t){i||(O(o.$$.fragment,t),i=!0)},o(t){$(o.$$.fragment,t),i=!1},d(t){t&&l(e),N(o)}}}let v="2014/01/14";function D(m){return[`
 
 # Using git & Python to autogen changelogs
 
@@ -97,7 +93,9 @@ def release_note_lines(msgs):
     """Parse the lines from git output and format the strings using the
     pull request number.
     """
-    ptn = r"Merge pull request #(\\d+).*\\n([^\\n]*)'$"
+    ptn = r"Merge pull request #(d+).*
+([^
+]*)'$"
     pairs = re.findall(ptn, msgs, re.MULTILINE)
     return deque(body.format(pr_num=pr_num) for pr_num, body in pairs)
 
@@ -113,11 +111,14 @@ def prepend(filename, lines, release_header=False):
         with open(filename, "r+") as f:
             first_line = f.read()
             f.seek(0, 0)
-            f.write("\\n\\n".join([lines, first_line]))
+            f.write("
+
+".join([lines, first_line]))
     else:
         with open(filename, "w") as f:
             f.write(lines)
-            f.write("\\n")
+            f.write("
+")
 
 
 if __name__ == "__main__":
@@ -142,7 +143,8 @@ if __name__ == "__main__":
     if args.tag:
         lines.appendleft(release_header_line(args.tag, args.date))
 
-    lines = "\\n".join(lines)
+    lines = "
+".join(lines)
 
     if args.filepath:
         filename = op.abspath(args.filepath)
@@ -165,33 +167,23 @@ $ ./release 1.7 HEAD ./RELEASE NOTES.md
 
 ## Conclusion
 
-One additional step I took is to create a git alias for the git log command, but prettied up a bit, for when I want to just scan through the differences from one version to the next. If you'd like to do the same, add the following to the \\[alias\\] section of \`~/.gitconfig\`:
+One additional step I took is to create a git alias for the git log command, but prettied up a bit, for when I want to just scan through the differences from one version to the next. If you'd like to do the same, add the following to the [alias] section of \`~/.gitconfig\`:
 
 \`\`\`text
-    lm = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset \\\\
-      -%C(yellow)%d%Creset %C(bold cyan)%s %Cgreen(%cr)%n%Creset%n - %b%n' \\\\
+    lm = log --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset \\
+      -%C(yellow)%d%Creset %C(bold cyan)%s %Cgreen(%cr)%n%Creset%n - %b%n' \\
       --abbrev-commit --date=relative --merges
 \`\`\`
 
 You can also achieve the same effect by entering the following at the CLI:
 
 \`\`\`sh
-    git config --global alias.lm "log --pretty=format:'%Cred%h%Creset \\\\
-      %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %C(bold cyan)%s \\\\
+    git config --global alias.lm "log --pretty=format:'%Cred%h%Creset \\
+      %C(bold blue)<%an>%Creset -%C(yellow)%d%Creset %C(bold cyan)%s \\
       %Cgreen(%cr)%n%Creset%n - %b%n' --abbrev-commit --date=relative --merges"
 \`\`\`
 
 (The escaped newlines aren't necessary, only including them to keep the line length down on the page.)
 
 Please leave a comment if you have questions or spot an error. Thanks.
-`;
-</script>
-
-<div>
-  <!-- <h1 class="title">{title}</h1> -->
-  <p class="date">written on {date}</p>
-  <div class="content">
-    <!-- svelte-ignore missing-declaration -->
-    <SvelteMarkdown {source} renderers={{ code: CodeRenderer }} />
-  </div>
-</div>
+`]}class W extends E{constructor(e){super();k(this,e,D,L,T,{})}}export{W as default};

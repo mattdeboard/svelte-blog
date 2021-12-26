@@ -1,17 +1,13 @@
-<script lang="ts">
-  import SvelteMarkdown from "svelte-markdown";
-  import CodeRenderer from "$components/CodeRenderer.svelte";
-  let date = "2011/11/23";
-  let source = `
+import{S as v,i as j,s as D,N as S,e as g,t as w,k as _,j as x,c as p,a as y,g as I,d,n as A,m as M,b,f as P,D as i,o as C,E as H,x as T,u as B,v as R}from"../../../../chunks/vendor-40f27b4e.js";import{C as $}from"../../../../chunks/CodeRenderer-8c0a1f9a.js";function E(l){let e,o,h,m,u,n,a,s;return a=new S({props:{source:l[0],renderers:{code:$}}}),{c(){e=g("div"),o=g("p"),h=w("written on "),m=w(k),u=_(),n=g("div"),x(a.$$.fragment),this.h()},l(t){e=p(t,"DIV",{});var r=y(e);o=p(r,"P",{class:!0});var c=y(o);h=I(c,"written on "),m=I(c,k),c.forEach(d),u=A(r),n=p(r,"DIV",{class:!0});var f=y(n);M(a.$$.fragment,f),f.forEach(d),r.forEach(d),this.h()},h(){b(o,"class","date"),b(n,"class","content")},m(t,r){P(t,e,r),i(e,o),i(o,h),i(o,m),i(e,u),i(e,n),C(a,n,null),s=!0},p:H,i(t){s||(T(a.$$.fragment,t),s=!0)},o(t){B(a.$$.fragment,t),s=!1},d(t){t&&d(e),R(a)}}}let k="2011/11/23";function L(l){return[`
 # How I Became a Programmer
 
-I posted a [very brief response](http://news.ycombinator.com/item?id=3268469) to a post on HackerNews yesterday challenging the notion that 8 weeks of guided tutelage on [Ruby on Rails](http://rubyonrails.org/) is not going to produce someone who you might consider a "junior RoR developer." It did not garner many upvotes so I figured that like most conversation on the Internet it faded into the general ambient chatter. Imagine my surprise when I woke up to couple handfuls' worth of emails from around the world asking me what I did, how I did it, and how I got a job. I'm assuming, judging by the relatively small amount of mail I got from a random aside on HN\\*, that there must be a lot of people who are trying to figure out how to pursue a career in programming.
+I posted a [very brief response](http://news.ycombinator.com/item?id=3268469) to a post on HackerNews yesterday challenging the notion that 8 weeks of guided tutelage on [Ruby on Rails](http://rubyonrails.org/) is not going to produce someone who you might consider a "junior RoR developer." It did not garner many upvotes so I figured that like most conversation on the Internet it faded into the general ambient chatter. Imagine my surprise when I woke up to couple handfuls' worth of emails from around the world asking me what I did, how I did it, and how I got a job. I'm assuming, judging by the relatively small amount of mail I got from a random aside on HN*, that there must be a lot of people who are trying to figure out how to pursue a career in programming.
 
 ## First, A Disclaimer or Two
 
 Please note that this blog post is entitled, "How **I** Became a Programmer", not, "How **You** Can Become a Programmer." I'm not a self-help guru or wise or even a particularly good programmer. I did, however, decide at an inflection point in my life to pursue something vigorously and it paid off. Any insights gleaned from my experience are yours to make on your own; I doubt I'll have much insight for your personal situation.
 
-Also, after consulting with my girlfriend, my total time of dedicated effort to becoming a paid programmer was actually about 12 weeks, not \\~10 as I stated in the post I linked to above. So, there you go.
+Also, after consulting with my girlfriend, my total time of dedicated effort to becoming a paid programmer was actually about 12 weeks, not ~10 as I stated in the post I linked to above. So, there you go.
 
 ## My Story: tl;dr
 
@@ -61,7 +57,7 @@ I don't have any tips or tricks to learning except just doing it. I spent a lot 
 
 As I said above, I did not and do not consider it fruitful to "learn Django," "learn Ruby on Rails," or "learn [Noir](http://webnoir.org)." I think a contributor to my success was learning the languages and the concepts behind them, then using a web framework to better learn that language. I learned the framework incidentally to my education in the language.
 
-Go read the Django docs, join \\#django on irc.freenode.net and ask questions constantly. That's what I did and it worked ok for me. But honestly I didn't just sit down and read stuff most of the time. Usually I was making things in order to learn concepts better, then reading in support of my goals. I'm a hands-on learner. Some people aren't, but I am so it worked for me. Decide on your own if that's good for you.
+Go read the Django docs, join #django on irc.freenode.net and ask questions constantly. That's what I did and it worked ok for me. But honestly I didn't just sit down and read stuff most of the time. Usually I was making things in order to learn concepts better, then reading in support of my goals. I'm a hands-on learner. Some people aren't, but I am so it worked for me. Decide on your own if that's good for you.
 
 As far as HTML & CSS there is just so much information out there, and they're such straightforward concepts. I learned as much HTML & CSS as I needed to do what I needed to do. I did not memorize much about how HTML & CSS work, i.e. syntax & semantics. I don't know right off the top of my head how to create a gradient, but I do know right off the top of my head how to find out. I think that's the important thing.
 
@@ -83,15 +79,5 @@ If I had to summarize the big overview of how I did what I did, I'd say:
 
 My final point really is that I got lucky. I'm not an amazing developer. At the end of the day I'm a newb and I still have a lot to learn. My career is just beginning but I am proud of the effort I put into changing my life. I hope my experiences can help some other folks.
 
-\\* _I should note that I was already of a mind to blog about this since my cousin Jeff has also taken up programming after leaving the environmental consultancy business._
-`;
-</script>
-
-<div>
-  <!-- <h1 class="title">{title}</h1> -->
-  <p class="date">written on {date}</p>
-  <div class="content">
-    <!-- svelte-ignore missing-declaration -->
-    <SvelteMarkdown {source} renderers={{ code: CodeRenderer }} />
-  </div>
-</div>
+* _I should note that I was already of a mind to blog about this since my cousin Jeff has also taken up programming after leaving the environmental consultancy business._
+`]}class N extends v{constructor(e){super();j(this,e,L,E,D,{})}}export{N as default};

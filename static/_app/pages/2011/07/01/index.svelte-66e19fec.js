@@ -1,8 +1,4 @@
-<script lang="ts">
-  import SvelteMarkdown from "svelte-markdown";
-  import CodeRenderer from "$components/CodeRenderer.svelte";
-  let date = "2011/07/01";
-  let source = `
+import{S as v,i as I,s as z,N as $,e as f,t as g,k as P,j as x,c as h,a as b,g as y,d as l,n as C,m as j,b as w,f as E,D as i,o as A,E as F,x as G,u as D,v as S}from"../../../../chunks/vendor-40f27b4e.js";import{C as L}from"../../../../chunks/CodeRenderer-8c0a1f9a.js";function M(d){let e,a,u,m,c,o,s,n;return s=new $({props:{source:d[0],renderers:{code:L}}}),{c(){e=f("div"),a=f("p"),u=g("written on "),m=g(k),c=P(),o=f("div"),x(s.$$.fragment),this.h()},l(t){e=h(t,"DIV",{});var r=b(e);a=h(r,"P",{class:!0});var p=b(a);u=y(p,"written on "),m=y(p,k),p.forEach(l),c=C(r),o=h(r,"DIV",{class:!0});var _=b(o);j(s.$$.fragment,_),_.forEach(l),r.forEach(l),this.h()},h(){w(a,"class","date"),w(o,"class","content")},m(t,r){E(t,e,r),i(e,a),i(a,u),i(a,m),i(e,c),i(e,o),A(s,o,null),n=!0},p:F,i(t){n||(G(s.$$.fragment,t),n=!0)},o(t){D(s.$$.fragment,t),n=!1},d(t){t&&l(e),S(s)}}}let k="2011/07/01";function O(d){return[`
 
 # Export ALL Your Facebook Photos Easily
 
@@ -31,7 +27,7 @@ from mytoken import token, username
 
 def get_photos(dl_dir):
     dest = os.path.abspath(dl_dir)
-    p = re.compile(r"[,!'\\ /]")
+    p = re.compile(r"[,!' /]")
     fb_photos = find_photos()
     for album in fb_photos:
         albname = p.sub("_", album).lower()
@@ -107,14 +103,4 @@ if __name__ == "__main__":
     (options, args) = parser.parse_args(args)
     get_photos(options.dest_dir)
 \`\`\`
-`;
-</script>
-
-<div>
-  <!-- <h1 class="title">{title}</h1> -->
-  <p class="date">written on {date}</p>
-  <div class="content">
-    <!-- svelte-ignore missing-declaration -->
-    <SvelteMarkdown {source} renderers={{ code: CodeRenderer }} />
-  </div>
-</div>
+`]}class V extends v{constructor(e){super();I(this,e,O,M,z,{})}}export{V as default};
